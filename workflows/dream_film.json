@@ -1,0 +1,3897 @@
+{
+  "id": "4c7d2a10-5e21-4b8a-9f3e-21a0d2b1c023",
+  "revision": 0,
+  "last_node_id": 4452018332049333,
+  "last_link_id": 3783745238734745,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "UNETLoader",
+      "pos": [
+        -170.35043037890787,
+        862.1935861918802
+      ],
+      "size": [
+        367.1817346885797,
+        93.99610559112112
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Video Model",
+          "name": "unet_name",
+          "type": "COMBO",
+          "widget": {
+            "name": "unet_name"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1
+          ]
+        }
+      ],
+      "title": "H3 FL2VA pruned int8",
+      "properties": {
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "default"
+      ],
+      "widgets_values_named": {
+        "unet_name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+        "weight_dtype": "default"
+      }
+    },
+    {
+      "id": 2,
+      "type": "LoraLoaderModelOnly",
+      "pos": [
+        -167.10860198102878,
+        993.7818300820853
+      ],
+      "size": [
+        367.4971844281601,
+        109.00993406766273
+      ],
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            2,
+            88
+          ]
+        }
+      ],
+      "title": "4-step turbo LoRA",
+      "properties": {
+        "Node name for S&R": "LoraLoaderModelOnly"
+      },
+      "widgets_values": [
+        "minimax_h3_fl2v_turbo_4step_v1.0_768p_comfyui_bf16.safetensors",
+        1
+      ],
+      "widgets_values_named": {
+        "lora_name": "minimax_h3_fl2v_turbo_4step_v1.0_768p_comfyui_bf16.safetensors",
+        "strength_model": 1
+      }
+    },
+    {
+      "id": 3,
+      "type": "CLIPLoader",
+      "pos": [
+        -173.39114675606677,
+        698.0070556819347
+      ],
+      "size": [
+        371.54286798186524,
+        121.99653902609839
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            84
+          ]
+        }
+      ],
+      "title": "Qwen3-VL 32B text encoder (int8)",
+      "properties": {
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+        "minimax",
+        "default"
+      ],
+      "widgets_values_named": {
+        "clip_name": "qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+        "type": "minimax",
+        "device": "default"
+      }
+    },
+    {
+      "id": 4,
+      "type": "VAELoader",
+      "pos": [
+        -185.17510190721202,
+        1282.1984012478106
+      ],
+      "size": [
+        384.62911070842335,
+        69.99741301657795
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            92
+          ]
+        }
+      ],
+      "title": "H3 video VAE",
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "minimax_h3_video_vae_int8_convrot.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
+      }
+    },
+    {
+      "id": 5,
+      "type": "VAELoader",
+      "pos": [
+        -192.03276039629574,
+        1534.2158923728862
+      ],
+      "size": [
+        385.65542694488477,
+        73.02504278207047
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            99
+          ]
+        }
+      ],
+      "title": "H3 audio VAE",
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "minimax_h3_audio_vae_fp32.safetensors"
+      ],
+      "widgets_values_named": {
+        "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+      }
+    },
+    {
+      "id": 6,
+      "type": "KSamplerSelect",
+      "pos": [
+        -192.28467438160905,
+        1388.3678992123046
+      ],
+      "size": [
+        381.7650193766485,
+        86.4533452480949
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "links": [
+            103
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSamplerSelect"
+      },
+      "widgets_values": [
+        "res_multistep"
+      ],
+      "widgets_values_named": {
+        "sampler_name": "res_multistep"
+      }
+    },
+    {
+      "id": 7,
+      "type": "BasicScheduler",
+      "pos": [
+        -164.6347994812739,
+        1129.4770363684415
+      ],
+      "size": [
+        364.2098826717836,
+        118.00188919484302
+      ],
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 2
+        },
+        {
+          "label": "Steps",
+          "name": "scheduler",
+          "type": "COMBO",
+          "widget": {
+            "name": "scheduler"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            107
+          ]
+        }
+      ],
+      "title": "4 steps (turbo)",
+      "properties": {
+        "Node name for S&R": "BasicScheduler"
+      },
+      "widgets_values": [
+        "simple",
+        4,
+        1
+      ],
+      "widgets_values_named": {
+        "scheduler": "simple",
+        "steps": 4,
+        "denoise": 1
+      }
+    },
+    {
+      "id": 8,
+      "type": "LoadImage",
+      "pos": [
+        -422.8859269477327,
+        -563.5245129784763
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Input Image",
+          "name": "image",
+          "type": "COMBO",
+          "widget": {
+            "name": "image"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            75
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": []
+        }
+      ],
+      "title": "Keyframe (Nano Banana, run 5)",
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "4f9802c96f741ef8fceea7135cc0d7eea3398052dd46d2f8ce92647586bf545e.png",
+        "image"
+      ],
+      "widgets_values_named": {
+        "image": "4f9802c96f741ef8fceea7135cc0d7eea3398052dd46d2f8ce92647586bf545e.png",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 101,
+      "type": "MiniMaxH3ImageToVideo",
+      "pos": [
+        928.4412389960855,
+        293.71236787966507
+      ],
+      "size": [
+        360,
+        220
+      ],
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 85
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 93
+        },
+        {
+          "name": "first_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 3783745238734726
+        },
+        {
+          "name": "last_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 79
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 3783745238734732
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 3783745238734735
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": 3783745238734738
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            7
+          ]
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "title": "Clip 1: image to video",
+      "properties": {
+        "Node name for S&R": "MiniMaxH3ImageToVideo"
+      },
+      "widgets_values": [
+        "First-person POV, handheld, the camera is my own eyes, my hands enter the lower frame. 1970s 35mm Kodachrome documentary footage, warm faded colors, soft film grain, gentle halation, bright natural daylight, deep blue sky with towering cumulus clouds, vast sense of scale, calm uncanny cosmic dread. I raise the brass binoculars toward the colossal black pillar hanging in the sky across the valley, then lower them. Wind ripples through the golden grass. Sound: wind in the grass, distant birds, a faint deep hum.",
+        768,
+        1344,
+        362
+      ],
+      "widgets_values_named": {
+        "prompt": "First-person POV, handheld, the camera is my own eyes, my hands enter the lower frame. 1970s 35mm Kodachrome documentary footage, warm faded colors, soft film grain, gentle halation, bright natural daylight, deep blue sky with towering cumulus clouds, vast sense of scale, calm uncanny cosmic dread. I raise the brass binoculars toward the colossal black pillar hanging in the sky across the valley, then lower them. Wind ripples through the golden grass. Sound: wind in the grass, distant birds, a faint deep hum.",
+        "width": 768,
+        "height": 1344,
+        "length": 362
+      }
+    },
+    {
+      "id": 102,
+      "type": "RandomNoise",
+      "pos": [
+        930.3479818882887,
+        607.3402164161914
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            8
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RandomNoise"
+      },
+      "widgets_values": [
+        43,
+        "fixed"
+      ],
+      "widgets_values_named": {
+        "noise_seed": 43,
+        "control_after_generate": "fixed"
+      }
+    },
+    {
+      "id": 103,
+      "type": "BasicGuider",
+      "pos": [
+        927.4641180833557,
+        801.4115535525676
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 89
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            9
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicGuider"
+      }
+    },
+    {
+      "id": 104,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        923.7320590416779,
+        994.210597833826
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 8
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 9
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 104
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 108
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            13,
+            15
+          ]
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SamplerCustomAdvanced"
+      }
+    },
+    {
+      "id": 105,
+      "type": "VAEDecode",
+      "pos": [
+        927.5163147077635,
+        1394.9040366095148
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 13
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 94
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            17,
+            111
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 106,
+      "type": "VAEDecodeAudio",
+      "pos": [
+        927.5163147077635,
+        1594.9040366095148
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 41,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 15
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 100
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            18
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecodeAudio"
+      }
+    },
+    {
+      "id": 107,
+      "type": "CreateVideo",
+      "pos": [
+        917.5163147077635,
+        1784.9040366095148
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 43,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 17
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 18
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            113
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        24,
+        8,
+        "sRGB",
+        "none"
+      ],
+      "widgets_values_named": {
+        "fps": 24,
+        "bit_depth": 8,
+        "color_space": "sRGB",
+        "codec": "none"
+      }
+    },
+    {
+      "id": 108,
+      "type": "ImageFromBatch",
+      "pos": [
+        920.3153589890219,
+        1992.7031658184417
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 42,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 111
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            22
+          ]
+        }
+      ],
+      "title": "Last frame",
+      "properties": {
+        "Node name for S&R": "ImageFromBatch"
+      },
+      "widgets_values": [
+        -1,
+        1
+      ],
+      "widgets_values_named": {
+        "batch_index": -1,
+        "length": 1
+      }
+    },
+    {
+      "id": 201,
+      "type": "MiniMaxH3ImageToVideo",
+      "pos": [
+        1505.313212471934,
+        284.8368529223662
+      ],
+      "size": [
+        360,
+        220
+      ],
+      "flags": {},
+      "order": 44,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 86
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 95
+        },
+        {
+          "name": "first_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 22
+        },
+        {
+          "name": "last_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 80
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 3783745238734733
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 3783745238734736
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": 3783745238734739
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            24
+          ]
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            29
+          ]
+        }
+      ],
+      "title": "Clip 2: image to video",
+      "properties": {
+        "Node name for S&R": "MiniMaxH3ImageToVideo"
+      },
+      "widgets_values": [
+        "First-person POV, handheld, the camera is my own eyes, my hands enter the lower frame. 1970s 35mm Kodachrome documentary footage, warm faded colors, soft film grain, gentle halation, bright natural daylight, deep blue sky with towering cumulus clouds, vast sense of scale, calm uncanny cosmic dread. The colossal black pillar begins to descend, gliding down slowly and silently toward the valley floor. On the country road below, tiny 1970s cars stop. I take a step forward through the grass. Sound: the deep resonant hum grows louder.",
+        768,
+        1344,
+        362
+      ],
+      "widgets_values_named": {
+        "prompt": "First-person POV, handheld, the camera is my own eyes, my hands enter the lower frame. 1970s 35mm Kodachrome documentary footage, warm faded colors, soft film grain, gentle halation, bright natural daylight, deep blue sky with towering cumulus clouds, vast sense of scale, calm uncanny cosmic dread. The colossal black pillar begins to descend, gliding down slowly and silently toward the valley floor. On the country road below, tiny 1970s cars stop. I take a step forward through the grass. Sound: the deep resonant hum grows louder.",
+        "width": 768,
+        "height": 1344,
+        "length": 362
+      }
+    },
+    {
+      "id": 202,
+      "type": "RandomNoise",
+      "pos": [
+        1509.8290039123642,
+        599.0211175341972
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            25
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RandomNoise"
+      },
+      "widgets_values": [
+        44,
+        "fixed"
+      ],
+      "widgets_values_named": {
+        "noise_seed": 44,
+        "control_after_generate": "fixed"
+      }
+    },
+    {
+      "id": 203,
+      "type": "BasicGuider",
+      "pos": [
+        1506.4421603320416,
+        798.0527004150576
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 45,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 90
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            26
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicGuider"
+      }
+    },
+    {
+      "id": 204,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        1507.5711081921493,
+        1003.8579704565636
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 46,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 25
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 26
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 105
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 109
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 29
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            30,
+            32
+          ]
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SamplerCustomAdvanced"
+      }
+    },
+    {
+      "id": 205,
+      "type": "VAEDecode",
+      "pos": [
+        1507.5711081921495,
+        1395.939637415809
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 47,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 30
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 96
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            34,
+            112
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 206,
+      "type": "VAEDecodeAudio",
+      "pos": [
+        1503.0553167517194,
+        1600.9546439552396
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 48,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 32
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 101
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            35
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecodeAudio"
+      }
+    },
+    {
+      "id": 207,
+      "type": "CreateVideo",
+      "pos": [
+        1497.4105774511816,
+        1786.4388525148097
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 50,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 34
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 35
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            114
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        24,
+        8,
+        "sRGB",
+        "none"
+      ],
+      "widgets_values_named": {
+        "fps": 24,
+        "bit_depth": 8,
+        "color_space": "sRGB",
+        "codec": "none"
+      }
+    },
+    {
+      "id": 208,
+      "type": "ImageFromBatch",
+      "pos": [
+        1497.4105774511816,
+        1977.5678003749176
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 49,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 112
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            39
+          ]
+        }
+      ],
+      "title": "Last frame",
+      "properties": {
+        "Node name for S&R": "ImageFromBatch"
+      },
+      "widgets_values": [
+        -1,
+        1
+      ],
+      "widgets_values_named": {
+        "batch_index": -1,
+        "length": 1
+      }
+    },
+    {
+      "id": 301,
+      "type": "MiniMaxH3ImageToVideo",
+      "pos": [
+        2108.4638011335674,
+        314.1894972851624
+      ],
+      "size": [
+        360,
+        220
+      ],
+      "flags": {},
+      "order": 51,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 87
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 97
+        },
+        {
+          "name": "first_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 39
+        },
+        {
+          "name": "last_frame",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 81
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "widget": {
+            "name": "width"
+          },
+          "link": 3783745238734734
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "widget": {
+            "name": "height"
+          },
+          "link": 3783745238734737
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": 3783745238734740
+        }
+      ],
+      "outputs": [
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            41
+          ]
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            46
+          ]
+        }
+      ],
+      "title": "Clip 3: image to video",
+      "properties": {
+        "Node name for S&R": "MiniMaxH3ImageToVideo"
+      },
+      "widgets_values": [
+        "First-person POV, handheld, the camera is my own eyes, my hands enter the lower frame. 1970s 35mm Kodachrome documentary footage, warm faded colors, soft film grain, gentle halation, bright natural daylight, deep blue sky with towering cumulus clouds, vast sense of scale, calm uncanny cosmic dread. The colossal black pillar slides into the earth like a knife into butter. The valley floor splits open and a vast wall of dust rolls outward across the fields toward me. My hands tremble. Sound: a low rumble, cracking earth, a rushing wind.",
+        768,
+        1344,
+        362
+      ],
+      "widgets_values_named": {
+        "prompt": "First-person POV, handheld, the camera is my own eyes, my hands enter the lower frame. 1970s 35mm Kodachrome documentary footage, warm faded colors, soft film grain, gentle halation, bright natural daylight, deep blue sky with towering cumulus clouds, vast sense of scale, calm uncanny cosmic dread. The colossal black pillar slides into the earth like a knife into butter. The valley floor splits open and a vast wall of dust rolls outward across the fields toward me. My hands tremble. Sound: a low rumble, cracking earth, a rushing wind.",
+        "width": 768,
+        "height": 1344,
+        "length": 362
+      }
+    },
+    {
+      "id": 302,
+      "type": "RandomNoise",
+      "pos": [
+        2108.4638011335674,
+        607.2624369129823
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            42
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RandomNoise"
+      },
+      "widgets_values": [
+        45,
+        "fixed"
+      ],
+      "widgets_values_named": {
+        "noise_seed": 45,
+        "control_after_generate": "fixed"
+      }
+    },
+    {
+      "id": 303,
+      "type": "BasicGuider",
+      "pos": [
+        2114.673014364159,
+        803.4716501435738
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 53,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 91
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 41
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            43
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "BasicGuider"
+      }
+    },
+    {
+      "id": 304,
+      "type": "SamplerCustomAdvanced",
+      "pos": [
+        2118.398542302514,
+        995.9553354358104
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 54,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 42
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 43
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 106
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 110
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 46
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": [
+            47,
+            49
+          ]
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SamplerCustomAdvanced"
+      }
+    },
+    {
+      "id": 305,
+      "type": "VAEDecode",
+      "pos": [
+        2116.745649740531,
+        1400.4463972733588
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 55,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 47
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 98
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            51
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      }
+    },
+    {
+      "id": 306,
+      "type": "VAEDecodeAudio",
+      "pos": [
+        2119.2293350327673,
+        1604.1066663806605
+      ],
+      "size": [
+        355.0413273582663,
+        138.42976719879383
+      ],
+      "flags": {},
+      "order": 56,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 49
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 102
+        }
+      ],
+      "outputs": [
+        {
+          "name": "AUDIO",
+          "type": "AUDIO",
+          "links": [
+            52
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecodeAudio"
+      }
+    },
+    {
+      "id": 307,
+      "type": "CreateVideo",
+      "pos": [
+        2119.2293350327673,
+        1790.3811384423052
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 57,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 51
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 52
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            116
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo"
+      },
+      "widgets_values": [
+        24,
+        8,
+        "sRGB",
+        "none"
+      ],
+      "widgets_values_named": {
+        "fps": 24,
+        "bit_depth": 8,
+        "color_space": "sRGB",
+        "codec": "none"
+      }
+    },
+    {
+      "id": 900,
+      "type": "ConcatenateVideo",
+      "pos": [
+        3251.5239177842136,
+        297.3558298736475
+      ],
+      "size": [
+        360,
+        162
+      ],
+      "flags": {},
+      "order": 59,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos.video0",
+          "type": "VIDEO",
+          "link": 113
+        },
+        {
+          "name": "videos.video1",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": 115
+        },
+        {
+          "name": "videos.video2",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": 117
+        },
+        {
+          "name": "videos.video3",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "complete_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            56
+          ]
+        }
+      ],
+      "title": "Stitch clips",
+      "properties": {
+        "Node name for S&R": "ConcatenateVideo"
+      },
+      "widgets_values": [
+        "auto"
+      ],
+      "widgets_values_named": {
+        "codec": "auto"
+      }
+    },
+    {
+      "id": 901,
+      "type": "SaveVideo",
+      "pos": [
+        3263.6755667082634,
+        506.6154564835875
+      ],
+      "size": [
+        360,
+        150
+      ],
+      "flags": {},
+      "order": 60,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 56
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": []
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveVideo"
+      },
+      "widgets_values": [
+        "dreams/film",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "dreams/film",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      }
+    },
+    {
+      "id": 999,
+      "type": "MarkdownNote",
+      "pos": [
+        88.05793308838884,
+        -545.2818164319463
+      ],
+      "size": [
+        1300,
+        200
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "title": "About this workflow",
+      "properties": {},
+      "widgets_values": [
+        "## Dreams v2.3: local MiniMax H3 on Comfy Cloud GPU, Nano Banana keyframe.\n\n- **Keyframe:** the switch picks Nano Banana or the image in Load Image. Save keyframe sits after the switch, so Nano Banana only runs (and bills) when the switch is on.\n- **Prompts:** Style, keyframe and clip actions written as numbered stage directions, one beat per skeleton (left, center, right), each clip ending on a stated end state.\n- **Clips:** H3 FL2VA int8 + 4-step turbo LoRA, 768x1344, 362 frames (15 s) each. Each clip starts on the last frame of the clip before it.\n- **Cost:** GPU time only + additional cost of Nano Banana if ran. \n- **Stitch:** *Crop Video (Temporal)* drops the repeated seam frame from clips 2 and 3, then *Concatenate Video* joins them."
+      ],
+      "widgets_values_named": {
+        "text": "## Dreams v2.3: local MiniMax H3 on Comfy Cloud GPU, Nano Banana keyframe.\n\n- **Keyframe:** the run-5 Nano Banana image is loaded directly.\n- **Prompts:** Style, keyframe and clip actions written as numbered stage directions, one beat per skeleton (left, center, right), each clip ending on a stated end state.\n- **Clips:** H3 FL2VA int8 + 4-step turbo LoRA, 768x1344, 362 frames (15 s) each. Each clip starts on the last frame of the clip before it.\n- **Cost:** GPU time only + additional cost of Nano Banana if ran. \n- **Stitch:** *Crop Video (Temporal)* drops the repeated seam frame from clips 2 and 3, then *Concatenate Video* joins them."
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 2001,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1643.516637586849,
+        -8.934200967384381
+      ],
+      "size": [
+        400,
+        190
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Style (shared by every prompt)",
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            58,
+            60,
+            62,
+            64
+          ]
+        }
+      ],
+      "title": "Style (shared by every prompt)",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "First-person POV, one single continuous handheld take with no cuts; the camera is my own eyes and I am alone. In the lower frame I always see exactly two hands: my left hand, in a brown leather gauntlet, holds one short steel sword; my right forearm carries a round wooden shield with a red spiral emblem. There is only one sword, and the shield never leaves my right arm. The skeletons always look the same: adult-sized human skeletons with normal anatomical proportions, weathered brown-stained bone, cracked skulls with faint red embers deep in the eye sockets, scraps of rotted cloth and dirt clinging to them. A still from a 1980s live-action fantasy film in the style of Legend, Willow and Dragonslayer, shot on Kodak 35mm film stock with practical sets and real physical materials: wet root, packed earth, old bone, rusted iron. Color grade: muted, slightly faded colors; cool steel-blue haze and smoke filling the air; soft warm amber torchlight that glows rather than burns; lifted milky blacks, low contrast; diffusion filter bloom and halation around every light; soft focus falloff; visible film grain. Grim and ominous."
+      ],
+      "widgets_values_named": {
+        "value": "First-person POV, one single continuous handheld take with no cuts; the camera is my own eyes and I am alone. In the lower frame I always see exactly two hands: my left hand, in a brown leather gauntlet, holds one short steel sword; my right forearm carries a round wooden shield with a red spiral emblem. There is only one sword, and the shield never leaves my right arm. The skeletons always look the same: adult-sized human skeletons with normal anatomical proportions, weathered brown-stained bone, cracked skulls with faint red embers deep in the eye sockets, scraps of rotted cloth and dirt clinging to them. A still from a 1980s live-action fantasy film in the style of Legend, Willow and Dragonslayer, shot on Kodak 35mm film stock with practical sets and real physical materials: wet root, packed earth, old bone, rusted iron. Color grade: muted, slightly faded colors; cool steel-blue haze and smoke filling the air; soft warm amber torchlight that glows rather than burns; lifted milky blacks, low contrast; diffusion filter bloom and halation around every light; soft focus falloff; visible film grain. Grim and ominous."
+      }
+    },
+    {
+      "id": 2002,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1643.516637586849,
+        211.06579903261596
+      ],
+      "size": [
+        400,
+        130
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Keyframe Prompt",
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            59
+          ]
+        }
+      ],
+      "title": "Keyframe scene",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "A deep underground cavern beneath an ancient giant tree. Thick twisted roots form the walls and ceiling, hung with cobwebs and patches of faintly glowing green moss. Torches burn in iron brackets on the roots. The dirt floor in front of me is cracked open, and a bony skeletal hand is clawing up out of the earth. My sword is held forward in my left hand, my shield raised on my right arm."
+      ],
+      "widgets_values_named": {
+        "value": "A deep underground cavern beneath an ancient giant tree. Thick twisted roots form the walls and ceiling, hung with cobwebs and patches of faintly glowing green moss. Torches burn in iron brackets on the roots. The dirt floor in front of me is cracked open, and a bony skeletal hand is clawing up out of the earth. My sword is held forward in my left hand, my shield raised on my right arm."
+      }
+    },
+    {
+      "id": 2003,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1638.8515637847518,
+        368.26675475135835
+      ],
+      "size": [
+        400,
+        130
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "First Clip Action",
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            61
+          ]
+        }
+      ],
+      "title": "Clip 1 action",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "There are exactly three skeletons, and the cavern behind them stays empty; no other skeletons ever appear. Each has its own silhouette: Left is short and hunched with a dangling lower jaw; Center is the tallest, with a cracked skull; Right drags a rusted iron shackle and chain from one wrist. The motion is slow and heavy, one action at a time. 0\u20133 s: The dirt in front of me bulges and trembles before it breaks; Left's bony hand bursts up, fingers curling, then the arm drags its skull and shoulders free as soil slides off in clumps. 3\u20136 s: The floor bulges again; Center pushes up in one long rising arc, its head coming up last, then pauses and sways while Left keeps shaking dirt from its ribs. 6\u20139 s: Right claws its way out, its chain uncoiling from the dirt a beat after its arm and clattering behind it. 9\u201313 s: All three straighten, their heads snapping toward me a beat after their bodies turn; they lurch forward in slow staggering steps, arms swinging loosely behind each step, while I ease backward with my sword and shield rising. 13\u201315 s: They stop close in front of me and hold, swaying, Left's jaw rattling, Right's chain still swinging to a stop. Only these three skeletons, with the empty cavern behind them. Sound: earth cracking, bones scraping, a chain dragging, low hollow moaning, my breathing, torches crackling."
+      ],
+      "widgets_values_named": {
+        "value": "There are exactly three skeletons, and the cavern behind them stays empty; no other skeletons ever appear. Each has its own silhouette: Left is short and hunched with a dangling lower jaw; Center is the tallest, with a cracked skull; Right drags a rusted iron shackle and chain from one wrist. The motion is slow and heavy, one action at a time. 0\u20133 s: The dirt in front of me bulges and trembles before it breaks; Left's bony hand bursts up, fingers curling, then the arm drags its skull and shoulders free as soil slides off in clumps. 3\u20136 s: The floor bulges again; Center pushes up in one long rising arc, its head coming up last, then pauses and sways while Left keeps shaking dirt from its ribs. 6\u20139 s: Right claws its way out, its chain uncoiling from the dirt a beat after its arm and clattering behind it. 9\u201313 s: All three straighten, their heads snapping toward me a beat after their bodies turn; they lurch forward in slow staggering steps, arms swinging loosely behind each step, while I ease backward with my sword and shield rising. 13\u201315 s: They stop close in front of me and hold, swaying, Left's jaw rattling, Right's chain still swinging to a stop. Only these three skeletons, with the empty cavern behind them. Sound: earth cracking, bones scraping, a chain dragging, low hollow moaning, my breathing, torches crackling."
+      }
+    },
+    {
+      "id": 2004,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1643.516637586849,
+        531.0657990326158
+      ],
+      "size": [
+        400,
+        130
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Second Clip Action",
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            63
+          ]
+        }
+      ],
+      "title": "Clip 2 action",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "Exactly three skeletons stand in front of me: Left, short and hunched with a dangling jaw; Center, the tallest, with a cracked skull; Right, with a rusted shackle and chain on one wrist. No other skeletons. Only one attacks at a time while the other two hold back, swaying. 0\u20134 s: Center rears back with its arms raised high over its head, hangs there for a beat, then slams its claws down onto my shield, jolting it. I draw my sword far back, pause, then swing it forward in a wide flat arc through its ribs: its skull flies off in a high arc and bounces away, its ribcage bursts apart, and its arm and leg bones fall a split second later, scattering across the dirt. 4\u20138 s: Left crouches low, coils, then springs at my head; I drop behind my shield, then chop down in a steep arc, and it breaks apart at every joint, its jaw flying loose last, the bones bouncing and settling into a pile at my feet. 8\u201312 s: Right whips its chain around the rim of my shield and yanks, pulling the shield toward it; I lean back, shove hard, and as it staggers I slash up through its spine in a rising arc: skull, ribs and limbs scatter, and the chain slides off last and coils on the dirt. 12\u201315 s: I slow down, lower my sword and look down: no whole skeletons remain, only separate scattered bones, three skulls and a loose chain. Dust drifts down and settles; nothing moves; my breathing slows. Sound: claws scraping wood, a chain rattling, steel cracking bone, bones clattering onto dirt, my heavy breathing."
+      ],
+      "widgets_values_named": {
+        "value": "Exactly three skeletons stand in front of me: Left, short and hunched with a dangling jaw; Center, the tallest, with a cracked skull; Right, with a rusted shackle and chain on one wrist. No other skeletons. Only one attacks at a time while the other two hold back, swaying. 0\u20134 s: Center rears back with its arms raised high over its head, hangs there for a beat, then slams its claws down onto my shield, jolting it. I draw my sword far back, pause, then swing it forward in a wide flat arc through its ribs: its skull flies off in a high arc and bounces away, its ribcage bursts apart, and its arm and leg bones fall a split second later, scattering across the dirt. 4\u20138 s: Left crouches low, coils, then springs at my head; I drop behind my shield, then chop down in a steep arc, and it breaks apart at every joint, its jaw flying loose last, the bones bouncing and settling into a pile at my feet. 8\u201312 s: Right whips its chain around the rim of my shield and yanks, pulling the shield toward it; I lean back, shove hard, and as it staggers I slash up through its spine in a rising arc: skull, ribs and limbs scatter, and the chain slides off last and coils on the dirt. 12\u201315 s: I slow down, lower my sword and look down: no whole skeletons remain, only separate scattered bones, three skulls and a loose chain. Dust drifts down and settles; nothing moves; my breathing slows. Sound: claws scraping wood, a chain rattling, steel cracking bone, bones clattering onto dirt, my heavy breathing."
+      }
+    },
+    {
+      "id": 2005,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1643.516637586849,
+        691.0657990326151
+      ],
+      "size": [
+        400,
+        130
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Third Clip Action",
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            65
+          ]
+        }
+      ],
+      "title": "Clip 3 action",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "Separate scattered bones, three skulls and a loose rusted chain lie on the dirt in front of me. 0\u20133 s: The bones twitch, slowly at first and then faster, sliding toward each other; the skulls wobble, roll and click back into place, and three half-built ribcages lift unsteadily off the ground. 3\u20136 s: A trickle of dirt falls from above. I look up slowly: a giant spider-like creature clings upside down to the ceiling roots, drawing its legs in tight and lowering its body, gathering itself. 6\u20138 s: It lets go. I look down as it falls in a heavy arc and lands on the half-built skeletons; its body sinks low as its legs buckle under its weight, then pushes back up; bone fragments spray outward and keep bouncing after it lands, and dust rolls out in a wave. 8\u201313 s: It crawls toward me, slowly at first and then faster, its legs stepping one after another in a rippling wave, its body swaying side to side and its head arriving last, until its head fills the frame. 13\u201315 s: It pulls its head back and rears up high, holds for a beat, then shrieks with its mandibles spread wide; I raise my shield and point my sword at its eye. The creature looks like a real giant arachnid, taller than a horse: dull olive-brown chitin caked with dust and cobwebs, six long hairy jointed legs, two front legs ending in hooked claws, wet mandibles, and one single enormous eye in the center of its head that glows a dull ember red through the haze. No metal, no armor plates, no shine. Sound: bones rattling, dirt trickling, roots tearing, a heavy crunching impact, clacking legs, an ear-splitting insect shriek, a deep drone."
+      ],
+      "widgets_values_named": {
+        "value": "Separate scattered bones, three skulls and a loose rusted chain lie on the dirt in front of me. 0\u20133 s: The bones twitch, slowly at first and then faster, sliding toward each other; the skulls wobble, roll and click back into place, and three half-built ribcages lift unsteadily off the ground. 3\u20136 s: A trickle of dirt falls from above. I look up slowly: a giant spider-like creature clings upside down to the ceiling roots, drawing its legs in tight and lowering its body, gathering itself. 6\u20138 s: It lets go. I look down as it falls in a heavy arc and lands on the half-built skeletons; its body sinks low as its legs buckle under its weight, then pushes back up; bone fragments spray outward and keep bouncing after it lands, and dust rolls out in a wave. 8\u201313 s: It crawls toward me, slowly at first and then faster, its legs stepping one after another in a rippling wave, its body swaying side to side and its head arriving last, until its head fills the frame. 13\u201315 s: It pulls its head back and rears up high, holds for a beat, then shrieks with its mandibles spread wide; I raise my shield and point my sword at its eye. The creature looks like a real giant arachnid, taller than a horse: dull olive-brown chitin caked with dust and cobwebs, six long hairy jointed legs, two front legs ending in hooked claws, wet mandibles, and one single enormous eye in the center of its head that glows a dull ember red through the haze. No metal, no armor plates, no shine. Sound: bones rattling, dirt trickling, roots tearing, a heavy crunching impact, clacking legs, an ear-splitting insect shriek, a deep drone."
+      }
+    },
+    {
+      "id": 2011,
+      "type": "StringConcatenate",
+      "pos": [
+        -1207.5792709296343,
+        109.28237062321983
+      ],
+      "size": [
+        400,
+        166
+      ],
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 58
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 59
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            3783745238734730
+          ]
+        }
+      ],
+      "title": "Keyframe prompt",
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        "",
+        " "
+      ],
+      "widgets_values_named": {
+        "string_a": "",
+        "string_b": "",
+        "delimiter": " "
+      }
+    },
+    {
+      "id": 2012,
+      "type": "StringConcatenate",
+      "pos": [
+        -1213.516637586849,
+        371.0657990326166
+      ],
+      "size": [
+        400,
+        166
+      ],
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 60
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 61
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            79
+          ]
+        }
+      ],
+      "title": "Clip 1 prompt",
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        "",
+        " "
+      ],
+      "widgets_values_named": {
+        "string_a": "",
+        "string_b": "",
+        "delimiter": " "
+      }
+    },
+    {
+      "id": 2013,
+      "type": "StringConcatenate",
+      "pos": [
+        -1213.516637586849,
+        531.0657990326158
+      ],
+      "size": [
+        400,
+        166
+      ],
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 62
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 63
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            80
+          ]
+        }
+      ],
+      "title": "Clip 2 prompt",
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        "",
+        " "
+      ],
+      "widgets_values_named": {
+        "string_a": "",
+        "string_b": "",
+        "delimiter": " "
+      }
+    },
+    {
+      "id": 2014,
+      "type": "StringConcatenate",
+      "pos": [
+        -1213.516637586849,
+        691.0657990326151
+      ],
+      "size": [
+        400,
+        166
+      ],
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 64
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 65
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            81
+          ]
+        }
+      ],
+      "title": "Clip 3 prompt",
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        "",
+        " "
+      ],
+      "widgets_values_named": {
+        "string_a": "",
+        "string_b": "",
+        "delimiter": " "
+      }
+    },
+    {
+      "id": 2201,
+      "type": "ComfySwitchNode",
+      "pos": [
+        309.1902399370629,
+        205.32599805645722
+      ],
+      "size": [
+        360,
+        78
+      ],
+      "flags": {},
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "on_false",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 75
+        },
+        {
+          "name": "on_true",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": 3783745238734744
+        },
+        {
+          "label": "Generate Keyframe Image?",
+          "name": "switch",
+          "type": "BOOLEAN",
+          "widget": {
+            "name": "switch"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "IMAGE",
+          "links": [
+            3783745238734726,
+            3783745238734745
+          ]
+        }
+      ],
+      "title": "Generate keyframe with Nano Banana?",
+      "properties": {
+        "Node name for S&R": "ComfySwitchNode"
+      },
+      "widgets_values": [
+        true
+      ],
+      "widgets_values_named": {
+        "switch": true
+      }
+    },
+    {
+      "id": 2204,
+      "type": "Reroute",
+      "pos": [
+        452.6448997487856,
+        725.1874252746918
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 84
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "CLIP",
+          "links": [
+            85,
+            86,
+            87
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 2205,
+      "type": "Reroute",
+      "pos": [
+        456.1544309146695,
+        833.5934387187408
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 88
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "MODEL",
+          "links": [
+            89,
+            90,
+            91
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 2206,
+      "type": "Reroute",
+      "pos": [
+        458.1718887311241,
+        940.9412653758499
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 92
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "VAE",
+          "links": [
+            93,
+            94,
+            95,
+            96,
+            97,
+            98
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 2207,
+      "type": "Reroute",
+      "pos": [
+        459.9924081386691,
+        1646.0630137280339
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 99
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "VAE",
+          "links": [
+            100,
+            101,
+            102
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 2208,
+      "type": "Reroute",
+      "pos": [
+        453.10321375068395,
+        1062.2664412874542
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 103
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "SAMPLER",
+          "links": [
+            104,
+            105,
+            106
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 2209,
+      "type": "Reroute",
+      "pos": [
+        444.9565953700816,
+        1169.8015240069788
+      ],
+      "size": [
+        75,
+        26
+      ],
+      "flags": {},
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "",
+          "type": "*",
+          "link": 107
+        }
+      ],
+      "outputs": [
+        {
+          "name": "",
+          "type": "SIGMAS",
+          "links": [
+            108,
+            109,
+            110
+          ]
+        }
+      ],
+      "properties": {
+        "showOutputText": false,
+        "horizontal": false
+      }
+    },
+    {
+      "id": 910,
+      "type": "VideoTemporalCrop",
+      "pos": [
+        2670.537594940505,
+        283.6474143502125
+      ],
+      "size": [
+        300,
+        100
+      ],
+      "flags": {},
+      "order": 52,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 114
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": 3783745238734742
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "slot_index": 0,
+          "links": [
+            115
+          ]
+        }
+      ],
+      "title": "Clip 2: drop seam frame",
+      "properties": {
+        "Node name for S&R": "VideoTemporalCrop"
+      },
+      "widgets_values": [
+        1,
+        361
+      ],
+      "widgets_values_named": {
+        "start_frame": 1,
+        "length": 361
+      }
+    },
+    {
+      "id": 911,
+      "type": "VideoTemporalCrop",
+      "pos": [
+        2670.537594940505,
+        403.6474143502125
+      ],
+      "size": [
+        300,
+        100
+      ],
+      "flags": {},
+      "order": 58,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 116
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": 3783745238734743
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "slot_index": 0,
+          "links": [
+            117
+          ]
+        }
+      ],
+      "title": "Clip 3: drop seam frame",
+      "properties": {
+        "Node name for S&R": "VideoTemporalCrop"
+      },
+      "widgets_values": [
+        1,
+        361
+      ],
+      "widgets_values_named": {
+        "start_frame": 1,
+        "length": 361
+      }
+    },
+    {
+      "id": 2211,
+      "type": "Basic data handling: IntCreate",
+      "pos": [
+        406.6428759624326,
+        -247.61993300994223
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Width",
+          "name": "value",
+          "type": "*",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            3783745238734732,
+            3783745238734733,
+            3783745238734734
+          ]
+        }
+      ],
+      "title": "Width",
+      "properties": {
+        "Node name for S&R": "Basic data handling: IntCreate"
+      },
+      "widgets_values": [
+        "768"
+      ],
+      "widgets_values_named": {
+        "value": "768"
+      }
+    },
+    {
+      "id": 2212,
+      "type": "Basic data handling: IntCreate",
+      "pos": [
+        406.6428759624326,
+        -107.61993300994196
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Height",
+          "name": "value",
+          "type": "*",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            3783745238734735,
+            3783745238734736,
+            3783745238734737
+          ]
+        }
+      ],
+      "title": "Height",
+      "properties": {
+        "Node name for S&R": "Basic data handling: IntCreate"
+      },
+      "widgets_values": [
+        "1344"
+      ],
+      "widgets_values_named": {
+        "value": "1344"
+      }
+    },
+    {
+      "id": 2213,
+      "type": "Basic data handling: IntCreate",
+      "pos": [
+        396.6428759624317,
+        12.380066990058278
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Total Frames",
+          "name": "value",
+          "type": "*",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            3783745238734738,
+            3783745238734739,
+            3783745238734740,
+            3783745238734741
+          ]
+        }
+      ],
+      "title": "Length",
+      "properties": {
+        "Node name for S&R": "Basic data handling: IntCreate"
+      },
+      "widgets_values": [
+        "362"
+      ],
+      "widgets_values_named": {
+        "value": "362"
+      }
+    },
+    {
+      "id": 4452018332049327,
+      "type": "SaveImage",
+      "pos": [
+        -432.2094569338363,
+        215.7682987858597
+      ],
+      "size": [
+        369.5558024660948,
+        69.99318654057664
+      ],
+      "flags": {},
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 3783745238734745
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "title": "Save keyframe",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "dreams/keyframe"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "dreams/keyframe"
+      }
+    },
+    {
+      "id": 4452018332049330,
+      "type": "GeminiNanoBanana2V2",
+      "pos": [
+        -435.75914930924506,
+        -159.83012415971768
+      ],
+      "size": [
+        360.2096121901701,
+        262.002357126259
+      ],
+      "flags": {},
+      "order": 33,
+      "mode": 0,
+      "showAdvanced": false,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 3783745238734731
+        },
+        {
+          "name": "model.images.image_1",
+          "shape": 7,
+          "type": "IMAGE",
+          "link": null
+        },
+        {
+          "name": "model.files",
+          "shape": 7,
+          "type": "GEMINI_INPUT_FILES",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            3783745238734744
+          ]
+        },
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": []
+        },
+        {
+          "name": "thought_image",
+          "type": "IMAGE",
+          "links": []
+        }
+      ],
+      "title": "Keyframe: Nano Banana 2.1",
+      "properties": {
+        "Node name for S&R": "GeminiNanoBanana2V2"
+      },
+      "widgets_values": [
+        "",
+        "Gemini Nano Banana 2.1",
+        "9:16",
+        "1K",
+        "MEDIUM",
+        42,
+        "fixed",
+        "IMAGE",
+        "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input\u2014regardless of format, intent, or abstraction\u2014as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+        1,
+        0.95
+      ],
+      "widgets_values_named": {
+        "prompt": "",
+        "model": "Gemini Nano Banana 2.1",
+        "model.aspect_ratio": "9:16",
+        "model.resolution": "1K",
+        "model.thinking_level": "MEDIUM",
+        "seed": 42,
+        "control_after_generate": "fixed",
+        "response_modalities": "IMAGE",
+        "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input\u2014regardless of format, intent, or abstraction\u2014as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+        "temperature": 1,
+        "top_p": 0.95
+      },
+      "color": "#432",
+      "bgcolor": "#653"
+    },
+    {
+      "id": 4452018332049331,
+      "type": "PrimitiveStringMultiline",
+      "pos": [
+        -1648.2223993504122,
+        857.6471710032387
+      ],
+      "size": [
+        400,
+        150
+      ],
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "Avoid (keyframe image only)",
+          "name": "value",
+          "type": "STRING",
+          "widget": {
+            "name": "value"
+          },
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            3783745238734729
+          ]
+        }
+      ],
+      "title": "Avoid (keyframe image only)",
+      "properties": {
+        "Node name for S&R": "PrimitiveStringMultiline"
+      },
+      "widgets_values": [
+        "Avoid: cartoon, anime, illustration, painting, 3D render, CGI look, video game graphics, toy, plastic, claymation, chibi or bobblehead proportions, oversized heads, cute faces, glossy surfaces, HDR, crisp digital sharpness, high contrast, crushed pure-black shadows, modern teal-and-orange grade, saturated orange fire, extra hands, two swords."
+      ],
+      "widgets_values_named": {
+        "value": "Avoid: cartoon, anime, illustration, painting, 3D render, CGI look, video game graphics, toy, plastic, claymation, chibi or bobblehead proportions, oversized heads, cute faces, glossy surfaces, HDR, crisp digital sharpness, high contrast, crushed pure-black shadows, modern teal-and-orange grade, saturated orange fire, extra hands, two swords."
+      }
+    },
+    {
+      "id": 4452018332049332,
+      "type": "StringConcatenate",
+      "pos": [
+        -1210.2505207548782,
+        900.9168485932298
+      ],
+      "size": [
+        400,
+        166
+      ],
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "string_a",
+          "type": "STRING",
+          "widget": {
+            "name": "string_a"
+          },
+          "link": 3783745238734730
+        },
+        {
+          "name": "string_b",
+          "type": "STRING",
+          "widget": {
+            "name": "string_b"
+          },
+          "link": 3783745238734729
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            3783745238734731
+          ]
+        }
+      ],
+      "title": "Keyframe prompt + Avoid",
+      "properties": {
+        "Node name for S&R": "StringConcatenate"
+      },
+      "widgets_values": [
+        "",
+        "",
+        " "
+      ],
+      "widgets_values_named": {
+        "string_a": "",
+        "string_b": "",
+        "delimiter": " "
+      }
+    },
+    {
+      "id": 4452018332049333,
+      "type": "ComfyMathExpression",
+      "pos": [
+        2092.372714624279,
+        9.967232467733282
+      ],
+      "size": [
+        362.03305241175224,
+        141.99350640054845
+      ],
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "values.a",
+          "type": "FLOAT,INT,BOOLEAN",
+          "link": 3783745238734741
+        },
+        {
+          "name": "values.b",
+          "shape": 7,
+          "type": "FLOAT,INT,BOOLEAN",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            3783745238734742,
+            3783745238734743
+          ]
+        },
+        {
+          "name": "BOOL",
+          "type": "BOOLEAN",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ComfyMathExpression"
+      },
+      "widgets_values": [
+        "a - 1"
+      ],
+      "widgets_values_named": {
+        "expression": "a - 1"
+      }
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "MODEL"
+    ],
+    [
+      2,
+      2,
+      0,
+      7,
+      0,
+      "MODEL"
+    ],
+    [
+      7,
+      101,
+      0,
+      103,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      8,
+      102,
+      0,
+      104,
+      0,
+      "NOISE"
+    ],
+    [
+      9,
+      103,
+      0,
+      104,
+      1,
+      "GUIDER"
+    ],
+    [
+      12,
+      101,
+      1,
+      104,
+      4,
+      "LATENT"
+    ],
+    [
+      13,
+      104,
+      0,
+      105,
+      0,
+      "LATENT"
+    ],
+    [
+      15,
+      104,
+      0,
+      106,
+      0,
+      "LATENT"
+    ],
+    [
+      17,
+      105,
+      0,
+      107,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      201,
+      0,
+      203,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      25,
+      202,
+      0,
+      204,
+      0,
+      "NOISE"
+    ],
+    [
+      26,
+      203,
+      0,
+      204,
+      1,
+      "GUIDER"
+    ],
+    [
+      29,
+      201,
+      1,
+      204,
+      4,
+      "LATENT"
+    ],
+    [
+      30,
+      204,
+      0,
+      205,
+      0,
+      "LATENT"
+    ],
+    [
+      32,
+      204,
+      0,
+      206,
+      0,
+      "LATENT"
+    ],
+    [
+      34,
+      205,
+      0,
+      207,
+      0,
+      "IMAGE"
+    ],
+    [
+      41,
+      301,
+      0,
+      303,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      42,
+      302,
+      0,
+      304,
+      0,
+      "NOISE"
+    ],
+    [
+      43,
+      303,
+      0,
+      304,
+      1,
+      "GUIDER"
+    ],
+    [
+      46,
+      301,
+      1,
+      304,
+      4,
+      "LATENT"
+    ],
+    [
+      47,
+      304,
+      0,
+      305,
+      0,
+      "LATENT"
+    ],
+    [
+      49,
+      304,
+      0,
+      306,
+      0,
+      "LATENT"
+    ],
+    [
+      51,
+      305,
+      0,
+      307,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      106,
+      0,
+      107,
+      1,
+      "AUDIO"
+    ],
+    [
+      22,
+      108,
+      0,
+      201,
+      2,
+      "IMAGE"
+    ],
+    [
+      35,
+      206,
+      0,
+      207,
+      1,
+      "AUDIO"
+    ],
+    [
+      39,
+      208,
+      0,
+      301,
+      2,
+      "IMAGE"
+    ],
+    [
+      52,
+      306,
+      0,
+      307,
+      1,
+      "AUDIO"
+    ],
+    [
+      58,
+      2001,
+      0,
+      2011,
+      0,
+      "STRING"
+    ],
+    [
+      59,
+      2002,
+      0,
+      2011,
+      1,
+      "STRING"
+    ],
+    [
+      60,
+      2001,
+      0,
+      2012,
+      0,
+      "STRING"
+    ],
+    [
+      61,
+      2003,
+      0,
+      2012,
+      1,
+      "STRING"
+    ],
+    [
+      62,
+      2001,
+      0,
+      2013,
+      0,
+      "STRING"
+    ],
+    [
+      63,
+      2004,
+      0,
+      2013,
+      1,
+      "STRING"
+    ],
+    [
+      64,
+      2001,
+      0,
+      2014,
+      0,
+      "STRING"
+    ],
+    [
+      65,
+      2005,
+      0,
+      2014,
+      1,
+      "STRING"
+    ],
+    [
+      79,
+      2012,
+      0,
+      101,
+      4,
+      "STRING"
+    ],
+    [
+      80,
+      2013,
+      0,
+      201,
+      4,
+      "STRING"
+    ],
+    [
+      81,
+      2014,
+      0,
+      301,
+      4,
+      "STRING"
+    ],
+    [
+      75,
+      8,
+      0,
+      2201,
+      0,
+      "IMAGE"
+    ],
+    [
+      84,
+      3,
+      0,
+      2204,
+      0,
+      "CLIP"
+    ],
+    [
+      85,
+      2204,
+      0,
+      101,
+      0,
+      "CLIP"
+    ],
+    [
+      86,
+      2204,
+      0,
+      201,
+      0,
+      "CLIP"
+    ],
+    [
+      87,
+      2204,
+      0,
+      301,
+      0,
+      "CLIP"
+    ],
+    [
+      88,
+      2,
+      0,
+      2205,
+      0,
+      "MODEL"
+    ],
+    [
+      89,
+      2205,
+      0,
+      103,
+      0,
+      "MODEL"
+    ],
+    [
+      90,
+      2205,
+      0,
+      203,
+      0,
+      "MODEL"
+    ],
+    [
+      91,
+      2205,
+      0,
+      303,
+      0,
+      "MODEL"
+    ],
+    [
+      92,
+      4,
+      0,
+      2206,
+      0,
+      "VAE"
+    ],
+    [
+      93,
+      2206,
+      0,
+      101,
+      1,
+      "VAE"
+    ],
+    [
+      94,
+      2206,
+      0,
+      105,
+      1,
+      "VAE"
+    ],
+    [
+      95,
+      2206,
+      0,
+      201,
+      1,
+      "VAE"
+    ],
+    [
+      96,
+      2206,
+      0,
+      205,
+      1,
+      "VAE"
+    ],
+    [
+      97,
+      2206,
+      0,
+      301,
+      1,
+      "VAE"
+    ],
+    [
+      98,
+      2206,
+      0,
+      305,
+      1,
+      "VAE"
+    ],
+    [
+      99,
+      5,
+      0,
+      2207,
+      0,
+      "VAE"
+    ],
+    [
+      100,
+      2207,
+      0,
+      106,
+      1,
+      "VAE"
+    ],
+    [
+      101,
+      2207,
+      0,
+      206,
+      1,
+      "VAE"
+    ],
+    [
+      102,
+      2207,
+      0,
+      306,
+      1,
+      "VAE"
+    ],
+    [
+      103,
+      6,
+      0,
+      2208,
+      0,
+      "SAMPLER"
+    ],
+    [
+      104,
+      2208,
+      0,
+      104,
+      2,
+      "SAMPLER"
+    ],
+    [
+      105,
+      2208,
+      0,
+      204,
+      2,
+      "SAMPLER"
+    ],
+    [
+      106,
+      2208,
+      0,
+      304,
+      2,
+      "SAMPLER"
+    ],
+    [
+      107,
+      7,
+      0,
+      2209,
+      0,
+      "SIGMAS"
+    ],
+    [
+      108,
+      2209,
+      0,
+      104,
+      3,
+      "SIGMAS"
+    ],
+    [
+      109,
+      2209,
+      0,
+      204,
+      3,
+      "SIGMAS"
+    ],
+    [
+      110,
+      2209,
+      0,
+      304,
+      3,
+      "SIGMAS"
+    ],
+    [
+      111,
+      105,
+      0,
+      108,
+      0,
+      "IMAGE"
+    ],
+    [
+      112,
+      205,
+      0,
+      208,
+      0,
+      "IMAGE"
+    ],
+    [
+      114,
+      207,
+      0,
+      910,
+      0,
+      "VIDEO"
+    ],
+    [
+      116,
+      307,
+      0,
+      911,
+      0,
+      "VIDEO"
+    ],
+    [
+      3783745238734726,
+      2201,
+      0,
+      101,
+      2,
+      "IMAGE"
+    ],
+    [
+      3783745238734729,
+      4452018332049331,
+      0,
+      4452018332049332,
+      1,
+      "STRING"
+    ],
+    [
+      3783745238734730,
+      2011,
+      0,
+      4452018332049332,
+      0,
+      "STRING"
+    ],
+    [
+      3783745238734732,
+      2211,
+      0,
+      101,
+      5,
+      "INT"
+    ],
+    [
+      3783745238734733,
+      2211,
+      0,
+      201,
+      5,
+      "INT"
+    ],
+    [
+      3783745238734734,
+      2211,
+      0,
+      301,
+      5,
+      "INT"
+    ],
+    [
+      3783745238734735,
+      2212,
+      0,
+      101,
+      6,
+      "INT"
+    ],
+    [
+      3783745238734736,
+      2212,
+      0,
+      201,
+      6,
+      "INT"
+    ],
+    [
+      3783745238734737,
+      2212,
+      0,
+      301,
+      6,
+      "INT"
+    ],
+    [
+      3783745238734738,
+      2213,
+      0,
+      101,
+      7,
+      "INT"
+    ],
+    [
+      3783745238734739,
+      2213,
+      0,
+      201,
+      7,
+      "INT"
+    ],
+    [
+      3783745238734740,
+      2213,
+      0,
+      301,
+      7,
+      "INT"
+    ],
+    [
+      56,
+      900,
+      0,
+      901,
+      0,
+      "VIDEO"
+    ],
+    [
+      3783745238734731,
+      4452018332049332,
+      0,
+      4452018332049330,
+      0,
+      "STRING"
+    ],
+    [
+      3783745238734741,
+      2213,
+      0,
+      4452018332049333,
+      0,
+      "INT"
+    ],
+    [
+      113,
+      107,
+      0,
+      900,
+      0,
+      "VIDEO"
+    ],
+    [
+      115,
+      910,
+      0,
+      900,
+      1,
+      "VIDEO"
+    ],
+    [
+      117,
+      911,
+      0,
+      900,
+      2,
+      "VIDEO"
+    ],
+    [
+      3783745238734742,
+      4452018332049333,
+      1,
+      910,
+      1,
+      "INT"
+    ],
+    [
+      3783745238734743,
+      4452018332049333,
+      1,
+      911,
+      1,
+      "INT"
+    ],
+    [
+      3783745238734744,
+      4452018332049330,
+      0,
+      2201,
+      1,
+      "IMAGE"
+    ],
+    [
+      3783745238734745,
+      2201,
+      0,
+      4452018332049327,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "H3 Video Models",
+      "bounding": [
+        -219.60884025090212,
+        579.5426236222512,
+        434.5215461355201,
+        1457.0335350836242
+      ],
+      "color": "#8A8A8A",
+      "flags": {}
+    },
+    {
+      "id": 2,
+      "title": "Keyframe: Provided",
+      "bounding": [
+        -444.6930419300814,
+        -640.36227517377,
+        402.54458571023497,
+        404.0583663736582
+      ],
+      "color": "#8A8A8A",
+      "flags": {}
+    },
+    {
+      "id": 3,
+      "title": "Clip 1",
+      "bounding": [
+        900,
+        210,
+        429.1800366321181,
+        2020.380324480226
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 4,
+      "title": "Clip 2",
+      "bounding": [
+        1489.8290039123642,
+        208.87105213989247,
+        398.30657820983856,
+        2020.9970472368632
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 5,
+      "title": "Clip 3",
+      "bounding": [
+        2090.947486425804,
+        214.51579144043006,
+        427.6794307393302,
+        1801.6526441934461
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 6,
+      "title": "Stitch",
+      "bounding": [
+        3239.7823194458497,
+        212.72982391618177,
+        405.7353547187863,
+        663.6301308974425
+      ],
+      "color": "#8A8A8A",
+      "flags": {}
+    },
+    {
+      "id": 7,
+      "title": "Prompts (edit the Style box once; actions per clip)",
+      "bounding": [
+        -1663.5166375868484,
+        -68.93420096738417,
+        897.0947486425805,
+        1179.176415601827
+      ],
+      "color": "#b58b2a",
+      "flags": {}
+    },
+    {
+      "id": 9,
+      "title": "Generate Image Toggle (muted)",
+      "bounding": [
+        292.3447959006247,
+        130.0409544252571,
+        406.9117396977729,
+        186.65891897690017
+      ],
+      "color": "#a1309b",
+      "flags": {}
+    },
+    {
+      "id": 10,
+      "title": "Video settings",
+      "bounding": [
+        386.6428759624317,
+        -317.61993300994135,
+        300,
+        434
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 11,
+      "title": "Remove Last Frame before Stitching",
+      "bounding": [
+        2660.537594940505,
+        213.64741435021256,
+        378.8829751128724,
+        356.0790239170211
+      ],
+      "color": "#3f789e",
+      "flags": {}
+    },
+    {
+      "id": 12,
+      "title": "Generate Keyframe Reference with Nano Banana",
+      "bounding": [
+        -445.759149309245,
+        -229.8301241597177,
+        508.2581765724704,
+        545.9126709680895
+      ],
+      "color": "#8A8",
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7320500000000228,
+      "offset": [
+        893.1380812986673,
+        636.7076091165986
+      ]
+    },
+    "linearData": {
+      "inputs": [
+        [
+          "4c7d2a10-5e21-4b8a-9f3e-21a0d2b1c023:2001:value",
+          "value"
+        ],
+        [
+          "4c7d2a10-5e21-4b8a-9f3e-21a0d2b1c023:2201:switch",
+          "switch"
+        ],
+        [
+          "4c7d2a10-5e21-4b8a-9f3e-21a0d2b1c023:2002:value",
+          "value"
+        ],
+        [
+          "4c7d2a10-5e21-4b8a-9f3e-21a0d2b1c023:4452018332049331:value",
+          "value"
+        ],
+        [
+          "4c7d2a10-5e21-4b8a-9f3e-21a0d2b1c023:8:image",
+          "image"
+        ],
+        [
+          "4c7d2a10-5e21-4b8a-9f3e-21a0d2b1c023:2211:value",
+          "value"
+        ],
+        [
+          "4c7d2a10-5e21-4b8a-9f3e-21a0d2b1c023:2212:value",
+          "value"
+        ],
+        [
+          "4c7d2a10-5e21-4b8a-9f3e-21a0d2b1c023:2213:value",
+          "value",
+          {
+            "description": "24 frames per second + 1 end frame. For one second of film, it would be 24 + 1 = 25"
+          }
+        ],
+        [
+          "4c7d2a10-5e21-4b8a-9f3e-21a0d2b1c023:2003:value",
+          "value",
+          {
+            "description": "Describe the Action to be done in the first 30 seconds"
+          }
+        ],
+        [
+          "4c7d2a10-5e21-4b8a-9f3e-21a0d2b1c023:2004:value",
+          "value"
+        ],
+        [
+          "4c7d2a10-5e21-4b8a-9f3e-21a0d2b1c023:2005:value",
+          "value"
+        ]
+      ],
+      "outputs": [
+        "4452018332049329",
+        "901"
+      ]
+    },
+    "frontendVersion": "1.56.3",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}

@@ -1,0 +1,840 @@
+{
+ "1": {
+  "inputs": {
+   "unet_name": "minimax_h3_fl2va_pruned_int8_convrot.safetensors",
+   "weight_dtype": "default"
+  },
+  "class_type": "UNETLoader",
+  "_meta": {
+   "title": "H3 FL2VA pruned int8"
+  }
+ },
+ "2": {
+  "inputs": {
+   "lora_name": "minimax_h3_fl2v_turbo_4step_v1.0_768p_comfyui_bf16.safetensors",
+   "strength_model": 1,
+   "model": [
+    "1",
+    0
+   ]
+  },
+  "class_type": "LoraLoaderModelOnly",
+  "_meta": {
+   "title": "4-step turbo LoRA"
+  }
+ },
+ "3": {
+  "inputs": {
+   "clip_name": "qwen3vl_32b_minimax_h3_int8_convrot.safetensors",
+   "type": "minimax",
+   "device": "default"
+  },
+  "class_type": "CLIPLoader",
+  "_meta": {
+   "title": "Qwen3-VL 32B text encoder (int8)"
+  }
+ },
+ "4": {
+  "inputs": {
+   "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
+  },
+  "class_type": "VAELoader",
+  "_meta": {
+   "title": "H3 video VAE"
+  }
+ },
+ "5": {
+  "inputs": {
+   "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+  },
+  "class_type": "VAELoader",
+  "_meta": {
+   "title": "H3 audio VAE"
+  }
+ },
+ "6": {
+  "inputs": {
+   "sampler_name": "res_multistep"
+  },
+  "class_type": "KSamplerSelect",
+  "_meta": {
+   "title": "KSamplerSelect"
+  }
+ },
+ "7": {
+  "inputs": {
+   "scheduler": "simple",
+   "steps": 4,
+   "denoise": 1,
+   "model": [
+    "2",
+    0
+   ]
+  },
+  "class_type": "BasicScheduler",
+  "_meta": {
+   "title": "4 steps (turbo)"
+  }
+ },
+ "8": {
+  "inputs": {
+   "image": "4f9802c96f741ef8fceea7135cc0d7eea3398052dd46d2f8ce92647586bf545e.png"
+  },
+  "class_type": "LoadImage",
+  "_meta": {
+   "title": "Keyframe (Nano Banana, run 5)"
+  }
+ },
+ "101": {
+  "inputs": {
+   "prompt": [
+    "2012",
+    0
+   ],
+   "width": [
+    "2211",
+    0
+   ],
+   "height": [
+    "2212",
+    0
+   ],
+   "length": [
+    "2213",
+    0
+   ],
+   "clip": [
+    "3",
+    0
+   ],
+   "vae": [
+    "4",
+    0
+   ],
+   "first_frame": [
+    "2201",
+    0
+   ]
+  },
+  "class_type": "MiniMaxH3ImageToVideo",
+  "_meta": {
+   "title": "Clip 1: image to video"
+  }
+ },
+ "102": {
+  "inputs": {
+   "noise_seed": 43
+  },
+  "class_type": "RandomNoise",
+  "_meta": {
+   "title": "RandomNoise"
+  }
+ },
+ "103": {
+  "inputs": {
+   "model": [
+    "2",
+    0
+   ],
+   "conditioning": [
+    "101",
+    0
+   ]
+  },
+  "class_type": "BasicGuider",
+  "_meta": {
+   "title": "Basic Guider"
+  }
+ },
+ "104": {
+  "inputs": {
+   "noise": [
+    "102",
+    0
+   ],
+   "guider": [
+    "103",
+    0
+   ],
+   "sampler": [
+    "6",
+    0
+   ],
+   "sigmas": [
+    "7",
+    0
+   ],
+   "latent_image": [
+    "101",
+    1
+   ]
+  },
+  "class_type": "SamplerCustomAdvanced",
+  "_meta": {
+   "title": "SamplerCustomAdvanced"
+  }
+ },
+ "105": {
+  "inputs": {
+   "samples": [
+    "104",
+    0
+   ],
+   "vae": [
+    "4",
+    0
+   ]
+  },
+  "class_type": "VAEDecode",
+  "_meta": {
+   "title": "VAE Decode"
+  }
+ },
+ "106": {
+  "inputs": {
+   "samples": [
+    "104",
+    0
+   ],
+   "vae": [
+    "5",
+    0
+   ]
+  },
+  "class_type": "VAEDecodeAudio",
+  "_meta": {
+   "title": "VAE Decode Audio"
+  }
+ },
+ "107": {
+  "inputs": {
+   "fps": 24,
+   "bit_depth": 8,
+   "color_space": "sRGB",
+   "codec": "none",
+   "images": [
+    "105",
+    0
+   ],
+   "audio": [
+    "106",
+    0
+   ]
+  },
+  "class_type": "CreateVideo",
+  "_meta": {
+   "title": "Create Video"
+  }
+ },
+ "108": {
+  "inputs": {
+   "batch_index": -1,
+   "length": 1,
+   "image": [
+    "105",
+    0
+   ]
+  },
+  "class_type": "ImageFromBatch",
+  "_meta": {
+   "title": "Last frame"
+  }
+ },
+ "201": {
+  "inputs": {
+   "prompt": [
+    "2013",
+    0
+   ],
+   "width": [
+    "2211",
+    0
+   ],
+   "height": [
+    "2212",
+    0
+   ],
+   "length": [
+    "2213",
+    0
+   ],
+   "clip": [
+    "3",
+    0
+   ],
+   "vae": [
+    "4",
+    0
+   ],
+   "first_frame": [
+    "108",
+    0
+   ]
+  },
+  "class_type": "MiniMaxH3ImageToVideo",
+  "_meta": {
+   "title": "Clip 2: image to video"
+  }
+ },
+ "202": {
+  "inputs": {
+   "noise_seed": 44
+  },
+  "class_type": "RandomNoise",
+  "_meta": {
+   "title": "RandomNoise"
+  }
+ },
+ "203": {
+  "inputs": {
+   "model": [
+    "2",
+    0
+   ],
+   "conditioning": [
+    "201",
+    0
+   ]
+  },
+  "class_type": "BasicGuider",
+  "_meta": {
+   "title": "Basic Guider"
+  }
+ },
+ "204": {
+  "inputs": {
+   "noise": [
+    "202",
+    0
+   ],
+   "guider": [
+    "203",
+    0
+   ],
+   "sampler": [
+    "6",
+    0
+   ],
+   "sigmas": [
+    "7",
+    0
+   ],
+   "latent_image": [
+    "201",
+    1
+   ]
+  },
+  "class_type": "SamplerCustomAdvanced",
+  "_meta": {
+   "title": "SamplerCustomAdvanced"
+  }
+ },
+ "205": {
+  "inputs": {
+   "samples": [
+    "204",
+    0
+   ],
+   "vae": [
+    "4",
+    0
+   ]
+  },
+  "class_type": "VAEDecode",
+  "_meta": {
+   "title": "VAE Decode"
+  }
+ },
+ "206": {
+  "inputs": {
+   "samples": [
+    "204",
+    0
+   ],
+   "vae": [
+    "5",
+    0
+   ]
+  },
+  "class_type": "VAEDecodeAudio",
+  "_meta": {
+   "title": "VAE Decode Audio"
+  }
+ },
+ "207": {
+  "inputs": {
+   "fps": 24,
+   "bit_depth": 8,
+   "color_space": "sRGB",
+   "codec": "none",
+   "images": [
+    "205",
+    0
+   ],
+   "audio": [
+    "206",
+    0
+   ]
+  },
+  "class_type": "CreateVideo",
+  "_meta": {
+   "title": "Create Video"
+  }
+ },
+ "208": {
+  "inputs": {
+   "batch_index": -1,
+   "length": 1,
+   "image": [
+    "205",
+    0
+   ]
+  },
+  "class_type": "ImageFromBatch",
+  "_meta": {
+   "title": "Last frame"
+  }
+ },
+ "301": {
+  "inputs": {
+   "prompt": [
+    "2014",
+    0
+   ],
+   "width": [
+    "2211",
+    0
+   ],
+   "height": [
+    "2212",
+    0
+   ],
+   "length": [
+    "2213",
+    0
+   ],
+   "clip": [
+    "3",
+    0
+   ],
+   "vae": [
+    "4",
+    0
+   ],
+   "first_frame": [
+    "208",
+    0
+   ]
+  },
+  "class_type": "MiniMaxH3ImageToVideo",
+  "_meta": {
+   "title": "Clip 3: image to video"
+  }
+ },
+ "302": {
+  "inputs": {
+   "noise_seed": 45
+  },
+  "class_type": "RandomNoise",
+  "_meta": {
+   "title": "RandomNoise"
+  }
+ },
+ "303": {
+  "inputs": {
+   "model": [
+    "2",
+    0
+   ],
+   "conditioning": [
+    "301",
+    0
+   ]
+  },
+  "class_type": "BasicGuider",
+  "_meta": {
+   "title": "Basic Guider"
+  }
+ },
+ "304": {
+  "inputs": {
+   "noise": [
+    "302",
+    0
+   ],
+   "guider": [
+    "303",
+    0
+   ],
+   "sampler": [
+    "6",
+    0
+   ],
+   "sigmas": [
+    "7",
+    0
+   ],
+   "latent_image": [
+    "301",
+    1
+   ]
+  },
+  "class_type": "SamplerCustomAdvanced",
+  "_meta": {
+   "title": "SamplerCustomAdvanced"
+  }
+ },
+ "305": {
+  "inputs": {
+   "samples": [
+    "304",
+    0
+   ],
+   "vae": [
+    "4",
+    0
+   ]
+  },
+  "class_type": "VAEDecode",
+  "_meta": {
+   "title": "VAE Decode"
+  }
+ },
+ "306": {
+  "inputs": {
+   "samples": [
+    "304",
+    0
+   ],
+   "vae": [
+    "5",
+    0
+   ]
+  },
+  "class_type": "VAEDecodeAudio",
+  "_meta": {
+   "title": "VAE Decode Audio"
+  }
+ },
+ "307": {
+  "inputs": {
+   "fps": 24,
+   "bit_depth": 8,
+   "color_space": "sRGB",
+   "codec": "none",
+   "images": [
+    "305",
+    0
+   ],
+   "audio": [
+    "306",
+    0
+   ]
+  },
+  "class_type": "CreateVideo",
+  "_meta": {
+   "title": "Create Video"
+  }
+ },
+ "900": {
+  "inputs": {
+   "codec": "auto",
+   "videos.video0": [
+    "107",
+    0
+   ],
+   "videos.video1": [
+    "910",
+    0
+   ],
+   "videos.video2": [
+    "911",
+    0
+   ]
+  },
+  "class_type": "ConcatenateVideo",
+  "_meta": {
+   "title": "Stitch clips"
+  }
+ },
+ "901": {
+  "inputs": {
+   "filename_prefix": "dreams/film",
+   "format": "auto",
+   "format.codec": "auto",
+   "codec": "auto",
+   "video": [
+    "900",
+    0
+   ]
+  },
+  "class_type": "SaveVideo",
+  "_meta": {
+   "title": "Save Video"
+  }
+ },
+ "910": {
+  "inputs": {
+   "start_frame": 1,
+   "length": [
+    "4452018332049333",
+    1
+   ],
+   "video": [
+    "207",
+    0
+   ]
+  },
+  "class_type": "VideoTemporalCrop",
+  "_meta": {
+   "title": "Clip 2: drop seam frame"
+  }
+ },
+ "911": {
+  "inputs": {
+   "start_frame": 1,
+   "length": [
+    "4452018332049333",
+    1
+   ],
+   "video": [
+    "307",
+    0
+   ]
+  },
+  "class_type": "VideoTemporalCrop",
+  "_meta": {
+   "title": "Clip 3: drop seam frame"
+  }
+ },
+ "2001": {
+  "inputs": {
+   "value": "First-person POV, one single continuous handheld take with no cuts; the camera is my own eyes and I am alone. In the lower frame I always see exactly two hands: my left hand, in a brown leather gauntlet, holds one short steel sword; my right forearm carries a round wooden shield with a red spiral emblem. There is only one sword, and the shield never leaves my right arm. The skeletons always look the same: adult-sized human skeletons with normal anatomical proportions, weathered brown-stained bone, cracked skulls with faint red embers deep in the eye sockets, scraps of rotted cloth and dirt clinging to them. A still from a 1980s live-action fantasy film in the style of Legend, Willow and Dragonslayer, shot on Kodak 35mm film stock with practical sets and real physical materials: wet root, packed earth, old bone, rusted iron. Color grade: muted, slightly faded colors; cool steel-blue haze and smoke filling the air; soft warm amber torchlight that glows rather than burns; lifted milky blacks, low contrast; diffusion filter bloom and halation around every light; soft focus falloff; visible film grain. Grim and ominous."
+  },
+  "class_type": "PrimitiveStringMultiline",
+  "_meta": {
+   "title": "Style (shared by every prompt)"
+  }
+ },
+ "2002": {
+  "inputs": {
+   "value": "A deep underground cavern beneath an ancient giant tree. Thick twisted roots form the walls and ceiling, hung with cobwebs and patches of faintly glowing green moss. Torches burn in iron brackets on the roots. The dirt floor in front of me is cracked open, and a bony skeletal hand is clawing up out of the earth. My sword is held forward in my left hand, my shield raised on my right arm."
+  },
+  "class_type": "PrimitiveStringMultiline",
+  "_meta": {
+   "title": "Keyframe scene"
+  }
+ },
+ "2003": {
+  "inputs": {
+   "value": "There are exactly three skeletons, and the cavern behind them stays empty; no other skeletons ever appear. Each has its own silhouette: Left is short and hunched with a dangling lower jaw; Center is the tallest, with a cracked skull; Right drags a rusted iron shackle and chain from one wrist. The motion is slow and heavy, one action at a time. 0–3 s: The dirt in front of me bulges and trembles before it breaks; Left's bony hand bursts up, fingers curling, then the arm drags its skull and shoulders free as soil slides off in clumps. 3–6 s: The floor bulges again; Center pushes up in one long rising arc, its head coming up last, then pauses and sways while Left keeps shaking dirt from its ribs. 6–9 s: Right claws its way out, its chain uncoiling from the dirt a beat after its arm and clattering behind it. 9–13 s: All three straighten, their heads snapping toward me a beat after their bodies turn; they lurch forward in slow staggering steps, arms swinging loosely behind each step, while I ease backward with my sword and shield rising. 13–15 s: They stop close in front of me and hold, swaying, Left's jaw rattling, Right's chain still swinging to a stop. Only these three skeletons, with the empty cavern behind them. Sound: earth cracking, bones scraping, a chain dragging, low hollow moaning, my breathing, torches crackling."
+  },
+  "class_type": "PrimitiveStringMultiline",
+  "_meta": {
+   "title": "Clip 1 action"
+  }
+ },
+ "2004": {
+  "inputs": {
+   "value": "Exactly three skeletons stand in front of me: Left, short and hunched with a dangling jaw; Center, the tallest, with a cracked skull; Right, with a rusted shackle and chain on one wrist. No other skeletons. Only one attacks at a time while the other two hold back, swaying. 0–4 s: Center rears back with its arms raised high over its head, hangs there for a beat, then slams its claws down onto my shield, jolting it. I draw my sword far back, pause, then swing it forward in a wide flat arc through its ribs: its skull flies off in a high arc and bounces away, its ribcage bursts apart, and its arm and leg bones fall a split second later, scattering across the dirt. 4–8 s: Left crouches low, coils, then springs at my head; I drop behind my shield, then chop down in a steep arc, and it breaks apart at every joint, its jaw flying loose last, the bones bouncing and settling into a pile at my feet. 8–12 s: Right whips its chain around the rim of my shield and yanks, pulling the shield toward it; I lean back, shove hard, and as it staggers I slash up through its spine in a rising arc: skull, ribs and limbs scatter, and the chain slides off last and coils on the dirt. 12–15 s: I slow down, lower my sword and look down: no whole skeletons remain, only separate scattered bones, three skulls and a loose chain. Dust drifts down and settles; nothing moves; my breathing slows. Sound: claws scraping wood, a chain rattling, steel cracking bone, bones clattering onto dirt, my heavy breathing."
+  },
+  "class_type": "PrimitiveStringMultiline",
+  "_meta": {
+   "title": "Clip 2 action"
+  }
+ },
+ "2005": {
+  "inputs": {
+   "value": "Separate scattered bones, three skulls and a loose rusted chain lie on the dirt in front of me. 0–3 s: The bones twitch, slowly at first and then faster, sliding toward each other; the skulls wobble, roll and click back into place, and three half-built ribcages lift unsteadily off the ground. 3–6 s: A trickle of dirt falls from above. I look up slowly: a giant spider-like creature clings upside down to the ceiling roots, drawing its legs in tight and lowering its body, gathering itself. 6–8 s: It lets go. I look down as it falls in a heavy arc and lands on the half-built skeletons; its body sinks low as its legs buckle under its weight, then pushes back up; bone fragments spray outward and keep bouncing after it lands, and dust rolls out in a wave. 8–13 s: It crawls toward me, slowly at first and then faster, its legs stepping one after another in a rippling wave, its body swaying side to side and its head arriving last, until its head fills the frame. 13–15 s: It pulls its head back and rears up high, holds for a beat, then shrieks with its mandibles spread wide; I raise my shield and point my sword at its eye. The creature looks like a real giant arachnid, taller than a horse: dull olive-brown chitin caked with dust and cobwebs, six long hairy jointed legs, two front legs ending in hooked claws, wet mandibles, and one single enormous eye in the center of its head that glows a dull ember red through the haze. No metal, no armor plates, no shine. Sound: bones rattling, dirt trickling, roots tearing, a heavy crunching impact, clacking legs, an ear-splitting insect shriek, a deep drone."
+  },
+  "class_type": "PrimitiveStringMultiline",
+  "_meta": {
+   "title": "Clip 3 action"
+  }
+ },
+ "2011": {
+  "inputs": {
+   "string_a": [
+    "2001",
+    0
+   ],
+   "string_b": [
+    "2002",
+    0
+   ],
+   "delimiter": " "
+  },
+  "class_type": "StringConcatenate",
+  "_meta": {
+   "title": "Keyframe prompt"
+  }
+ },
+ "2012": {
+  "inputs": {
+   "string_a": [
+    "2001",
+    0
+   ],
+   "string_b": [
+    "2003",
+    0
+   ],
+   "delimiter": " "
+  },
+  "class_type": "StringConcatenate",
+  "_meta": {
+   "title": "Clip 1 prompt"
+  }
+ },
+ "2013": {
+  "inputs": {
+   "string_a": [
+    "2001",
+    0
+   ],
+   "string_b": [
+    "2004",
+    0
+   ],
+   "delimiter": " "
+  },
+  "class_type": "StringConcatenate",
+  "_meta": {
+   "title": "Clip 2 prompt"
+  }
+ },
+ "2014": {
+  "inputs": {
+   "string_a": [
+    "2001",
+    0
+   ],
+   "string_b": [
+    "2005",
+    0
+   ],
+   "delimiter": " "
+  },
+  "class_type": "StringConcatenate",
+  "_meta": {
+   "title": "Clip 3 prompt"
+  }
+ },
+ "2201": {
+  "inputs": {
+   "switch": true,
+   "on_false": [
+    "8",
+    0
+   ],
+   "on_true": [
+    "4452018332049330",
+    0
+   ]
+  },
+  "class_type": "ComfySwitchNode",
+  "_meta": {
+   "title": "Generate keyframe with Nano Banana?"
+  }
+ },
+ "2211": {
+  "inputs": {
+   "value": "768"
+  },
+  "class_type": "Basic data handling: IntCreate",
+  "_meta": {
+   "title": "Width"
+  }
+ },
+ "2212": {
+  "inputs": {
+   "value": "1344"
+  },
+  "class_type": "Basic data handling: IntCreate",
+  "_meta": {
+   "title": "Height"
+  }
+ },
+ "2213": {
+  "inputs": {
+   "value": "362"
+  },
+  "class_type": "Basic data handling: IntCreate",
+  "_meta": {
+   "title": "Length"
+  }
+ },
+ "4452018332049331": {
+  "inputs": {
+   "value": "Avoid: cartoon, anime, illustration, painting, 3D render, CGI look, video game graphics, toy, plastic, claymation, chibi or bobblehead proportions, oversized heads, cute faces, glossy surfaces, HDR, crisp digital sharpness, high contrast, crushed pure-black shadows, modern teal-and-orange grade, saturated orange fire, extra hands, two swords."
+  },
+  "class_type": "PrimitiveStringMultiline",
+  "_meta": {
+   "title": "Avoid (keyframe image only)"
+  }
+ },
+ "4452018332049333": {
+  "inputs": {
+   "expression": "a - 1",
+   "values.a": [
+    "2213",
+    0
+   ]
+  },
+  "class_type": "ComfyMathExpression",
+  "_meta": {
+   "title": "Math Expression"
+  }
+ },
+ "4452018332049332": {
+  "inputs": {
+   "string_a": [
+    "2011",
+    0
+   ],
+   "string_b": [
+    "4452018332049331",
+    0
+   ],
+   "delimiter": " "
+  },
+  "class_type": "StringConcatenate",
+  "_meta": {
+   "title": "Keyframe prompt + Avoid"
+  }
+ },
+ "4452018332049330": {
+  "inputs": {
+   "prompt": [
+    "4452018332049332",
+    0
+   ],
+   "model": "Gemini Nano Banana 2.1",
+   "model.aspect_ratio": "9:16",
+   "model.resolution": "1K",
+   "model.thinking_level": "MEDIUM",
+   "seed": 42,
+   "response_modalities": "IMAGE",
+   "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input—regardless of format, intent, or abstraction—as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+   "temperature": 1,
+   "top_p": 0.95
+  },
+  "class_type": "GeminiNanoBanana2V2",
+  "_meta": {
+   "title": "Keyframe: Nano Banana 2.1"
+  }
+ },
+ "4452018332049327": {
+  "inputs": {
+   "filename_prefix": "dreams/keyframe",
+   "images": [
+    "2201",
+    0
+   ]
+  },
+  "class_type": "SaveImage",
+  "_meta": {
+   "title": "Save keyframe"
+  }
+ }
+}
