@@ -4,7 +4,7 @@ Build the app by hand on the MacBook: four files, about 60 lines. The finished v
 
 ## Prep on my Macbook
 
-1. Pull the repo after `examples/minimal-app/` is committed, then:
+1. Pull the repo, then:
 
    ```sh
    cd Dream-studio/examples/minimal-app
