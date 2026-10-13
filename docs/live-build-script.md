@@ -23,7 +23,9 @@ Build the app by hand on the MacBook: four files, about 60 lines. The finished v
 3. In VS Code, open the `examples/minimal-app` folder. Font size up (Cmd +) twice. Terminal panel open.
 4. Fallback at any point: `cp -R ~/mini-done/* .` restores the finished files.
 
-## On stage
+## Live session
+
+Slides at: https://docs.google.com/presentation/d/1VbbFcxgS1_tj6VrpvljRo_DYt8Oj3kPic2rJUEjJv-Y/edit?usp=sharing
 
 ### 1. `lib/comfy.ts`: the whole SDK story (3 min)
 
