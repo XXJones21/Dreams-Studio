@@ -2,7 +2,7 @@
 
 A standalone app that turns a written dream into a short first-person film with sound. One ComfyUI workflow does all of it on Comfy Cloud: Nano Banana draws the opening keyframe (or you upload your own), MiniMax H3 animates three clips in a row, each starting on the last frame of the one before, and the workflow joins them into one film. The app calls it through the [Comfy SDK](https://docs.comfy.org/development/api-development/sdks) for TypeScript (`@comfyorg/sdk`) and runs on Comfy Cloud.
 
-New to building on ComfyUI? Read [Deploying a local ComfyUI workflow as an app](docs/from-workflow-to-app.md). It takes this workflow from a local machine to Comfy Cloud, APP mode, the Comfy API, and this app, with the snags we hit along the way.
+New to building on ComfyUI? Read [Deploying a local ComfyUI workflow as an app](docs/Developer%20Docs/from-workflow-to-app.md). It takes this workflow from a local machine to Comfy Cloud, APP mode, the Comfy API, and this app, with the snags we hit along the way.
 
 ## Run locally
 
@@ -77,7 +77,9 @@ Two details in `lib/comfy.ts` are easy to miss:
 | `app/api/` | Server routes; the only code that reads the API key |
 | `components/dreams.tsx` | The page |
 | `start-windows.cmd`, `start-mac.command`, `scripts/launch.ts` | Double-click start: asks for a key on the first run, installs, starts the app and opens the browser |
-| `docs/` | [The tutorial](docs/from-workflow-to-app.md), [how the app calls the Comfy API](docs/how-the-app-works.md) and [the talk that follows it](docs/presentation.md) |
+| `Developer Docs` | [The tutorial](docs/Developer%20Docs/from-workflow-to-app.md): from a local workflow to this app |
+| `On-site Docs` | [How the app calls the Comfy API](docs/On-site/how-the-app-works.md), [the live build script](docs/On-site/live-build-script.md) and [the dream prompts](docs/On-site/dream-prompts.md) |
+| `Friction log` | [The friction log](docs/friction-log.md): what helped and what got in the way while building this |
 
 ## Make a change
 

@@ -342,7 +342,7 @@ With a key and the export, a short script drives your workflow from code. The sc
 
 The script shows four patterns:
 
-- **`result()` waits.** Submitting creates the job and returns its job ID at once. `result()` then polls the job, asking for its status every few seconds, until it reaches a final status (succeeded, failed, canceled, or expired), which suits a script. A web app can't wait that long (see [How Dreams Studio calls the Comfy API](how-the-app-works.md#submit-a-job)).
+- **`result()` waits.** Submitting creates the job and returns its job ID at once. `result()` then polls the job, asking for its status every few seconds, until it reaches a final status (succeeded, failed, canceled, or expired), which suits a script. A web app can't wait that long (see [How Dreams Studio calls the Comfy API](../On-site/how-the-app-works.md#submit-a-job)).
 - **Outputs come by node ID.** Each file a job saves is an output. `get_outputs("901")` returns what `SaveVideo` wrote.
 - **`to_file` saves the bytes.** You download an output through a signed link: a temporary URL that works without your key until it expires. Save the bytes of anything you want to keep when you first get them.
 - **Load Image always gets a file.** Comfy validates **Load Image** even when the switch skips it, so the script sets node `8` on every run.
@@ -417,4 +417,4 @@ To run the app from a terminal:
 
 <!-- ![Dreams Studio making a film](images/app-running.png) -->
 
-Under the hood, the app names each workflow input once, submits a job and polls it through all seven statuses, reads outputs by node ID, and keeps the key on the server. For the code, see [How Dreams Studio calls the Comfy API](how-the-app-works.md).
+Under the hood, the app names each workflow input once, submits a job and polls it through all seven statuses, reads outputs by node ID, and keeps the key on the server. For the code, see [How Dreams Studio calls the Comfy API](../On-site/how-the-app-works.md).

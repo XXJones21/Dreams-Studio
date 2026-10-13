@@ -1,6 +1,6 @@
 # How Dreams Studio calls the Comfy API
 
-How the Dreams Studio app names its workflow inputs, submits and polls a job, reads outputs by node ID, and keeps the API key on the server. It picks up where [Deploying a local ComfyUI workflow as an app](from-workflow-to-app.md) ends, with the app running.
+How the Dreams Studio app names its workflow inputs, submits and polls a job, reads outputs by node ID, and keeps the API key on the server. It picks up where [Deploying a local ComfyUI workflow as an app](../Developer%20Docs/from-workflow-to-app.md) ends, with the app running.
 
 ## Name the inputs
 
@@ -91,7 +91,7 @@ export async function submitFilm(input: FilmRequest) {
 }
 ```
 
-- **The frame grid lives in code.** `lib/film.ts` holds `CLIP_FRAMES = { 5: 124, 10: 243, 15: 362 }`, so the form offers seconds and the app sends frames (see [Choose the inputs for the form](from-workflow-to-app.md#choose-the-inputs-for-the-form)).
+- **The frame grid lives in code.** `lib/film.ts` holds `CLIP_FRAMES = { 5: 124, 10: 243, 15: 362 }`, so the form offers seconds and the app sends frames (see [Choose the inputs for the form](../Developer%20Docs/from-workflow-to-app.md#choose-the-inputs-for-the-form)).
 - **Uploads are assets.** `c.assets.fromBytes` and `c.assets.fromFile` create an asset handle that you set like any other input. Handles are content-addressed, so the same file doesn't upload twice.
 - **Use `submit`, not `run`.** `submit` returns at once with a job ID. `run` waits for the result, and a film takes several minutes, longer than a web request can wait.
 
