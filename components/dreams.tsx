@@ -112,7 +112,7 @@ export function Dreams() {
       <div className="titlerow"><h1>Dreams Studio</h1><span className="beta">BETA</span></div>
       <div className="subrow">
         <p className="sub">Describe a dream and watch it play out as a short film with sound.</p>
-        <a className="gh" href="https://github.com/">View on GitHub ↗</a>
+        <a className="gh" href="https://github.com/XXJones21/Dream-studio">View on GitHub ↗</a>
       </div>
       <div className="grid">
         <section className="card">
@@ -192,7 +192,7 @@ export function Dreams() {
                   {run.keyframe && <a className="button" href={run.keyframe} download="keyframe.png">Download keyframe</a>}
                   <a className="button" download="dream.json" href={`data:application/json,${encodeURIComponent(serialize(dream))}`}>Download dream.json</a>
                 </div>
-                <p className="prov">Comfy Cloud keeps outputs for 24 hours. Download the film to keep it.</p>
+                <p className="prov">Outputs on Comfy Cloud expire. Download the film to keep it.</p>
               </div>
             </div>)}
         </section>

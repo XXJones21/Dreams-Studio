@@ -78,7 +78,7 @@ export async function getJob(id: string) {
 async function findOutput(jobId: string, outputId: string) {
   const job = await client().jobs.get(jobId);
   const output = job.outputs.find((o) => o.id === outputId);
-  if (!output) throw new Error("That output is gone. Comfy Cloud keeps outputs for 24 hours; make the film again.");
+  if (!output) throw new Error("That output is gone; it may have expired. Make the film again.");
   return output;
 }
 
