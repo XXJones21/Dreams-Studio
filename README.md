@@ -85,7 +85,6 @@ Two details in `lib/comfy.ts` are easy to miss:
 
 - **Change the workflow:** open `workflows/dream_film.json` in Comfy Cloud, edit it, save it back, export it with **Export (API)** over `workflows/dream_film.api.json`, and update `workflows/dream_film.inputs.json` if node ids changed (`npm run inspect -- workflows/dream_film.api.json` lists them). Run `npm test`: it fails if a role points at a node or input that no longer exists, if the two workflow files are wired differently, or if the seam crops stop following the clip length.
 - **Add an example:** add a preset to `lib/styles.ts`.
-- **Check the whole path on Comfy Cloud:** `npm run smoke` makes a 3 × 5 s film from the command line with the default keyframe (the cheapest run). `npm run smoke -- 15 --nano` makes the full 45 s film with a Nano Banana keyframe. Both spend credits.
 
 ## If a run fails
 
