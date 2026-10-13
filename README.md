@@ -77,11 +77,11 @@ Two details in `lib/comfy.ts` are easy to miss:
 | `app/api/` | Server routes; the only code that reads the API key |
 | `components/dreams.tsx` | The page |
 | `start-windows.cmd`, `start-mac.command`, `scripts/launch.ts` | Double-click start: asks for a key on the first run, installs, starts the app and opens the browser |
-| `docs/` | [The tutorial](docs/from-workflow-to-app.md), [how the app calls the Comfy API](docs/how-the-app-works.md), [the workflow map](docs/workflow.md) and [the talk that follows it](docs/presentation.md) |
+| `docs/` | [The tutorial](docs/from-workflow-to-app.md), [how the app calls the Comfy API](docs/how-the-app-works.md) and [the talk that follows it](docs/presentation.md) |
 
 ## Make a change
 
-- **Change the workflow:** open `workflows/dream_film.json` in Comfy Cloud, edit it, save it back, export it with **Export (API)** over `workflows/dream_film.api.json`, and update `workflows/dream_film.inputs.json` if node ids changed (`npm run inspect -- workflows/dream_film.api.json` lists them). Run `npm test`: it fails if a role points at a node or input that no longer exists, if the two workflow files are wired differently, or if the seam crops stop following the clip length. [docs/workflow.md](docs/workflow.md) maps every node.
+- **Change the workflow:** open `workflows/dream_film.json` in Comfy Cloud, edit it, save it back, export it with **Export (API)** over `workflows/dream_film.api.json`, and update `workflows/dream_film.inputs.json` if node ids changed (`npm run inspect -- workflows/dream_film.api.json` lists them). Run `npm test`: it fails if a role points at a node or input that no longer exists, if the two workflow files are wired differently, or if the seam crops stop following the clip length.
 - **Add an example:** add a preset to `lib/styles.ts`.
 - **Check the whole path on Comfy Cloud:** `npm run smoke` makes a 3 × 5 s film from the command line with the default keyframe (the cheapest run). `npm run smoke -- 15 --nano` makes the full 45 s film with a Nano Banana keyframe. Both spend credits.
 
