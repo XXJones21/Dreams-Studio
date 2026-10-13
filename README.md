@@ -80,6 +80,7 @@ Two details in `lib/comfy.ts` are easy to miss:
 | `Developer Docs` | [The tutorial](docs/Developer%20Docs/from-workflow-to-app.md): from a local workflow to this app |
 | `On-site Docs` | [How the app calls the Comfy API](docs/On-site/how-the-app-works.md), [the live build script](docs/On-site/live-build-script.md) and [the dream prompts](docs/On-site/dream-prompts.md) |
 | `Friction log` | [The friction log](docs/friction-log.md): what helped and what got in the way while building this |
+| `Prompts` | [Web app prompts](docs/On-site/web-app-prompts.md): A set of prompts to use in your own Claude Code or Codex to configure to your own needs |
 
 ## Make a change
 
