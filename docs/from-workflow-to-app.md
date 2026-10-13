@@ -2,6 +2,8 @@
 
 You already have a workflow that works in ComfyUI. This guide turns it into something your own code can run on Comfy Cloud, using Dreams Studio as the example. Every step points at the file in this repo that does it.
 
+The [official docs](#official-docs-to-read-alongside) already cover the SDK calls well. This guide adds what comes before and around them: getting your own workflow ready to drive from code, and the traps between the canvas and a running app.
+
 It takes six steps:
 
 1. Make the workflow Cloud-ready.
@@ -84,10 +86,10 @@ Find each output by the node that saved it, not by its position in the list:
 
 ```ts
 const film = job.outputs.find((o) => o.nodeId === "901");
-const { url, expiresAt } = await film.getDownloadUrl();  // signed, expires in about an hour
+const { url, expiresAt } = await film.getDownloadUrl();  // a signed URL, valid until expiresAt
 ```
 
-The app redirects the browser to that signed URL, so video seeking works and the bytes never pass through your server. Comfy Cloud keeps outputs for 24 hours. When a link expires, fetch the job again for a fresh one; don't re-run the workflow. To keep a result, save the bytes (`output.toBytes()` or `toFile()`).
+The app redirects the browser to that signed URL, so video seeking works and the bytes never pass through your server. Don't hard-code how long a link lasts: read `expiresAt`. When a link expires, fetch the job again for a fresh one; don't re-run the workflow. Comfy's own pages disagree on how long outputs are kept: the Deploy to Comfy API page says 24 hours, and the [API reference](https://docs.comfy.org/api-reference/v2/overview) says there's no retention policy yet. So save the bytes (`output.toBytes()` or `toFile()`) for anything you need to keep.
 
 ## 6. Handle secrets and failures
 
@@ -102,8 +104,20 @@ The app redirects the browser to that signed URL, so video seeking works and the
 | Partner node rejected the key | Use a key with partner access, or upload your own keyframe |
 | Node or model missing on the server | Which node or file is missing |
 
-The SDK's `JobFailed` error message only says the job failed. Read the job's `error` field for the node and the cause.
+In SDK 0.4.0, the `JobFailed` error message only says the job failed. Read the job's `error` field for the node and the cause.
 
 ## Where "Deploy to Comfy API" fits
 
 Comfy Cloud's **Deploy to Comfy API** page describes this same path: an API key, the exported workflow, and an SDK call to `https://cloud.comfy.org`. A workflow that uses only catalog nodes needs no build. One with custom nodes or extra models needs a build (`comfy-cli`, `comfy skills show comfy-build`), which gives it its own endpoint. Point the app at a build or at your own ComfyUI with `COMFY_BASE_URL`.
+
+## Official docs to read alongside
+
+| Topic | Page |
+|---|---|
+| Your first workflow from code | [Quickstart](https://docs.comfy.org/development/api-development/quickstart) |
+| Save vs Export (API) | [Workflow API format](https://docs.comfy.org/development/api-development/workflow-api-format) |
+| The SDKs: client, `setInput`, `run` vs `submit`, events, retries, errors | [SDKs](https://docs.comfy.org/development/api-development/sdks) |
+| Job statuses, output URLs and how long they last | [API reference v2](https://docs.comfy.org/api-reference/v2/overview) |
+| Builds for custom nodes and extra models | [Serverless quickstart](https://docs.comfy.org/development/serverless/quickstart) |
+| Partner-node key on submit | [TypeScript SDK README](https://github.com/Comfy-Org/comfy-typescript-sdk), "Partner (API) node auth" |
+| More example apps | [Comfy-Org/comfy-examples](https://github.com/Comfy-Org/comfy-examples) |

@@ -62,7 +62,7 @@ Two details in `lib/comfy.ts` are easy to miss:
 | `lib/requests.ts`, `lib/job-error.ts` | Input checks before a paid job; errors turned into plain sentences |
 | `app/api/` | Server routes; the only code that reads the API key |
 | `components/dreams.tsx` | The page |
-| `docs/` | [The tutorial](docs/from-workflow-to-app.md) and [the workflow map](docs/workflow.md) |
+| `docs/` | [The tutorial](docs/from-workflow-to-app.md), [the workflow map](docs/workflow.md) and [the talk that follows it](docs/presentation.md) |
 
 ## Make a change
 
