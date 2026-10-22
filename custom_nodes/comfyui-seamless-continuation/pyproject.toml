@@ -1,0 +1,16 @@
+[project]
+name = "comfyui-seamless-continuation"
+version = "0.1.0"
+description = "Chain video clips in ComfyUI: take a clip's last frame for the next generation, then stitch clips with the duplicate seam frame removed (ffmpeg, low memory)."
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+classifiers = ["Operating System :: OS Independent"]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/XXJones21/comfyui-seamless-continuation"
+
+[tool.comfy]
+PublisherId = "XXJones21"
+DisplayName = "Seamless Continuation"
+requires-comfyui = ">=0.39.0"

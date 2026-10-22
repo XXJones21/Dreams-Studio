@@ -72,6 +72,7 @@ Two details in `lib/comfy.ts` are easy to miss:
 | `workflows/dream_film.api.json` | The same workflow from **Export (API)**: what the app runs |
 | `workflows/dream_film.inputs.json` | Which node input each form field sets |
 | `workflows/Local/minimax_continuation_krea_workflow.json` | The original local version, kept for comparison: a Krea 2 keyframe, GGUF H3 and two custom nodes (`SeamlessContinuationLastFrame`, `SeamlessContinuationStitch`). It needs the GGUF and custom node packs, so it doesn't run on Comfy Cloud, and the app doesn't use it |
+| `custom_nodes/comfyui-seamless-continuation/` | The two FFmpeg custom nodes that workflow uses: **Last Frame (Continuation)** and **Stitch Continuation Clips**. Copy or link the folder into `ComfyUI/custom_nodes` to run it locally; [its README](custom_nodes/comfyui-seamless-continuation/README.md) covers install and the API format |
 | `lib/comfy.ts` | The only file that talks to Comfy: submit, job status, outputs |
 | `lib/requests.ts`, `lib/job-error.ts` | Input checks before a paid job; errors turned into plain sentences |
 | `app/api/` | Server routes; the only code that reads the API key |
