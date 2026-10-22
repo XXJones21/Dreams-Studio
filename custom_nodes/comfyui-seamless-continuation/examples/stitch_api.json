@@ -1,0 +1,10 @@
+{
+  "1": {"class_type": "LoadVideo", "inputs": {"file": ""}},
+  "2": {"class_type": "LoadVideo", "inputs": {"file": ""}},
+  "3": {"class_type": "LoadVideo", "inputs": {"file": ""}},
+  "10": {"class_type": "SeamlessContinuationStitch",
+         "inputs": {"clips.clip0": ["1", 0], "clips.clip1": ["2", 0], "clips.clip2": ["3", 0],
+                    "seam_frames": 1, "crf": 18}},
+  "20": {"class_type": "SaveVideo",
+         "inputs": {"video": ["10", 0], "filename_prefix": "seamless_stitch", "format": "mp4", "codec": "auto"}}
+}
