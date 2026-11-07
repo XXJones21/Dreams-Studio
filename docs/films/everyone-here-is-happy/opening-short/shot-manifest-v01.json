@@ -1,0 +1,1225 @@
+{
+  "schema_version": "0.1-draft",
+  "artifact_kind": "editorial_plan_not_executable_workflow",
+  "title": "Everyone Here Is Happy",
+  "scope": "Opening only: birthday party, disappearance, search, threshold, arrival in the Playways.",
+  "source_bible": "../original-story-map.md",
+  "screenplay": "screenplay-v01.fountain",
+  "delivery": {
+    "fps": 24,
+    "width": 1920,
+    "height": 1080,
+    "total_frames": 7200,
+    "total_seconds": 300,
+    "title_and_credits_seconds": 10
+  },
+  "scope_exclusions": [
+    "Later search adventures",
+    "Archives",
+    "Time revelation",
+    "Older Sarah",
+    "Metropolis ending"
+  ],
+  "larger_story_continuity": "Sarah's later travels change aging and she has been seen recently. Do not disclose this in the opening.",
+  "production_status": "Draft; no Cloud jobs submitted; no paid-generation budget set.",
+  "character_references": [
+    "CHAR_ETHAN_V01",
+    "CHAR_SARAH_V01"
+  ],
+  "environment_groups": [
+    {
+      "group": "PARTY_ROOM_AND_PIT",
+      "references": [
+        "LOC_PARTY_V01",
+        "LOC_PIT_V01",
+        "LOC_PARTY_PIT_AXIS_V01",
+        "LOC_SEAM_V01"
+      ]
+    },
+    {
+      "group": "THRESHOLD_PASSAGE",
+      "references": [
+        "LOC_PASSAGE_V01"
+      ]
+    },
+    {
+      "group": "PLAYWAYS_ARRIVAL",
+      "references": [
+        "LOC_ARRIVAL_V01",
+        "LOC_PLAYWAYS_VISTA_V01"
+      ]
+    }
+  ],
+  "shared_rules": [
+    "Approve references and a timed animatic before final generation.",
+    "This schedule contains editorial units; units with multiple plates must be broken into individual execution jobs.",
+    "Keep the wrist star's location consistent and never duplicate it.",
+    "Crown remains on the party table after S01_SH05.",
+    "No time-revelation clues, operator figure, or separate view of Sarah after disappearance.",
+    "Generation frame-grid estimates do not establish measured output duration.",
+    "Select actual source trims after generation; do not infer them from target shot lengths."
+  ],
+  "assets": [],
+  "workflow_registry": [],
+  "generation_attempts": [],
+  "scenes": [
+    {
+      "id": "S01",
+      "name": "Birthday party",
+      "purpose": "Establish Sarah as a particular child and Ethan as affectionate but distracted.",
+      "start_frame": 0,
+      "end_frame": 1800
+    },
+    {
+      "id": "S02",
+      "name": "Disappearance",
+      "purpose": "A small act of meanness turns into an urgent absence.",
+      "start_frame": 1800,
+      "end_frame": 3000
+    },
+    {
+      "id": "S03",
+      "name": "The search",
+      "purpose": "A plausible search exposes a route that should not exist.",
+      "start_frame": 3000,
+      "end_frame": 4560
+    },
+    {
+      "id": "S04",
+      "name": "The threshold",
+      "purpose": "Ethan makes the protective choice to follow.",
+      "start_frame": 4560,
+      "end_frame": 5640
+    },
+    {
+      "id": "S05",
+      "name": "The Playways",
+      "purpose": "Reveal the place and give the rescue its first route.",
+      "start_frame": 5640,
+      "end_frame": 6960
+    },
+    {
+      "id": "S06",
+      "name": "Title",
+      "purpose": "Let the threshold crossing settle.",
+      "start_frame": 6960,
+      "end_frame": 7200
+    }
+  ],
+  "shots": [
+    {
+      "shot_id": "S01_SH01",
+      "scene_id": "S01",
+      "title": "Party at its height",
+      "action": "Ordinary birthday activity; Ethan sits at its edge with coffee, sensitive to the noise.",
+      "framing": "wide",
+      "timeline": {
+        "in_frame": 0,
+        "out_frame_exclusive": 240,
+        "used_frames": 240,
+        "used_seconds": 10
+      },
+      "location_reference_id": "LOC_PARTY_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Party clapping and room sound",
+      "continuity": "Keep background guests incidental; no ominous imagery.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 12,
+        "h3_grid_frames": 294,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S01_SH02",
+      "scene_id": "S01",
+      "title": "The crown",
+      "action": "Sarah puts a crooked paper crown over Ethan's eyes; he lifts it.",
+      "framing": "medium",
+      "timeline": {
+        "in_frame": 240,
+        "out_frame_exclusive": 456,
+        "used_frames": 216,
+        "used_seconds": 9
+      },
+      "location_reference_id": "LOC_PARTY_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01",
+        "CHAR_SARAH_V01"
+      ],
+      "audio": "Ethan: Is that better?",
+      "continuity": "Sarah wears the star; Ethan remains seated; frame both faces clearly.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 11,
+        "h3_grid_frames": 277,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S01_SH03",
+      "scene_id": "S01",
+      "title": "A shared laugh",
+      "action": "Sarah adjusts the crown; they share a quiet laugh.",
+      "framing": "close_two_shot",
+      "timeline": {
+        "in_frame": 456,
+        "out_frame_exclusive": 648,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "location_reference_id": "LOC_PARTY_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01",
+        "CHAR_SARAH_V01"
+      ],
+      "audio": "Natural laughter",
+      "continuity": "Genuine affection without exaggerated expressions.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 10,
+        "h3_grid_frames": 243,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S01_SH04",
+      "scene_id": "S01",
+      "title": "Two taps",
+      "action": "Sarah climbs down, taps the table twice, and asks him to say ready.",
+      "framing": "medium",
+      "timeline": {
+        "in_frame": 648,
+        "out_frame_exclusive": 888,
+        "used_frames": 240,
+        "used_seconds": 10
+      },
+      "location_reference_id": "LOC_PARTY_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01",
+        "CHAR_SARAH_V01"
+      ],
+      "audio": "Sarah: You say ready.",
+      "continuity": "Treat the taps as an editorial sound/performance cue; do not force finger precision in a wide shot.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 12,
+        "h3_grid_frames": 294,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S01_SH05",
+      "scene_id": "S01",
+      "title": "He joins the game",
+      "action": "Ethan leaves the crown on the table, says ready, and watches Sarah hop a floor line.",
+      "framing": "medium",
+      "timeline": {
+        "in_frame": 888,
+        "out_frame_exclusive": 1128,
+        "used_frames": 240,
+        "used_seconds": 10
+      },
+      "location_reference_id": "LOC_PARTY_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01",
+        "CHAR_SARAH_V01"
+      ],
+      "audio": "Ethan: Ready.",
+      "continuity": "The crown stays on the table for the remainder of the short.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 12,
+        "h3_grid_frames": 294,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S01_SH06",
+      "scene_id": "S01",
+      "title": "The interruption",
+      "action": "Phone vibrates; Ethan reads Lena's message and starts an unsent reply.",
+      "framing": "insert",
+      "timeline": {
+        "in_frame": 1128,
+        "out_frame_exclusive": 1368,
+        "used_frames": 240,
+        "used_seconds": 10
+      },
+      "location_reference_id": "LOC_PARTY_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Phone vibration",
+      "continuity": "Composite message: Lena: Mark and I can collect her if you're not up to it. No time or date emphasis.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 12,
+        "h3_grid_frames": 294,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S01_SH07",
+      "scene_id": "S01",
+      "title": "Watch this one",
+      "action": "Sarah reaches the pit rail and asks him to watch.",
+      "framing": "medium",
+      "timeline": {
+        "in_frame": 1368,
+        "out_frame_exclusive": 1560,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "location_reference_id": "LOC_PIT_V01",
+      "character_reference_ids": [
+        "CHAR_SARAH_V01"
+      ],
+      "audio": "Sarah: Dad. Watch this one.",
+      "continuity": "Blue top, same star, same hair and child proportions.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 10,
+        "h3_grid_frames": 243,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S01_SH08",
+      "scene_id": "S01",
+      "title": "Almost present",
+      "action": "Ethan says one second; Sarah taps the rail and enters while he looks down.",
+      "framing": "alternating_coverage",
+      "timeline": {
+        "in_frame": 1560,
+        "out_frame_exclusive": 1800,
+        "used_frames": 240,
+        "used_seconds": 10
+      },
+      "location_reference_id": "LOC_PARTY_PIT_AXIS_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01",
+        "CHAR_SARAH_V01"
+      ],
+      "audio": "Ethan: One second. Two taps.",
+      "continuity": "An editorial unit that may use separate Dad/Sarah plates; maintain eyeline and room geography.",
+      "workflow_role": "multiple_plates_then_edit",
+      "candidate_generation": {
+        "requested_seconds": 12,
+        "h3_grid_frames": 294,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S02_SH01",
+      "scene_id": "S02",
+      "title": "Across the balls",
+      "action": "Sarah wades toward a foam stepping block.",
+      "framing": "medium",
+      "timeline": {
+        "in_frame": 1800,
+        "out_frame_exclusive": 1992,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "location_reference_id": "LOC_PIT_V01",
+      "character_reference_ids": [
+        "CHAR_SARAH_V01"
+      ],
+      "audio": "Children playing",
+      "continuity": "Keep her visible and spatially trackable.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 10,
+        "h3_grid_frames": 243,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S02_SH02",
+      "scene_id": "S02",
+      "title": "The block is taken",
+      "action": "A larger child's hands pull the block away as Sarah reaches for it.",
+      "framing": "insert",
+      "timeline": {
+        "in_frame": 1992,
+        "out_frame_exclusive": 2160,
+        "used_frames": 168,
+        "used_seconds": 7
+      },
+      "location_reference_id": "LOC_PIT_V01",
+      "character_reference_ids": [
+        "CHAR_SARAH_V01"
+      ],
+      "audio": "Foam rubbing and party sound",
+      "continuity": "No new recurring child identity required; split contact into two plates if needed.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 9,
+        "h3_grid_frames": 226,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S02_SH03",
+      "scene_id": "S02",
+      "title": "The cry",
+      "action": "Sarah falls backward into the balls and cries.",
+      "framing": "medium",
+      "timeline": {
+        "in_frame": 2160,
+        "out_frame_exclusive": 2328,
+        "used_frames": 168,
+        "used_seconds": 7
+      },
+      "location_reference_id": "LOC_PIT_V01",
+      "character_reference_ids": [
+        "CHAR_SARAH_V01"
+      ],
+      "audio": "Brief upset cry",
+      "continuity": "No visible injury or supernatural attack.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 9,
+        "h3_grid_frames": 226,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S02_SH04",
+      "scene_id": "S02",
+      "title": "Ethan looks up",
+      "action": "He hears the cry, turns the phone face down, and stands.",
+      "framing": "medium",
+      "timeline": {
+        "in_frame": 2328,
+        "out_frame_exclusive": 2472,
+        "used_frames": 144,
+        "used_seconds": 6
+      },
+      "location_reference_id": "LOC_PARTY_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Ethan: Hey. I'm here.",
+      "continuity": "No delay once he recognizes distress.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 8,
+        "h3_grid_frames": 192,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S02_SH05",
+      "scene_id": "S02",
+      "title": "A hand disappears",
+      "action": "Sarah's hand is briefly above the balls, then the surface closes.",
+      "framing": "insert",
+      "timeline": {
+        "in_frame": 2472,
+        "out_frame_exclusive": 2640,
+        "used_frames": 168,
+        "used_seconds": 7
+      },
+      "location_reference_id": "LOC_PIT_V01",
+      "character_reference_ids": [
+        "CHAR_SARAH_V01"
+      ],
+      "audio": "Balls shifting",
+      "continuity": "No monster, blood, or hole opening in view; use edit and occlusion.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 9,
+        "h3_grid_frames": 226,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S02_SH06",
+      "scene_id": "S02",
+      "title": "Waiting for her to rise",
+      "action": "Ethan reaches the rail and scans the spot where Sarah went under.",
+      "framing": "close",
+      "timeline": {
+        "in_frame": 2640,
+        "out_frame_exclusive": 2808,
+        "used_frames": 168,
+        "used_seconds": 7
+      },
+      "location_reference_id": "LOC_PIT_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Party sound remains ordinary",
+      "continuity": "Keep missing-child tension grounded; no premature horror sting.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 9,
+        "h3_grid_frames": 226,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S02_SH07",
+      "scene_id": "S02",
+      "title": "Into the pit",
+      "action": "She does not emerge; Ethan steps over the rail.",
+      "framing": "medium",
+      "timeline": {
+        "in_frame": 2808,
+        "out_frame_exclusive": 3000,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "location_reference_id": "LOC_PIT_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "His breath and balls moving",
+      "continuity": "He enters from the established side of the pit.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 10,
+        "h3_grid_frames": 243,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S03_SH01",
+      "scene_id": "S03",
+      "title": "The expected response",
+      "action": "Ethan calls Sarah and pushes balls aside.",
+      "framing": "medium",
+      "timeline": {
+        "in_frame": 3000,
+        "out_frame_exclusive": 3192,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "location_reference_id": "LOC_PIT_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Ethan: Sarah.",
+      "continuity": "Initially expect an ordinary response.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 10,
+        "h3_grid_frames": 243,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S03_SH02",
+      "scene_id": "S03",
+      "title": "A child's direction",
+      "action": "An incidental child points; Ethan checks that spot, then looks back.",
+      "framing": "medium",
+      "timeline": {
+        "in_frame": 3192,
+        "out_frame_exclusive": 3384,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "location_reference_id": "LOC_PIT_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Background chatter",
+      "continuity": "No meaningful extra line is required.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 10,
+        "h3_grid_frames": 243,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S03_SH03",
+      "scene_id": "S03",
+      "title": "Staff intervene",
+      "action": "A staff member clears the pit while Ethan keeps searching.",
+      "framing": "cropped_medium",
+      "timeline": {
+        "in_frame": 3384,
+        "out_frame_exclusive": 3576,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "location_reference_id": "LOC_PIT_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Staff: Everybody out for a moment, please.",
+      "continuity": "Staff remain competent; frame hands/shoulder or use offscreen voice.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 10,
+        "h3_grid_frames": 243,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S03_SH04",
+      "scene_id": "S03",
+      "title": "She was right here",
+      "action": "Ethan feels the padded bottom and checks beneath the block.",
+      "framing": "medium",
+      "timeline": {
+        "in_frame": 3576,
+        "out_frame_exclusive": 3792,
+        "used_frames": 216,
+        "used_seconds": 9
+      },
+      "location_reference_id": "LOC_PIT_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Ethan: She was right here.",
+      "continuity": "The block matches the earlier incident.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 11,
+        "h3_grid_frames": 277,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S03_SH05",
+      "scene_id": "S03",
+      "title": "Checking the exits",
+      "action": "Staff move around the outside while Ethan kneels lower.",
+      "framing": "medium",
+      "timeline": {
+        "in_frame": 3792,
+        "out_frame_exclusive": 3984,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "location_reference_id": "LOC_PIT_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Staff radio: Check the far exit, please. Little girl. Blue top.",
+      "continuity": "Only incidental staff coverage; keep focus on Ethan.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 10,
+        "h3_grid_frames": 243,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S03_SH06",
+      "scene_id": "S03",
+      "title": "The star",
+      "action": "Ethan finds Sarah's star with a loose wrist loop and pockets it.",
+      "framing": "insert",
+      "timeline": {
+        "in_frame": 3984,
+        "out_frame_exclusive": 4176,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "location_reference_id": "LOC_PIT_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Small plastic contact",
+      "continuity": "Exactly one star. It is now in Ethan's pocket until arrival.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 10,
+        "h3_grid_frames": 243,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S03_SH07",
+      "scene_id": "S03",
+      "title": "The crease",
+      "action": "Balls roll through the seam between the back-corner padded panels.",
+      "framing": "insert",
+      "timeline": {
+        "in_frame": 4176,
+        "out_frame_exclusive": 4368,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "location_reference_id": "LOC_SEAM_V01",
+      "character_reference_ids": [],
+      "audio": "Room sound begins to feel more distant",
+      "continuity": "Same identifiable corner; no stylized portal effects.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 10,
+        "h3_grid_frames": 243,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S03_SH08",
+      "scene_id": "S03",
+      "title": "More space than there should be",
+      "action": "Ethan puts his hand and then forearm into the seam, finds no back wall, and calls Sarah.",
+      "framing": "close",
+      "timeline": {
+        "in_frame": 4368,
+        "out_frame_exclusive": 4560,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "location_reference_id": "LOC_SEAM_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Ethan: Sarah?",
+      "continuity": "The impossible depth is the first spatial anomaly.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 10,
+        "h3_grid_frames": 243,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S04_SH01",
+      "scene_id": "S04",
+      "title": "The only route",
+      "action": "Ethan looks toward the busy staff member, then lowers his face to the gap.",
+      "framing": "close",
+      "timeline": {
+        "in_frame": 4560,
+        "out_frame_exclusive": 4752,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "location_reference_id": "LOC_SEAM_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Party sound and staff movement",
+      "continuity": "No explanatory dialogue or view of Sarah beyond the gap.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 10,
+        "h3_grid_frames": 243,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S04_SH02",
+      "scene_id": "S04",
+      "title": "Shoulders through",
+      "action": "He draws one shoulder, then the other, into the passage.",
+      "framing": "close",
+      "timeline": {
+        "in_frame": 4752,
+        "out_frame_exclusive": 4992,
+        "used_frames": 240,
+        "used_seconds": 10
+      },
+      "location_reference_id": "LOC_PASSAGE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Fabric and padded-wall contact",
+      "continuity": "Cut on matching movement instead of transforming the set in one generation.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 12,
+        "h3_grid_frames": 294,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S04_SH03",
+      "scene_id": "S04",
+      "title": "No view back",
+      "action": "Inside the tight passage he pauses and turns; the party is muffled behind him.",
+      "framing": "close",
+      "timeline": {
+        "in_frame": 4992,
+        "out_frame_exclusive": 5208,
+        "used_frames": 216,
+        "used_seconds": 9
+      },
+      "location_reference_id": "LOC_PASSAGE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Indistinct call from behind, muffled party",
+      "continuity": "Preserve clothes and travel direction; show no aging.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 11,
+        "h3_grid_frames": 277,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S04_SH04",
+      "scene_id": "S04",
+      "title": "Light ahead",
+      "action": "He sees warm light, reaches, and the padded surface gives under his palm.",
+      "framing": "pov_and_insert",
+      "timeline": {
+        "in_frame": 5208,
+        "out_frame_exclusive": 5448,
+        "used_frames": 240,
+        "used_seconds": 10
+      },
+      "location_reference_id": "LOC_PASSAGE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Breath, soft movement",
+      "continuity": "A short editorial unit can use separate light and hand plates.",
+      "workflow_role": "multiple_plates_then_edit",
+      "candidate_generation": {
+        "requested_seconds": 12,
+        "h3_grid_frames": 294,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S04_SH05",
+      "scene_id": "S04",
+      "title": "The slide",
+      "action": "Ethan slides beyond the light into an unseen space.",
+      "framing": "tight_action",
+      "timeline": {
+        "in_frame": 5448,
+        "out_frame_exclusive": 5640,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "location_reference_id": "LOC_PASSAGE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Party sound drops away across the cut",
+      "continuity": "No giant spinning tunnel or prolonged falling stunt.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 10,
+        "h3_grid_frames": 243,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S05_SH01",
+      "scene_id": "S05",
+      "title": "Landing",
+      "action": "Ethan rolls from a soft slope into a shallow drift of balls and catches his breath.",
+      "framing": "medium",
+      "timeline": {
+        "in_frame": 5640,
+        "out_frame_exclusive": 5856,
+        "used_frames": 216,
+        "used_seconds": 9
+      },
+      "location_reference_id": "LOC_ARRIVAL_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Soft landing, new spacious room tone",
+      "continuity": "Delay the full environment reveal.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 11,
+        "h3_grid_frames": 277,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S05_SH02",
+      "scene_id": "S05",
+      "title": "Trying to orient",
+      "action": "He looks back at the short tube mouth and stands.",
+      "framing": "medium",
+      "timeline": {
+        "in_frame": 5856,
+        "out_frame_exclusive": 6096,
+        "used_frames": 240,
+        "used_seconds": 10
+      },
+      "location_reference_id": "LOC_ARRIVAL_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Breath and distant venue ambience",
+      "continuity": "There is no view of the birthday room through the tube.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 12,
+        "h3_grid_frames": 294,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S05_SH03",
+      "scene_id": "S05",
+      "title": "Impossible scale",
+      "action": "From his eyeline, bridges and play tubes cross an immense warmly lit space.",
+      "framing": "wide",
+      "timeline": {
+        "in_frame": 6096,
+        "out_frame_exclusive": 6312,
+        "used_frames": 216,
+        "used_seconds": 9
+      },
+      "location_reference_id": "LOC_PLAYWAYS_VISTA_V01",
+      "character_reference_ids": [],
+      "audio": "Spacious, inviting ambience",
+      "continuity": "No antagonist figure, aged objects, calendars, or audience/control-room reveal.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 11,
+        "h3_grid_frames": 277,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S05_SH04",
+      "scene_id": "S05",
+      "title": "Calling into it",
+      "action": "Ethan steps forward and calls Sarah; the sound travels.",
+      "framing": "wide_with_figure",
+      "timeline": {
+        "in_frame": 6312,
+        "out_frame_exclusive": 6504,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "location_reference_id": "LOC_ARRIVAL_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Ethan: Sarah! Long natural response of the space.",
+      "continuity": "Human-scale figure remains recognizable; world must feel usable.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 10,
+        "h3_grid_frames": 243,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S05_SH05",
+      "scene_id": "S05",
+      "title": "A welcome",
+      "action": "Ethan takes out the star. A chime and gentle welcome accompany a path lighting up.",
+      "framing": "close_and_route",
+      "timeline": {
+        "in_frame": 6504,
+        "out_frame_exclusive": 6720,
+        "used_frames": 216,
+        "used_seconds": 9
+      },
+      "location_reference_id": "LOC_ARRIVAL_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Venue: Welcome. We're glad you're here.",
+      "continuity": "Star comes from his pocket; route lighting may be composited.",
+      "workflow_role": "multiple_plates_then_edit",
+      "candidate_generation": {
+        "requested_seconds": 11,
+        "h3_grid_frames": 277,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S05_SH06",
+      "scene_id": "S05",
+      "title": "First step",
+      "action": "Ethan looks back at the tube once, turns to the path, and takes his first step.",
+      "framing": "medium_to_wide",
+      "timeline": {
+        "in_frame": 6720,
+        "out_frame_exclusive": 6960,
+        "used_frames": 240,
+        "used_seconds": 10
+      },
+      "location_reference_id": "LOC_ARRIVAL_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio": "Venue ambience continues",
+      "continuity": "End at the start of the rescue journey, with hope and uncertainty.",
+      "workflow_role": "approved_keyframe_then_i2v_or_r2v",
+      "candidate_generation": {
+        "requested_seconds": 12,
+        "h3_grid_frames": 294,
+        "fps": 24,
+        "note": "Per-plate candidate only. Multi-plate units need separate generation requests and editorial assembly."
+      },
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    },
+    {
+      "shot_id": "S06_SH01",
+      "scene_id": "S06",
+      "title": "End title",
+      "action": "Black title card: Everyone Here Is Happy. Reserve remaining time for a short credit card.",
+      "framing": "graphic",
+      "timeline": {
+        "in_frame": 6960,
+        "out_frame_exclusive": 7200,
+        "used_frames": 240,
+        "used_seconds": 10
+      },
+      "location_reference_id": null,
+      "character_reference_ids": [],
+      "audio": "Playways ambience continues",
+      "continuity": "Typography is editorial. No teaser of later story events.",
+      "workflow_role": "editorial_graphics",
+      "candidate_generation": null,
+      "first_frame_asset": null,
+      "workflow_file": null,
+      "selected_take": null,
+      "source_in_frame": null,
+      "source_out_frame_exclusive": null,
+      "status": "draft"
+    }
+  ]
+}

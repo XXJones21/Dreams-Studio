@@ -1,0 +1,94 @@
+{
+ "depth": "aa1e4612c22241087c25f771729c6e4f9b141f6885c580705fbbac975c5eacb3.mp4",
+ "jobs": [
+  {
+   "shot": "S01",
+   "prompt_id": "b843c8ac-d878-4851-92c4-1ba6f7feb6e4",
+   "seed": 30011,
+   "graph": "S01_graph.json",
+   "builder": "prompts/chain_h3_v03.py s01"
+  },
+  {
+   "shot": "S02",
+   "prompt_id": "ed137c6e-1969-4fcc-8bed-d80cc8bf38fa",
+   "seed": 30021,
+   "graph": "S02_graph.json",
+   "first_frame": "S01_f120.png (5e63edeb...png)"
+  },
+  {
+   "shot": "S03-S07",
+   "prompt_id": "497d1214-6c93-4088-b308-49206db7ab3f",
+   "seeds": [
+    30031,
+    30041,
+    30051,
+    30061,
+    30071
+   ],
+   "graph": "S03_S07_graph.json",
+   "first_frame": "S02_f120.png (f271507a...png)"
+  },
+  {
+   "shot": "S08-S12",
+   "prompt_id": "6e487d09-a870-4015-8f14-52d7ff41905e",
+   "seeds": [
+    30081,
+    30091,
+    30101,
+    30111,
+    30121
+   ],
+   "graph": "S08_S12_graph.json",
+   "first_frame": "S07_f120.png (99ce5968...png, output used directly)"
+  },
+  {
+   "shot": "S05",
+   "pass": "v3 refchain",
+   "prompt_id": "2ed4f942-fe24-4ec6-a950-a2bb316a7623",
+   "graph": "S05_v3_graph.json",
+   "first": "S04_f120"
+  },
+  {
+   "shot": "S06-S08",
+   "pass": "v3 refchain",
+   "prompt_id": "6a9855a4-d942-4f8a-bb2a-bbc7ca7ea262",
+   "graph": "S06_S08_v3_graph.json",
+   "first": "S05_v3_f120"
+  },
+  {
+   "shot": "S09-S12",
+   "pass": "v3 refchain",
+   "prompt_id": "e5eb2a91-b124-4927-ad01-aaf165a72f47",
+   "graph": "S09_S12_v3_graph.json",
+   "first": "S08_v3_f120"
+  },
+  {
+   "shot": "S05",
+   "pass": "v4 blockout",
+   "prompt_id": "926cc53e-217a-4043-9c42-979e04d490a2",
+   "graph": "S05_v4_graph.json",
+   "first": "S04_f120"
+  },
+  {
+   "shot": "S01-S04",
+   "pass": "v4 blockout",
+   "prompt_id": "d0b049bd-6ec6-4780-93ec-fdc708b7516d",
+   "graph": "S01_S04_v4_graph.json",
+   "first": "none (refs only)"
+  },
+  {
+   "shot": "S05-S08",
+   "pass": "v4 blockout",
+   "prompt_id": "52eb2c45-0494-40eb-b315-4b505f682c64",
+   "graph": "S05_S08_v4_graph.json",
+   "first": "S04_v4_f120 (33e5425b...png)"
+  },
+  {
+   "shot": "S09-S12",
+   "pass": "v4 blockout",
+   "prompt_id": "44d25f77-955c-41f1-8a03-dab1540225df",
+   "graph": "S09_S12_v4_graph.json",
+   "first": "S08_v4_f120 (6e439456...png)"
+  }
+ ]
+}

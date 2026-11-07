@@ -1,0 +1,10 @@
+# Rendered video and render frames stay local; the shot tracker's preview stills are kept.
+*.mp4
+*.png
+*.jpg
+*.webp
+!everyone-here-is-happy/halloween-short/tracker/media/**/*.jpg
+__pycache__/
+*.pyc
+*.bak_*
+everyone-here-is-happy/halloween-short/takes/_rough_work/

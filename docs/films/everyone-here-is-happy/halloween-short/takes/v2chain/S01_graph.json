@@ -1,0 +1,340 @@
+{
+ "127": {
+  "class_type": "UNETLoader",
+  "inputs": {
+   "unet_name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+   "weight_dtype": "default"
+  },
+  "_meta": {
+   "title": "UNETLoader 127"
+  }
+ },
+ "145": {
+  "class_type": "LoraLoaderModelOnly",
+  "inputs": {
+   "model": [
+    "127",
+    0
+   ],
+   "lora_name": "pika_h3_flex_ref2va_v1_bf16.safetensors",
+   "strength_model": 1
+  },
+  "_meta": {
+   "title": "LoraLoaderModelOnly 145"
+  }
+ },
+ "173": {
+  "class_type": "ModelPatchLoader",
+  "inputs": {
+   "name": "minimax_h3_fun_controlnet_union_pruned_int8_convrot.safetensors"
+  },
+  "_meta": {
+   "title": "ModelPatchLoader 173"
+  }
+ },
+ "174": {
+  "class_type": "LoadVideo",
+  "inputs": {
+   "file": "aa1e4612c22241087c25f771729c6e4f9b141f6885c580705fbbac975c5eacb3.mp4"
+  },
+  "_meta": {
+   "title": "LoadVideo 174"
+  }
+ },
+ "705": {
+  "class_type": "Video Slice",
+  "inputs": {
+   "video": [
+    "174",
+    0
+   ],
+   "start_time": 0.01,
+   "duration": 5.1667,
+   "strict_duration": false
+  },
+  "_meta": {
+   "title": "Video Slice 705"
+  }
+ },
+ "709": {
+  "class_type": "GetVideoComponents",
+  "inputs": {
+   "video": [
+    "705",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "GetVideoComponents 709"
+  }
+ },
+ "172": {
+  "class_type": "MiniMaxH3FunControlNetApply",
+  "inputs": {
+   "model": [
+    "145",
+    0
+   ],
+   "model_patch": [
+    "173",
+    0
+   ],
+   "vae": [
+    "119",
+    0
+   ],
+   "strength": 0.35,
+   "start_percent": 0.0,
+   "end_percent": 0.35,
+   "control_video": [
+    "709",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "MiniMaxH3FunControlNetApply 172"
+  }
+ },
+ "128": {
+  "class_type": "CLIPLoader",
+  "inputs": {
+   "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+   "type": "minimax",
+   "device": "default"
+  },
+  "_meta": {
+   "title": "CLIPLoader 128"
+  }
+ },
+ "119": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
+  },
+  "_meta": {
+   "title": "VAELoader 119"
+  }
+ },
+ "120": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+  },
+  "_meta": {
+   "title": "VAELoader 120"
+  }
+ },
+ "136": {
+  "class_type": "MiniMaxH3ReferenceToVideo",
+  "inputs": {
+   "clip": [
+    "128",
+    0
+   ],
+   "vae": [
+    "119",
+    0
+   ],
+   "audio_vae": [
+    "120",
+    0
+   ],
+   "prompt": "subject_definitions:\n<Subject 1> is Happy Hank's Pizza & Play in <Picture 1>: a cheap 1990s pizza-and-games party room, drop ceiling with flat fluorescent panels, laminate party tables with paper tablecloths and balloons, purple patterned carpet, arcade glow, a yellow-poled play structure with red, blue and teal tubes behind a ball pit. Ordinary, loud, a little grubby. Only children and the one mascot are in the room; no adult is ever close to the camera.\n<Subject 2> is Sarah, the girl in <Picture 2>: about five, shoulder-length brown hair, blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow star bracelet on her left wrist.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. I sit at the party table, my left hand resting a paper soda cup with a plastic lid and a straw on the paper tablecloth; behind it the room is busy and loud. It ends on Sarah standing beside my chair on my right, holding a yellow paper crown up toward me with both hands; my left hand with the soda cup on the table; the busy party and the play structure behind her.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person POV, one single continuous handheld take with no cuts; the camera is my own eyes, a tired father, and no other adult is ever near the camera. The only part of me ever visible is my own two bare hands and forearms in the lower frame; exactly two hands, never more. Sarah always looks the same: a girl of about five, shoulder-length brown hair, a blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow plastic star bracelet on her left wrist. Photorealistic early-1990s live-action film still, shot on 35mm film with a real lens, practical sets and real physical materials: scuffed rotomolded plastic, vinyl padding, cheap carpet, nylon rope net. Natural textures and real-world scale. Flat cool fluorescent light from a drop ceiling, a loud ordinary room. Visible film grain, slight halation around lights.\nMotion: the camera moves like a real person's head and body. Every move starts with a small anticipation, eases in and eases out, travels on a gentle arc and settles with a little follow-through; nothing snaps or jitters. People move with weight. The last half second holds almost still on the end state.\nExactly one child close to me, and only at the end: Sarah, a girl of about five with shoulder-length brown hair, a blue long-sleeve top, dark grey leggings and cream velcro sneakers. The children at the far tables are small and always moving: eating pizza, laughing, running, waving balloons. No adult anywhere in frame.\n\n[Shot 1] In order: 1. 0-1 s: I sit at the party table, my left hand resting a paper soda cup with a plastic lid and a straw on the paper tablecloth; behind it the room is busy and loud. 2. 1-3.5 s: my head pans slowly left to right on a gentle arc, easing in and out: kids at the far tables eating pizza and laughing, a child waving a balloon, two kids running between the tables, the yellow-poled play structure and the ball pit at the back of the room. 3. 3.5-4.5 s: as the pan settles, Sarah walks up to me from the right, holding a yellow paper birthday crown in both hands, her steps small and quick. 4. 4.5-5 s: she stops right beside my chair, lifts the crown toward me, and holds.\nThe shot ends on: Sarah standing beside my chair on my right, holding a yellow paper crown up toward me with both hands; my left hand with the soda cup on the table; the busy party and the play structure behind her.\n\noverall_soundscape:\nParty din, kids shrieking and laughing, arcade bleeps, a distant birthday song, fluorescent hum, ice rattling in the soda cup.\n\nnon_diegetic_music:\nNone.\n\nAvoid: a cut, third-person view, cartoon, anime, illustration, 3D render, CGI look, video game graphics, glossy surfaces, oversaturated colors, readable text, logos, a second adult, a stranger looking at the camera, a face close to the camera, extra hands, extra mascots, monsters, concentric rings, a tunnel of repeating circles, an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room, a mug, a hot drink.",
+   "width": 768,
+   "height": 1344,
+   "length": 124,
+   "ref_image_size": "match",
+   "ref_images.ref_image_0": [
+    "150",
+    0
+   ],
+   "ref_images.ref_image_1": [
+    "151",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "MiniMaxH3ReferenceToVideo 136"
+  }
+ },
+ "126": {
+  "class_type": "BasicGuider",
+  "inputs": {
+   "model": [
+    "172",
+    0
+   ],
+   "conditioning": [
+    "136",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "BasicGuider 126"
+  }
+ },
+ "129": {
+  "class_type": "RandomNoise",
+  "inputs": {
+   "noise_seed": 30011
+  },
+  "_meta": {
+   "title": "RandomNoise 129"
+  }
+ },
+ "123": {
+  "class_type": "KSamplerSelect",
+  "inputs": {
+   "sampler_name": "lcm"
+  },
+  "_meta": {
+   "title": "KSamplerSelect 123"
+  }
+ },
+ "147": {
+  "class_type": "ManualSigmas",
+  "inputs": {
+   "sigmas": "1.0, 0.972973, 0.923077, 0.8, 0.571429, 0.333333, 0.0"
+  },
+  "_meta": {
+   "title": "ManualSigmas 147"
+  }
+ },
+ "125": {
+  "class_type": "SamplerCustomAdvanced",
+  "inputs": {
+   "noise": [
+    "129",
+    0
+   ],
+   "guider": [
+    "126",
+    0
+   ],
+   "sampler": [
+    "123",
+    0
+   ],
+   "sigmas": [
+    "147",
+    0
+   ],
+   "latent_image": [
+    "136",
+    1
+   ]
+  },
+  "_meta": {
+   "title": "SamplerCustomAdvanced 125"
+  }
+ },
+ "122": {
+  "class_type": "VAEDecode",
+  "inputs": {
+   "samples": [
+    "125",
+    0
+   ],
+   "vae": [
+    "119",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "VAEDecode 122"
+  }
+ },
+ "121": {
+  "class_type": "VAEDecodeAudio",
+  "inputs": {
+   "samples": [
+    "125",
+    0
+   ],
+   "vae": [
+    "120",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "VAEDecodeAudio 121"
+  }
+ },
+ "130": {
+  "class_type": "CreateVideo",
+  "inputs": {
+   "images": [
+    "122",
+    0
+   ],
+   "audio": [
+    "121",
+    0
+   ],
+   "fps": 24
+  },
+  "_meta": {
+   "title": "CreateVideo 130"
+  }
+ },
+ "92": {
+  "class_type": "SaveVideo",
+  "inputs": {
+   "video": [
+    "130",
+    0
+   ],
+   "filename_prefix": "ehih/halloween/v2chain/S01_v2_s30011",
+   "format": "auto",
+   "codec": "auto"
+  },
+  "_meta": {
+   "title": "SaveVideo 92"
+  }
+ },
+ "150": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "5c90d4bab53db5a503bcef6c8062c5e3fdb4edaecfbc7aff08cfb541fd71fefc.png"
+  },
+  "_meta": {
+   "title": "LoadImage 150"
+  }
+ },
+ "151": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "aa3e743e448b406c5d0321b85fca4f2dab372a8292b4b194b93e0ecfc57ee451.png"
+  },
+  "_meta": {
+   "title": "LoadImage 151"
+  }
+ },
+ "93": {
+  "class_type": "ImageFromBatch",
+  "inputs": {
+   "image": [
+    "122",
+    0
+   ],
+   "batch_index": 120,
+   "length": 1
+  },
+  "_meta": {
+   "title": "ImageFromBatch 93"
+  }
+ },
+ "94": {
+  "class_type": "SaveImage",
+  "inputs": {
+   "images": [
+    "93",
+    0
+   ],
+   "filename_prefix": "ehih/halloween/v2chain/S01_f120"
+  },
+  "_meta": {
+   "title": "SaveImage 94"
+  }
+ }
+}

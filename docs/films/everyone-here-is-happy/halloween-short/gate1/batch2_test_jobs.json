@@ -1,0 +1,10 @@
+{"note": "v02 test, 2026-11-01. Josh: 'Yes, please run those 8 jobs'. Rerun of batch1 S01 (e8de6e8a-c693-4640-bf28-7ec5b2b7219a) with v02 prompts (prompts/batch_h3_v02.py). a = FunCN strength 0.6 end 0.5; b = strength 0.35 end 0.35.",
+ "jobs": {
+  "S02_h3v2a_s20021": "c409ec8d-a5a1-4026-a621-cdbc75ca1417",
+  "S10_h3v2a_s20101": "daf81c3d-08e9-40f0-afb2-09601c51ecae",
+  "S16_h3v2a_s20161": "7b05aea4-5a08-4b87-bae4-994c5cd7cd99",
+  "S30_h3v2a_s20301": "ee7fc645-d5fa-4c72-b2b0-66b171217ed3",
+  "S02_h3v2b_s20022": "af2c88f0-ea24-4492-b3d1-11ff88ee3e1e",
+  "S10_h3v2b_s20102": "e41d6e63-276a-46a6-bb8c-8a12c01cfa03",
+  "S16_h3v2b_s20162": "7d8c542f-54cd-49bd-9d86-0d89411bb767",
+  "S30_h3v2b_s20302": "3df8121d-1e7e-48a8-a23d-39814d183e64"}}

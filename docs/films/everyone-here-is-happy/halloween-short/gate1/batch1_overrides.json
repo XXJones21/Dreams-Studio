@@ -1,0 +1,662 @@
+{
+ "S01": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is Happy Hank's Pizza & Play in <Picture 1>: a cheap 1990s pizza-and-games party room, drop ceiling with flat fluorescent panels, laminate party tables with paper tablecloths and balloons, purple patterned carpet, arcade glow, a yellow-poled play structure with red, blue and teal tubes behind a ball pit. Ordinary, loud, a little grubby.\n<Subject 2> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. At 0 seconds we sit at the party table holding a paper coffee cup in both hands, steam rising.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, brighter, flatter fluorescent light, an ordinary room.\n\n[Shot 1] At 0 seconds we sit at the party table holding a paper coffee cup in both hands, steam rising. Over five seconds the view pans slowly left to right across the birthday party: kids eating pizza, balloons, paper plates, the play structure at the back. The hands stay on the cup.\n\noverall_soundscape:\nParty din, kids shrieking, arcade bleeps, a distant birthday song, fluorescent hum.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "5c90d4bab53db5a503bcef6c8062c5e3fdb4edaecfbc7aff08cfb541fd71fefc.png"
+  },
+  "151": {
+   "image": "5c90d4bab53db5a503bcef6c8062c5e3fdb4edaecfbc7aff08cfb541fd71fefc.png"
+  },
+  "705": {
+   "start_time": 0.01
+  },
+  "129": {
+   "noise_seed": 10011
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S01_h3_s10011"
+  }
+ },
+ "S02": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is Happy Hank's Pizza & Play in <Picture 1>: a cheap 1990s pizza-and-games party room, drop ceiling with flat fluorescent panels, laminate party tables with paper tablecloths and balloons, purple patterned carpet, arcade glow, a yellow-poled play structure with red, blue and teal tubes behind a ball pit. Ordinary, loud, a little grubby.\n<Subject 2> is Sarah, the girl in <Picture 2>: about five, shoulder-length brown hair, blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow star bracelet on her left wrist.\n<Subject 3> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. At 0 seconds a paper birthday crown drops down over the top of the view, its yellow zigzag edge filling the upper frame.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, brighter, flatter fluorescent light, an ordinary room. Sarah appears exactly as defined.\n\n[Shot 1] At 0 seconds a paper birthday crown drops down over the top of the view, its yellow zigzag edge filling the upper frame. One hand rises and lifts it. The view turns right to Sarah standing on the seat beside us, pleased with herself, reaching to straighten the crown.\n\noverall_soundscape:\nPaper rustle, Sarah giggles, party din.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "5c90d4bab53db5a503bcef6c8062c5e3fdb4edaecfbc7aff08cfb541fd71fefc.png"
+  },
+  "151": {
+   "image": "aa3e743e448b406c5d0321b85fca4f2dab372a8292b4b194b93e0ecfc57ee451.png"
+  },
+  "705": {
+   "start_time": 5.1767
+  },
+  "129": {
+   "noise_seed": 10021
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S02_h3_s10021"
+  }
+ },
+ "S03": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is Happy Hank's Pizza & Play in <Picture 1>: a cheap 1990s pizza-and-games party room, drop ceiling with flat fluorescent panels, laminate party tables with paper tablecloths and balloons, purple patterned carpet, arcade glow, a yellow-poled play structure with red, blue and teal tubes behind a ball pit. Ordinary, loud, a little grubby.\n<Subject 2> is Sarah, the girl in <Picture 2>: about five, shoulder-length brown hair, blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow star bracelet on her left wrist.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. Sarah climbs down off the seat and walks to the edge of the table; the view follows her down and along.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, brighter, flatter fluorescent light, an ordinary room. Sarah appears exactly as defined.\n\n[Shot 1] Sarah climbs down off the seat and walks to the edge of the table; the view follows her down and along. She turns back and says something with a serious little face.\n\noverall_soundscape:\nSarah, small and clear: \"You say ready.\" Party din behind.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "5c90d4bab53db5a503bcef6c8062c5e3fdb4edaecfbc7aff08cfb541fd71fefc.png"
+  },
+  "151": {
+   "image": "aa3e743e448b406c5d0321b85fca4f2dab372a8292b4b194b93e0ecfc57ee451.png"
+  },
+  "705": {
+   "start_time": 10.3433
+  },
+  "129": {
+   "noise_seed": 10031
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S03_h3_s10031"
+  }
+ },
+ "S04": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is Happy Hank's Pizza & Play in <Picture 1>: a cheap 1990s pizza-and-games party room, drop ceiling with flat fluorescent panels, laminate party tables with paper tablecloths and balloons, purple patterned carpet, arcade glow, a yellow-poled play structure with red, blue and teal tubes behind a ball pit. Ordinary, loud, a little grubby.\n<Subject 2> is Sarah, the girl in <Picture 2>: about five, shoulder-length brown hair, blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow star bracelet on her left wrist.\n<Subject 3> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. A hand sets the paper crown on the table.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, brighter, flatter fluorescent light, an ordinary room. Sarah appears exactly as defined.\n\n[Shot 1] A hand sets the paper crown on the table. The view lifts as Sarah hops over a line in the carpet pattern, lands, and looks back to check we saw.\n\noverall_soundscape:\nA tired man's voice off-screen: \"Ready.\" A small thump of sneakers on carpet. Party din.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "5c90d4bab53db5a503bcef6c8062c5e3fdb4edaecfbc7aff08cfb541fd71fefc.png"
+  },
+  "151": {
+   "image": "aa3e743e448b406c5d0321b85fca4f2dab372a8292b4b194b93e0ecfc57ee451.png"
+  },
+  "705": {
+   "start_time": 15.51
+  },
+  "129": {
+   "noise_seed": 10041
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S04_h3_s10041"
+  }
+ },
+ "S05": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the party mascot in <Picture 1>: one person in a cheap worn orange plush costume with a foam head, fixed wide grin, yellow belly, oversized gloves. Exactly one mascot.\n<Subject 2> is Happy Hank's Pizza & Play in <Picture 2>: a cheap 1990s pizza-and-games party room, drop ceiling with flat fluorescent panels, laminate party tables with paper tablecloths and balloons, purple patterned carpet, arcade glow, a yellow-poled play structure with red, blue and teal tubes behind a ball pit. Ordinary, loud, a little grubby.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. Across the room the mascot waves at a table of kids, turns slowly, and waves directly at us.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, brighter, flatter fluorescent light, an ordinary room.\n\n[Shot 1] Across the room the mascot waves at a table of kids, turns slowly, and waves directly at us. Its grin never changes. It is a person in a costume, moving like one.\n\noverall_soundscape:\nParty din, a kid laughing, the muffled squeak of the costume.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "682b09df3ab691335398c3abac8437154dc1fc9b05fcfd0ab85be620b07497b8.png"
+  },
+  "151": {
+   "image": "5c90d4bab53db5a503bcef6c8062c5e3fdb4edaecfbc7aff08cfb541fd71fefc.png"
+  },
+  "705": {
+   "start_time": 20.6767
+  },
+  "129": {
+   "noise_seed": 10051
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S05_h3_s10051"
+  }
+ },
+ "S06": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is Happy Hank's Pizza & Play in <Picture 1>: a cheap 1990s pizza-and-games party room, drop ceiling with flat fluorescent panels, laminate party tables with paper tablecloths and balloons, purple patterned carpet, arcade glow, a yellow-poled play structure with red, blue and teal tubes behind a ball pit. Ordinary, loud, a little grubby.\n<Subject 2> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. The view tilts down to a phone lying face up on the sticky table, buzzing, the screen lighting up with a message notification.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, brighter, flatter fluorescent light, an ordinary room.\n\n[Shot 1] The view tilts down to a phone lying face up on the sticky table, buzzing, the screen lighting up with a message notification. The words are not readable.\n\noverall_soundscape:\nPhone vibration rattling on laminate, party din.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "5c90d4bab53db5a503bcef6c8062c5e3fdb4edaecfbc7aff08cfb541fd71fefc.png"
+  },
+  "151": {
+   "image": "5c90d4bab53db5a503bcef6c8062c5e3fdb4edaecfbc7aff08cfb541fd71fefc.png"
+  },
+  "705": {
+   "start_time": 25.8433
+  },
+  "129": {
+   "noise_seed": 10061
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S06_h3_s10061"
+  }
+ },
+ "S07": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is Happy Hank's Pizza & Play in <Picture 1>: a cheap 1990s pizza-and-games party room, drop ceiling with flat fluorescent panels, laminate party tables with paper tablecloths and balloons, purple patterned carpet, arcade glow, a yellow-poled play structure with red, blue and teal tubes behind a ball pit. Ordinary, loud, a little grubby.\n<Subject 2> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. The phone is in one hand, close.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, brighter, flatter fluorescent light, an ordinary room.\n\n[Shot 1] The phone is in one hand, close. The thumb starts typing a reply, pauses, hovers, stops. The screen text is not readable.\n\noverall_soundscape:\nSoft thumb taps, then nothing, party din.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "5c90d4bab53db5a503bcef6c8062c5e3fdb4edaecfbc7aff08cfb541fd71fefc.png"
+  },
+  "151": {
+   "image": "5c90d4bab53db5a503bcef6c8062c5e3fdb4edaecfbc7aff08cfb541fd71fefc.png"
+  },
+  "705": {
+   "start_time": 31.01
+  },
+  "129": {
+   "noise_seed": 10071
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S07_h3_s10071"
+  }
+ },
+ "S08": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the ball pit in <Picture 1>: low blue padded walls, colored plastic balls, a foam step, the yellow-poled play structure rising behind it.\n<Subject 2> is Sarah, the girl in <Picture 2>: about five, shoulder-length brown hair, blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow star bracelet on her left wrist.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. The view looks up from the table to the ball pit across the room: Sarah at the padded rail, waving both arms at us, bouncing.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, brighter, flatter fluorescent light, an ordinary room. Sarah appears exactly as defined.\n\n[Shot 1] The view looks up from the table to the ball pit across the room: Sarah at the padded rail, waving both arms at us, bouncing.\n\noverall_soundscape:\nSarah calls across the room: \"Dad. Watch this one.\" A man's voice nearby: \"One second.\"\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "22df8380adf787f84f4203ea3961aea6effcbf94fcdeb4fee1cf1d4839c49cd3.png"
+  },
+  "151": {
+   "image": "aa3e743e448b406c5d0321b85fca4f2dab372a8292b4b194b93e0ecfc57ee451.png"
+  },
+  "705": {
+   "start_time": 36.1767
+  },
+  "129": {
+   "noise_seed": 10081
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S08_h3_s10081"
+  }
+ },
+ "S09": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the ball pit in <Picture 1>: low blue padded walls, colored plastic balls, a foam step, the yellow-poled play structure rising behind it.\n<Subject 2> is Sarah, the girl in <Picture 2>: about five, shoulder-length brown hair, blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow star bracelet on her left wrist.\n<Subject 3> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. The view dips down to the phone in hand for a moment, then back up: Sarah is climbing over the padded wall into the ball pit.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, brighter, flatter fluorescent light, an ordinary room. Sarah appears exactly as defined.\n\n[Shot 1] The view dips down to the phone in hand for a moment, then back up: Sarah is climbing over the padded wall into the ball pit.\n\noverall_soundscape:\nBall pit rattle, party din.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "22df8380adf787f84f4203ea3961aea6effcbf94fcdeb4fee1cf1d4839c49cd3.png"
+  },
+  "151": {
+   "image": "aa3e743e448b406c5d0321b85fca4f2dab372a8292b4b194b93e0ecfc57ee451.png"
+  },
+  "705": {
+   "start_time": 41.3433
+  },
+  "129": {
+   "noise_seed": 10091
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S09_h3_s10091"
+  }
+ },
+ "S10": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the ball pit in <Picture 1>: low blue padded walls, colored plastic balls, a foam step, the yellow-poled play structure rising behind it.\n<Subject 2> is Sarah, the girl in <Picture 2>: about five, shoulder-length brown hair, blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow star bracelet on her left wrist.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. The view pushes in on the ball pit.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, brighter, flatter fluorescent light, an ordinary room. Sarah appears exactly as defined.\n\n[Shot 1] The view pushes in on the ball pit. A bigger boy in a pink shirt shoves Sarah off the foam step; she stumbles into the balls.\n\noverall_soundscape:\nA shove, balls clattering, Sarah's startled cry.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "22df8380adf787f84f4203ea3961aea6effcbf94fcdeb4fee1cf1d4839c49cd3.png"
+  },
+  "151": {
+   "image": "aa3e743e448b406c5d0321b85fca4f2dab372a8292b4b194b93e0ecfc57ee451.png"
+  },
+  "705": {
+   "start_time": 46.51
+  },
+  "129": {
+   "noise_seed": 10101
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S10_h3_s10101"
+  }
+ },
+ "S11": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is Happy Hank's Pizza & Play in <Picture 1>: a cheap 1990s pizza-and-games party room, drop ceiling with flat fluorescent panels, laminate party tables with paper tablecloths and balloons, purple patterned carpet, arcade glow, a yellow-poled play structure with red, blue and teal tubes behind a ball pit. Ordinary, loud, a little grubby.\n<Subject 2> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. One hand flips the phone face down on the table and the view rises fast as we stand up from the bench.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, brighter, flatter fluorescent light, an ordinary room.\n\n[Shot 1] One hand flips the phone face down on the table and the view rises fast as we stand up from the bench.\n\noverall_soundscape:\nSarah crying across the room cuts through the party noise. The bench scrapes.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "5c90d4bab53db5a503bcef6c8062c5e3fdb4edaecfbc7aff08cfb541fd71fefc.png"
+  },
+  "151": {
+   "image": "5c90d4bab53db5a503bcef6c8062c5e3fdb4edaecfbc7aff08cfb541fd71fefc.png"
+  },
+  "705": {
+   "start_time": 51.6767
+  },
+  "129": {
+   "noise_seed": 10111
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S11_h3_s10111"
+  }
+ },
+ "S12": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is Happy Hank's Pizza & Play in <Picture 1>: a cheap 1990s pizza-and-games party room, drop ceiling with flat fluorescent panels, laminate party tables with paper tablecloths and balloons, purple patterned carpet, arcade glow, a yellow-poled play structure with red, blue and teal tubes behind a ball pit. Ordinary, loud, a little grubby.\n<Subject 2> is the ball pit in <Picture 2>: low blue padded walls, colored plastic balls, a foam step, the yellow-poled play structure rising behind it.\n<Subject 3> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. Walking fast between the party tables toward the ball pit, tables and balloons sliding past, hands swinging into frame.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, brighter, flatter fluorescent light, an ordinary room.\n\n[Shot 1] Walking fast between the party tables toward the ball pit, tables and balloons sliding past, hands swinging into frame.\n\noverall_soundscape:\nA man's voice: \"Hey. Hey, I'm here.\" Footsteps, party din.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "5c90d4bab53db5a503bcef6c8062c5e3fdb4edaecfbc7aff08cfb541fd71fefc.png"
+  },
+  "151": {
+   "image": "22df8380adf787f84f4203ea3961aea6effcbf94fcdeb4fee1cf1d4839c49cd3.png"
+  },
+  "705": {
+   "start_time": 56.8433
+  },
+  "129": {
+   "noise_seed": 10121
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S12_h3_s10121"
+  }
+ },
+ "S13": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the ball pit in <Picture 1>: low blue padded walls, colored plastic balls, a foam step, the yellow-poled play structure rising behind it.\n<Subject 2> is Sarah, the girl in <Picture 2>: about five, shoulder-length brown hair, blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow star bracelet on her left wrist.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. Sarah scrambles out of the ball pit crying and runs into the entrance of the play structure; the view follows her as she disappears inside.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, brighter, flatter fluorescent light, an ordinary room. Sarah appears exactly as defined.\n\n[Shot 1] Sarah scrambles out of the ball pit crying and runs into the entrance of the play structure; the view follows her as she disappears inside.\n\noverall_soundscape:\nSarah sobbing, sneakers on padding, party din.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "22df8380adf787f84f4203ea3961aea6effcbf94fcdeb4fee1cf1d4839c49cd3.png"
+  },
+  "151": {
+   "image": "aa3e743e448b406c5d0321b85fca4f2dab372a8292b4b194b93e0ecfc57ee451.png"
+  },
+  "705": {
+   "start_time": 62.01
+  },
+  "129": {
+   "noise_seed": 10131
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S13_h3_s10131"
+  }
+ },
+ "S14": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the ball pit in <Picture 1>: low blue padded walls, colored plastic balls, a foam step, the yellow-poled play structure rising behind it.\n<Subject 2> is the play-structure tube in <Picture 2>: dull faded rotomolded plastic, scuffed padded floor, round bolt caps at the joints, thin warm light through the plastic. Cramped for an adult, still ordinary.\n<Subject 3> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. We crouch at the round mouth of a play tube; hands grip its rim.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, brighter, flatter fluorescent light, an ordinary room.\n\n[Shot 1] We crouch at the round mouth of a play tube; hands grip its rim. Deep inside, a pair of small cream sneakers vanishes around the bend.\n\noverall_soundscape:\nHollow plastic echo, a sniffle fading away inside the tube.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "22df8380adf787f84f4203ea3961aea6effcbf94fcdeb4fee1cf1d4839c49cd3.png"
+  },
+  "151": {
+   "image": "723c38e5ea6b233f56836c0a176ce036439d7c880e74cef624c2e2e1f63583af.png"
+  },
+  "705": {
+   "start_time": 67.1767
+  },
+  "129": {
+   "noise_seed": 10141
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S14_h3_s10141"
+  }
+ },
+ "S15": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the play-structure tube in <Picture 1>: dull faded rotomolded plastic, scuffed padded floor, round bolt caps at the joints, thin warm light through the plastic. Cramped for an adult, still ordinary.\n<Subject 2> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. Crawling forward through a padded play tube, both hands planted on the scuffed padded floor in front, the tube stretching ahead.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, dim and warm, light leaking through plastic, getting dimmer.\n\n[Shot 1] Crawling forward through a padded play tube, both hands planted on the scuffed padded floor in front, the tube stretching ahead.\n\noverall_soundscape:\nKnees and palms on vinyl, breathing, a man's voice: \"Sarah?\" The party muffled outside.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "723c38e5ea6b233f56836c0a176ce036439d7c880e74cef624c2e2e1f63583af.png"
+  },
+  "151": {
+   "image": "723c38e5ea6b233f56836c0a176ce036439d7c880e74cef624c2e2e1f63583af.png"
+  },
+  "705": {
+   "start_time": 72.3433
+  },
+  "129": {
+   "noise_seed": 10151
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S15_h3_s10151"
+  }
+ },
+ "S16": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the play-structure tube in <Picture 1>: dull faded rotomolded plastic, scuffed padded floor, round bolt caps at the joints, thin warm light through the plastic. Cramped for an adult, still ordinary.\n<Subject 2> is Sarah, the girl in <Picture 2>: about five, shoulder-length brown hair, blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow star bracelet on her left wrist.\n<Subject 3> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. A net tunnel; far ahead at the corner, a flash of a blue long-sleeve top whips out of sight.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, dim and warm, light leaking through plastic, getting dimmer. Sarah appears exactly as defined.\n\n[Shot 1] A net tunnel; far ahead at the corner, a flash of a blue long-sleeve top whips out of sight. Hands push forward on the net floor.\n\noverall_soundscape:\nNet creaking, distant small footsteps, the party fainter.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "723c38e5ea6b233f56836c0a176ce036439d7c880e74cef624c2e2e1f63583af.png"
+  },
+  "151": {
+   "image": "aa3e743e448b406c5d0321b85fca4f2dab372a8292b4b194b93e0ecfc57ee451.png"
+  },
+  "705": {
+   "start_time": 77.51
+  },
+  "129": {
+   "noise_seed": 10161
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S16_h3_s10161"
+  }
+ },
+ "S17": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the junction chamber in <Picture 1>: faded teal plastic walls, red and yellow tube mouths leading off, a strip of net overhead, scuffed padded floor.\n<Subject 2> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. Inside the junction chamber the view looks left into one tube, right into another, then back to the middle and moves toward one.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, dim and warm, light leaking through plastic, getting dimmer.\n\n[Shot 1] Inside the junction chamber the view looks left into one tube, right into another, then back to the middle and moves toward one.\n\noverall_soundscape:\nBreathing, plastic creaks, the party barely audible.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "fab1bdc6b71279cd4a2878182f7422872fdf268ed13f4cb6de511d55eeff3b81.png"
+  },
+  "151": {
+   "image": "fab1bdc6b71279cd4a2878182f7422872fdf268ed13f4cb6de511d55eeff3b81.png"
+  },
+  "705": {
+   "start_time": 82.6767
+  },
+  "129": {
+   "noise_seed": 10171
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S17_h3_s10171"
+  }
+ },
+ "S18": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the play-structure tube in <Picture 1>: dull faded rotomolded plastic, scuffed padded floor, round bolt caps at the joints, thin warm light through the plastic. Cramped for an adult, still ordinary.\n<Subject 2> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. On the tube floor lies a small yellow plastic star charm.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, dim and warm, light leaking through plastic, getting dimmer.\n\n[Shot 1] On the tube floor lies a small yellow plastic star charm. One hand picks it up, holds it close for a moment, and tucks it away.\n\noverall_soundscape:\nA tiny plastic click, breathing.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "723c38e5ea6b233f56836c0a176ce036439d7c880e74cef624c2e2e1f63583af.png"
+  },
+  "151": {
+   "image": "723c38e5ea6b233f56836c0a176ce036439d7c880e74cef624c2e2e1f63583af.png"
+  },
+  "705": {
+   "start_time": 87.8433
+  },
+  "129": {
+   "noise_seed": 10181
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S18_h3_s10181"
+  }
+ },
+ "S19": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the play-structure tube in <Picture 1>: dull faded rotomolded plastic, scuffed padded floor, round bolt caps at the joints, thin warm light through the plastic. Cramped for an adult, still ordinary.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. An endless straight tube ahead, the same joints repeating far past where the building should end.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, dim and warm, light leaking through plastic, getting dimmer.\n\n[Shot 1] An endless straight tube ahead, the same joints repeating far past where the building should end. Slow push forward.\n\noverall_soundscape:\nBreathing, plastic, the party gone faint and far.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "723c38e5ea6b233f56836c0a176ce036439d7c880e74cef624c2e2e1f63583af.png"
+  },
+  "151": {
+   "image": "723c38e5ea6b233f56836c0a176ce036439d7c880e74cef624c2e2e1f63583af.png"
+  },
+  "705": {
+   "start_time": 93.01
+  },
+  "129": {
+   "noise_seed": 10191
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S19_h3_s10191"
+  }
+ },
+ "S20": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the junction chamber in <Picture 1>: faded teal plastic walls, red and yellow tube mouths leading off, a strip of net overhead, scuffed padded floor.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. The same teal junction chamber again, from another side.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, dim and warm, light leaking through plastic, getting dimmer.\n\n[Shot 1] The same teal junction chamber again, from another side. The view pushes in on a single faded sticker on the wall, already seen once.\n\noverall_soundscape:\nNear silence, a low hum starting.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "fab1bdc6b71279cd4a2878182f7422872fdf268ed13f4cb6de511d55eeff3b81.png"
+  },
+  "151": {
+   "image": "fab1bdc6b71279cd4a2878182f7422872fdf268ed13f4cb6de511d55eeff3b81.png"
+  },
+  "705": {
+   "start_time": 98.1767
+  },
+  "129": {
+   "noise_seed": 10201
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S20_h3_s10201"
+  }
+ },
+ "S21": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the play-structure tube in <Picture 1>: dull faded rotomolded plastic, scuffed padded floor, round bolt caps at the joints, thin warm light through the plastic. Cramped for an adult, still ordinary.\n<Subject 2> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. Padded steps lead down into a warmer, dimmer section; hands on the padded edges as we go down.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, dim and warm, light leaking through plastic, getting dimmer.\n\n[Shot 1] Padded steps lead down into a warmer, dimmer section; hands on the padded edges as we go down.\n\noverall_soundscape:\nMuffled thumps on padding, the hum growing.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "723c38e5ea6b233f56836c0a176ce036439d7c880e74cef624c2e2e1f63583af.png"
+  },
+  "151": {
+   "image": "723c38e5ea6b233f56836c0a176ce036439d7c880e74cef624c2e2e1f63583af.png"
+  },
+  "705": {
+   "start_time": 103.3433
+  },
+  "129": {
+   "noise_seed": 10211
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S21_h3_s10211"
+  }
+ },
+ "S22": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the play-structure tube in <Picture 1>: dull faded rotomolded plastic, scuffed padded floor, round bolt caps at the joints, thin warm light through the plastic. Cramped for an adult, still ordinary.\n<Subject 2> is the slide in <Picture 2>: a dull faded orange rotomolded plastic tube slide, matte chalky plastic, plastic collars with fat round bolt caps.\n<Subject 3> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. A dark round slide mouth in the wall that was not there before; hands grip its rim and the view peers into the black.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, dim and warm, light leaking through plastic, getting dimmer.\n\n[Shot 1] A dark round slide mouth in the wall that was not there before; hands grip its rim and the view peers into the black.\n\noverall_soundscape:\nA man's voice into the dark: \"Sarah?\" It echoes far too long.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "723c38e5ea6b233f56836c0a176ce036439d7c880e74cef624c2e2e1f63583af.png"
+  },
+  "151": {
+   "image": "4461501730de79ed771e5b537b0367bffe317c9768f39837cf11fe6afc632a92.png"
+  },
+  "705": {
+   "start_time": 108.51
+  },
+  "129": {
+   "noise_seed": 10221
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S22_h3_s10221"
+  }
+ },
+ "S23": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the slide in <Picture 1>: a dull faded orange rotomolded plastic tube slide, matte chalky plastic, plastic collars with fat round bolt caps.\n<Subject 2> is the play-structure tube in <Picture 2>: dull faded rotomolded plastic, scuffed padded floor, round bolt caps at the joints, thin warm light through the plastic. Cramped for an adult, still ordinary.\n<Subject 3> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. We climb into the slide mouth; the floor tips forward and we start to slide, hands grabbing at the tube walls as it drops away.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, dim orange glow through translucent plastic.\n\n[Shot 1] We climb into the slide mouth; the floor tips forward and we start to slide, hands grabbing at the tube walls as it drops away.\n\noverall_soundscape:\nPlastic squeal, a sharp breath, the slide roar starting.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "4461501730de79ed771e5b537b0367bffe317c9768f39837cf11fe6afc632a92.png"
+  },
+  "151": {
+   "image": "723c38e5ea6b233f56836c0a176ce036439d7c880e74cef624c2e2e1f63583af.png"
+  },
+  "705": {
+   "start_time": 113.6767
+  },
+  "129": {
+   "noise_seed": 10231
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S23_h3_s10231"
+  }
+ },
+ "S27": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the Playways in <Picture 1>: a dense knot of grimy faded tube slides, torn sagging net catwalks, dark mesh-caged towers, dusty bubble pods, endless towers of small amber windows in cold blue-grey haze, a vast sea of dull colored balls. No ceiling ever visible.\n<Subject 2> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. Underwater-like darkness under the balls: dim colored balls pressed against the view, hands clawing at them, cold blue light leaking between from above.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, gloomy and underlit, cold desaturated blue-grey dark against weak amber practicals, drifting haze.\n\n[Shot 1] Underwater-like darkness under the balls: dim colored balls pressed against the view, hands clawing at them, cold blue light leaking between from above.\n\noverall_soundscape:\nMuffled clatter, heartbeat, pressure.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "05d166539983d8dc8d26c71b8f5ae5faf750431927477dc62f41a4bb79d394c4.png"
+  },
+  "151": {
+   "image": "05d166539983d8dc8d26c71b8f5ae5faf750431927477dc62f41a4bb79d394c4.png"
+  },
+  "705": {
+   "start_time": 134.3433
+  },
+  "129": {
+   "noise_seed": 10271
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S27_h3_s10271"
+  }
+ },
+ "S28": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the Playways in <Picture 1>: a dense knot of grimy faded tube slides, torn sagging net catwalks, dark mesh-caged towers, dusty bubble pods, endless towers of small amber windows in cold blue-grey haze, a vast sea of dull colored balls. No ceiling ever visible.\n<Subject 2> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. The hands break the surface of the ball sea, balls spilling off; the view rises out into the hazy air of the Playways.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, gloomy and underlit, cold desaturated blue-grey dark against weak amber practicals, drifting haze.\n\n[Shot 1] The hands break the surface of the ball sea, balls spilling off; the view rises out into the hazy air of the Playways.\n\noverall_soundscape:\nBalls rolling off, a gasp, then silence and a low hum where the party was.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "05d166539983d8dc8d26c71b8f5ae5faf750431927477dc62f41a4bb79d394c4.png"
+  },
+  "151": {
+   "image": "05d166539983d8dc8d26c71b8f5ae5faf750431927477dc62f41a4bb79d394c4.png"
+  },
+  "705": {
+   "start_time": 139.51
+  },
+  "129": {
+   "noise_seed": 10281
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S28_h3_s10281"
+  }
+ },
+ "S29": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the Playways in <Picture 1>: a dense knot of grimy faded tube slides, torn sagging net catwalks, dark mesh-caged towers, dusty bubble pods, endless towers of small amber windows in cold blue-grey haze, a vast sea of dull colored balls. No ceiling ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. From the ball sea the view tilts slowly up the towers of the Playways, up and up into haze, no top in sight.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, gloomy and underlit, cold desaturated blue-grey dark against weak amber practicals, drifting haze.\n\n[Shot 1] From the ball sea the view tilts slowly up the towers of the Playways, up and up into haze, no top in sight.\n\noverall_soundscape:\nA low enormous hum, distant creaks.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "05d166539983d8dc8d26c71b8f5ae5faf750431927477dc62f41a4bb79d394c4.png"
+  },
+  "151": {
+   "image": "05d166539983d8dc8d26c71b8f5ae5faf750431927477dc62f41a4bb79d394c4.png"
+  },
+  "705": {
+   "start_time": 144.6767
+  },
+  "129": {
+   "noise_seed": 10291
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S29_h3_s10291"
+  }
+ },
+ "S30": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the Playways in <Picture 1>: a dense knot of grimy faded tube slides, torn sagging net catwalks, dark mesh-caged towers, dusty bubble pods, endless towers of small amber windows in cold blue-grey haze, a vast sea of dull colored balls. No ceiling ever visible.\n<Subject 2> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. Wading through the balls to a padded ledge; the hands grab its edge and haul up onto it.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, gloomy and underlit, cold desaturated blue-grey dark against weak amber practicals, drifting haze.\n\n[Shot 1] Wading through the balls to a padded ledge; the hands grab its edge and haul up onto it.\n\noverall_soundscape:\nBalls shifting, heavy breathing, vinyl creak.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "05d166539983d8dc8d26c71b8f5ae5faf750431927477dc62f41a4bb79d394c4.png"
+  },
+  "151": {
+   "image": "05d166539983d8dc8d26c71b8f5ae5faf750431927477dc62f41a4bb79d394c4.png"
+  },
+  "705": {
+   "start_time": 149.8433
+  },
+  "129": {
+   "noise_seed": 10301
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S30_h3_s10301"
+  }
+ },
+ "S31": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the Playways in <Picture 1>: a dense knot of grimy faded tube slides, torn sagging net catwalks, dark mesh-caged towers, dusty bubble pods, endless towers of small amber windows in cold blue-grey haze, a vast sea of dull colored balls. No ceiling ever visible.\n<Subject 2> is Sarah, the girl in <Picture 2>: about five, shoulder-length brown hair, blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow star bracelet on her left wrist.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. Far off on a net bridge high up stands one small figure in a blue long-sleeve top, back turned, perfectly still.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, gloomy and underlit, cold desaturated blue-grey dark against weak amber practicals, drifting haze. Sarah appears exactly as defined. The small figures are all the same size and outfit as Sarah and never turn around.\n\n[Shot 1] Far off on a net bridge high up stands one small figure in a blue long-sleeve top, back turned, perfectly still.\n\noverall_soundscape:\nA man's voice shouting: \"Sarah!\" It rolls away into the space with no answer.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "05d166539983d8dc8d26c71b8f5ae5faf750431927477dc62f41a4bb79d394c4.png"
+  },
+  "151": {
+   "image": "aa3e743e448b406c5d0321b85fca4f2dab372a8292b4b194b93e0ecfc57ee451.png"
+  },
+  "705": {
+   "start_time": 155.01
+  },
+  "129": {
+   "noise_seed": 10311
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S31_h3_s10311"
+  }
+ },
+ "S32": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the Playways in <Picture 1>: a dense knot of grimy faded tube slides, torn sagging net catwalks, dark mesh-caged towers, dusty bubble pods, endless towers of small amber windows in cold blue-grey haze, a vast sea of dull colored balls. No ceiling ever visible.\n<Subject 2> is Sarah, the girl in <Picture 2>: about five, shoulder-length brown hair, blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow star bracelet on her left wrist.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. The view pans: another small figure in a blue top in a lit window, back turned; another at the top of a slide.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, gloomy and underlit, cold desaturated blue-grey dark against weak amber practicals, drifting haze. Sarah appears exactly as defined. The small figures are all the same size and outfit as Sarah and never turn around.\n\n[Shot 1] The view pans: another small figure in a blue top in a lit window, back turned; another at the top of a slide. All still.\n\noverall_soundscape:\nThe hum, distant creaks.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "05d166539983d8dc8d26c71b8f5ae5faf750431927477dc62f41a4bb79d394c4.png"
+  },
+  "151": {
+   "image": "aa3e743e448b406c5d0321b85fca4f2dab372a8292b4b194b93e0ecfc57ee451.png"
+  },
+  "705": {
+   "start_time": 160.1767
+  },
+  "129": {
+   "noise_seed": 10321
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S32_h3_s10321"
+  }
+ },
+ "S33": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the Playways in <Picture 1>: a dense knot of grimy faded tube slides, torn sagging net catwalks, dark mesh-caged towers, dusty bubble pods, endless towers of small amber windows in cold blue-grey haze, a vast sea of dull colored balls. No ceiling ever visible.\n<Subject 2> is Sarah, the girl in <Picture 2>: about five, shoulder-length brown hair, blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow star bracelet on her left wrist.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. A fast whip pan across the bridges: dozens of small figures in blue tops on every bridge and catwalk, all with their backs turned, all still.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, gloomy and underlit, cold desaturated blue-grey dark against weak amber practicals, drifting haze. Sarah appears exactly as defined. The small figures are all the same size and outfit as Sarah and never turn around.\n\n[Shot 1] A fast whip pan across the bridges: dozens of small figures in blue tops on every bridge and catwalk, all with their backs turned, all still.\n\noverall_soundscape:\nWhoosh of the pan, then the hum.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "05d166539983d8dc8d26c71b8f5ae5faf750431927477dc62f41a4bb79d394c4.png"
+  },
+  "151": {
+   "image": "aa3e743e448b406c5d0321b85fca4f2dab372a8292b4b194b93e0ecfc57ee451.png"
+  },
+  "705": {
+   "start_time": 165.3433
+  },
+  "129": {
+   "noise_seed": 10331
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S33_h3_s10331"
+  }
+ },
+ "S34": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the Playways in <Picture 1>: a dense knot of grimy faded tube slides, torn sagging net catwalks, dark mesh-caged towers, dusty bubble pods, endless towers of small amber windows in cold blue-grey haze, a vast sea of dull colored balls. No ceiling ever visible.\n<Subject 2> is the giant mascot idol in <Picture 2>: the same grinning orange mascot face, as one enormous still statue. Exactly one. It never moves.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. The view tilts up the tiers of the Playways, every tier dotted with small still figures turned away, to the giant grinning mascot idol looking down.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, gloomy and underlit, cold desaturated blue-grey dark against weak amber practicals, drifting haze.  The small figures are all the same size and outfit as Sarah and never turn around.\n\n[Shot 1] The view tilts up the tiers of the Playways, every tier dotted with small still figures turned away, to the giant grinning mascot idol looking down.\n\noverall_soundscape:\nA deep swelling drone.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "05d166539983d8dc8d26c71b8f5ae5faf750431927477dc62f41a4bb79d394c4.png"
+  },
+  "151": {
+   "image": "8c92a1285baeb92a3fbefa2a80d7b2037afa58541cfc8f54536291af20fd71ae.png"
+  },
+  "705": {
+   "start_time": 170.51
+  },
+  "129": {
+   "noise_seed": 10341
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S34_h3_s10341"
+  }
+ },
+ "S35": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the Playways in <Picture 1>: a dense knot of grimy faded tube slides, torn sagging net catwalks, dark mesh-caged towers, dusty bubble pods, endless towers of small amber windows in cold blue-grey haze, a vast sea of dull colored balls. No ceiling ever visible.\n<Subject 2> is the viewer's own two hands, invented. The viewer's own two hands: a man in his mid-30s, light-to-medium warm skin, charcoal cotton overshirt cuffs. They are the only part of the viewer ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. Looking down at one open hand holding the small yellow plastic star charm.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, gloomy and underlit, cold desaturated blue-grey dark against weak amber practicals, drifting haze.\n\n[Shot 1] Looking down at one open hand holding the small yellow plastic star charm.\n\noverall_soundscape:\nThe hum, a single breath.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "05d166539983d8dc8d26c71b8f5ae5faf750431927477dc62f41a4bb79d394c4.png"
+  },
+  "151": {
+   "image": "05d166539983d8dc8d26c71b8f5ae5faf750431927477dc62f41a4bb79d394c4.png"
+  },
+  "705": {
+   "start_time": 175.6767
+  },
+  "129": {
+   "noise_seed": 10351
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S35_h3_s10351"
+  }
+ },
+ "S36": {
+  "136": {
+   "prompt": "subject_definitions:\n<Subject 1> is the Playways in <Picture 1>: a dense knot of grimy faded tube slides, torn sagging net catwalks, dark mesh-caged towers, dusty bubble pods, endless towers of small amber windows in cold blue-grey haze, a vast sea of dull colored balls. No ceiling ever visible.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. A slow tilt up into a tower that never ends, rising into haze and dark; at the very end the frame goes to black.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person point of view through the eyes of a tired father, handheld, photographic 35mm film look with 1990s grain and slight halation, gloomy and underlit, cold desaturated blue-grey dark against weak amber practicals, drifting haze.\n\n[Shot 1] A slow tilt up into a tower that never ends, rising into haze and dark; at the very end the frame goes to black.\n\noverall_soundscape:\nThe hum swelling, then cut to silence.\n\nnon_diegetic_music:\nNone.\n\nAvoid: cuts, a third-person view, the viewer's face or body beyond the hands, extra mascots, monsters, cartoon style, readable text, logos."
+  },
+  "150": {
+   "image": "05d166539983d8dc8d26c71b8f5ae5faf750431927477dc62f41a4bb79d394c4.png"
+  },
+  "151": {
+   "image": "05d166539983d8dc8d26c71b8f5ae5faf750431927477dc62f41a4bb79d394c4.png"
+  },
+  "705": {
+   "start_time": 180.8433
+  },
+  "129": {
+   "noise_seed": 10361
+  },
+  "92": {
+   "filename_prefix": "ehih/halloween/batch1/S36_h3_s10361"
+  }
+ }
+}

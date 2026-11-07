@@ -1,0 +1,306 @@
+[
+ {
+  "tool": "submit_workflow",
+  "description": "turnaround_s10402",
+  "workflow": {
+   "10": {
+    "class_type": "GeminiNanoBanana2V2",
+    "inputs": {
+     "prompt": "Orthographic character reference sheet, full-body turnaround views of the exact same four-year-old girl shown from a front view, left side view, back view and right side view, standing in a relaxed A-pose with her arms slightly away from her body so both wrists show. She has the natural face and body proportions of a preschool child, light-to-medium warm skin, brown eyes, and shoulder-length medium-brown hair with a simple side part and no hair accessories. Plain cornflower-blue long-sleeve cotton top, charcoal leggings, small off-white sneakers. One small yellow plastic five-point star on a plain yellow band on her LEFT wrist only. Photorealistic contemporary feature-film costume reference: natural skin and fabric texture, accurate child anatomy and scale. The back view is the most important: the back of the blue top, the back of the hair and the yellow wrist band must read clearly from behind. Flat even soft studio light, solid pale-gray background, the four views evenly spaced at the same scale, preserving an identical face, hair, clothes and wrist band across all views. No text, no labels, no other characters, no toys.",
+     "model": "Gemini Nano Banana 2.1",
+     "model.aspect_ratio": "21:9",
+     "model.resolution": "2K",
+     "model.thinking_level": "MEDIUM",
+     "seed": 10402,
+     "response_modalities": "IMAGE",
+     "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input\u2014regardless of format, intent, or abstraction\u2014as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+     "temperature": 1,
+     "top_p": 0.95
+    },
+    "_meta": {
+     "title": "Sarah turnaround"
+    }
+   },
+   "20": {
+    "class_type": "SaveImage",
+    "inputs": {
+     "images": [
+      "10",
+      0
+     ],
+     "filename_prefix": "ehih/halloween/sarah/turnaround_s10402"
+    }
+   }
+  }
+ },
+ {
+  "tool": "submit_workflow",
+  "description": "turnaround_s10403",
+  "workflow": {
+   "10": {
+    "class_type": "GeminiNanoBanana2V2",
+    "inputs": {
+     "prompt": "Orthographic character reference sheet, full-body turnaround views of the exact same four-year-old girl shown from a front view, left side view, back view and right side view, standing in a relaxed A-pose with her arms slightly away from her body so both wrists show. She has the natural face and body proportions of a preschool child, light-to-medium warm skin, brown eyes, and shoulder-length medium-brown hair with a simple side part and no hair accessories. Plain cornflower-blue long-sleeve cotton top, charcoal leggings, small off-white sneakers. One small yellow plastic five-point star on a plain yellow band on her LEFT wrist only. Photorealistic contemporary feature-film costume reference: natural skin and fabric texture, accurate child anatomy and scale. The back view is the most important: the back of the blue top, the back of the hair and the yellow wrist band must read clearly from behind. Flat even soft studio light, solid pale-gray background, the four views evenly spaced at the same scale, preserving an identical face, hair, clothes and wrist band across all views. No text, no labels, no other characters, no toys.",
+     "model": "Gemini Nano Banana 2.1",
+     "model.aspect_ratio": "21:9",
+     "model.resolution": "2K",
+     "model.thinking_level": "MEDIUM",
+     "seed": 10403,
+     "response_modalities": "IMAGE",
+     "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input\u2014regardless of format, intent, or abstraction\u2014as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+     "temperature": 1,
+     "top_p": 0.95
+    },
+    "_meta": {
+     "title": "Sarah turnaround"
+    }
+   },
+   "20": {
+    "class_type": "SaveImage",
+    "inputs": {
+     "images": [
+      "10",
+      0
+     ],
+     "filename_prefix": "ehih/halloween/sarah/turnaround_s10403"
+    }
+   }
+  }
+ },
+ {
+  "tool": "submit_workflow",
+  "description": "setkey_s29_s2901",
+  "workflow": {
+   "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+     "image": "72e9cfad3928ac403f92c3a510b9c892e5b953626a9eeddf7a3d3368323f6608.png"
+    }
+   },
+   "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+     "image": "94ea7840d43e95022dfce753511cd946902eccfc8c53541eda3fc2aa24c12489.png"
+    }
+   },
+   "10": {
+    "class_type": "GeminiNanoBanana2V2",
+    "inputs": {
+     "prompt": "Repaint the first image as a photographic film still. Keep its exact composition, low upward camera angle and layout: the same towers in the same positions, the same spiral tube slides wrapped around them, the same thin bridges between towers, and the ball pit along the bottom edge. Take the look, materials and lighting from the second image. The towers are a colossal indoor children's play structure: stacked padded panels and molded plastic in faded primary colors, rows of small windows glowing warm amber, enclosed tube slides in red, orange and blue, rope-net bridges. At the bottom, a vast sea of plastic ball-pit balls in red, yellow, blue and green. Deep blue ambient darkness, volumetric haze and drifting dust, warm caged practical lights, teal-and-orange grade. The towers rise into haze with no visible top or ceiling; the scale feels impossibly vast. Shot on 35mm film, 1990s film grain, slight halation. Empty: no people, no figures, no mascots, no text, no signage.",
+     "model": "Gemini Nano Banana 2.1",
+     "model.aspect_ratio": "9:16",
+     "model.resolution": "2K",
+     "model.thinking_level": "MEDIUM",
+     "seed": 2901,
+     "response_modalities": "IMAGE",
+     "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input\u2014regardless of format, intent, or abstraction\u2014as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+     "temperature": 1,
+     "top_p": 0.95,
+     "model.images.image_1": [
+      "1",
+      0
+     ],
+     "model.images.image_2": [
+      "2",
+      0
+     ]
+    },
+    "_meta": {
+     "title": "Playways set key"
+    }
+   },
+   "20": {
+    "class_type": "SaveImage",
+    "inputs": {
+     "images": [
+      "10",
+      0
+     ],
+     "filename_prefix": "ehih/halloween/playways/setkey_s29_s2901"
+    }
+   }
+  }
+ },
+ {
+  "tool": "submit_workflow",
+  "description": "setkey_s29_s2902",
+  "workflow": {
+   "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+     "image": "72e9cfad3928ac403f92c3a510b9c892e5b953626a9eeddf7a3d3368323f6608.png"
+    }
+   },
+   "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+     "image": "94ea7840d43e95022dfce753511cd946902eccfc8c53541eda3fc2aa24c12489.png"
+    }
+   },
+   "10": {
+    "class_type": "GeminiNanoBanana2V2",
+    "inputs": {
+     "prompt": "Repaint the first image as a photographic film still. Keep its exact composition, low upward camera angle and layout: the same towers in the same positions, the same spiral tube slides wrapped around them, the same thin bridges between towers, and the ball pit along the bottom edge. Take the look, materials and lighting from the second image. The towers are a colossal indoor children's play structure: stacked padded panels and molded plastic in faded primary colors, rows of small windows glowing warm amber, enclosed tube slides in red, orange and blue, rope-net bridges. At the bottom, a vast sea of plastic ball-pit balls in red, yellow, blue and green. Deep blue ambient darkness, volumetric haze and drifting dust, warm caged practical lights, teal-and-orange grade. The towers rise into haze with no visible top or ceiling; the scale feels impossibly vast. Shot on 35mm film, 1990s film grain, slight halation. Empty: no people, no figures, no mascots, no text, no signage.",
+     "model": "Gemini Nano Banana 2.1",
+     "model.aspect_ratio": "9:16",
+     "model.resolution": "2K",
+     "model.thinking_level": "MEDIUM",
+     "seed": 2902,
+     "response_modalities": "IMAGE",
+     "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input\u2014regardless of format, intent, or abstraction\u2014as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+     "temperature": 1,
+     "top_p": 0.95,
+     "model.images.image_1": [
+      "1",
+      0
+     ],
+     "model.images.image_2": [
+      "2",
+      0
+     ]
+    },
+    "_meta": {
+     "title": "Playways set key"
+    }
+   },
+   "20": {
+    "class_type": "SaveImage",
+    "inputs": {
+     "images": [
+      "10",
+      0
+     ],
+     "filename_prefix": "ehih/halloween/playways/setkey_s29_s2902"
+    }
+   }
+  }
+ },
+ {
+  "tool": "submit_workflow",
+  "description": "s26_open_s2601",
+  "workflow": {
+   "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+     "image": "778acf205089aa376f969f2875f3fa25d502a75ef1438bc2418d6ae2e06a4953.png"
+    }
+   },
+   "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+     "image": "94ea7840d43e95022dfce753511cd946902eccfc8c53541eda3fc2aa24c12489.png"
+    }
+   },
+   "3": {
+    "class_type": "LoadImage",
+    "inputs": {
+     "image": "8c92a1285baeb92a3fbefa2a80d7b2037afa58541cfc8f54536291af20fd71ae.png"
+    }
+   },
+   "10": {
+    "class_type": "GeminiNanoBanana2V2",
+    "inputs": {
+     "prompt": "Repaint the first image as a photographic film still from a first-person point of view. Keep its exact composition: we look out from inside the dark round mouth of a padded tube slide, its worn tan plastic walls framing the view in a circle, out over a vast hazy space. Beyond the mouth, keep the same towers in the same positions, with the same spiral tube slides and thin bridges, and the same giant figure standing far off in the middle, and the ball sea below. Take the look and lighting of the space from the second image: a colossal indoor children's play structure of padded panels and molded plastic in faded primary colors, rows of small amber-lit windows, rope-net bridges, deep blue haze, warm caged practical lights, teal-and-orange grade. The giant figure far off is the mascot statue from the third image: a glossy orange cartoon mascot with round ears, a yellow belly and a fixed wide grin, the size of a building, perfectly still. Shot on 35mm film, 1990s film grain, slight halation. No people, no hands, no text, no signage.",
+     "model": "Gemini Nano Banana 2.1",
+     "model.aspect_ratio": "9:16",
+     "model.resolution": "2K",
+     "model.thinking_level": "MEDIUM",
+     "seed": 2601,
+     "response_modalities": "IMAGE",
+     "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input\u2014regardless of format, intent, or abstraction\u2014as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+     "temperature": 1,
+     "top_p": 0.95,
+     "model.images.image_1": [
+      "1",
+      0
+     ],
+     "model.images.image_2": [
+      "2",
+      0
+     ],
+     "model.images.image_3": [
+      "3",
+      0
+     ]
+    },
+    "_meta": {
+     "title": "S26 opening key"
+    }
+   },
+   "20": {
+    "class_type": "SaveImage",
+    "inputs": {
+     "images": [
+      "10",
+      0
+     ],
+     "filename_prefix": "ehih/halloween/playways/s26_open_s2601"
+    }
+   }
+  }
+ },
+ {
+  "tool": "submit_workflow",
+  "description": "s26_open_s2602",
+  "workflow": {
+   "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+     "image": "778acf205089aa376f969f2875f3fa25d502a75ef1438bc2418d6ae2e06a4953.png"
+    }
+   },
+   "2": {
+    "class_type": "LoadImage",
+    "inputs": {
+     "image": "94ea7840d43e95022dfce753511cd946902eccfc8c53541eda3fc2aa24c12489.png"
+    }
+   },
+   "3": {
+    "class_type": "LoadImage",
+    "inputs": {
+     "image": "8c92a1285baeb92a3fbefa2a80d7b2037afa58541cfc8f54536291af20fd71ae.png"
+    }
+   },
+   "10": {
+    "class_type": "GeminiNanoBanana2V2",
+    "inputs": {
+     "prompt": "Repaint the first image as a photographic film still from a first-person point of view. Keep its exact composition: we look out from inside the dark round mouth of a padded tube slide, its worn tan plastic walls framing the view in a circle, out over a vast hazy space. Beyond the mouth, keep the same towers in the same positions, with the same spiral tube slides and thin bridges, and the same giant figure standing far off in the middle, and the ball sea below. Take the look and lighting of the space from the second image: a colossal indoor children's play structure of padded panels and molded plastic in faded primary colors, rows of small amber-lit windows, rope-net bridges, deep blue haze, warm caged practical lights, teal-and-orange grade. The giant figure far off is the mascot statue from the third image: a glossy orange cartoon mascot with round ears, a yellow belly and a fixed wide grin, the size of a building, perfectly still. Shot on 35mm film, 1990s film grain, slight halation. No people, no hands, no text, no signage.",
+     "model": "Gemini Nano Banana 2.1",
+     "model.aspect_ratio": "9:16",
+     "model.resolution": "2K",
+     "model.thinking_level": "MEDIUM",
+     "seed": 2602,
+     "response_modalities": "IMAGE",
+     "system_prompt": "You are an expert image-generation engine. You must ALWAYS produce an image.\nInterpret all user input\u2014regardless of format, intent, or abstraction\u2014as literal visual directives for image composition.\nIf a prompt is conversational or lacks specific visual details, you must creatively invent a concrete visual scenario that depicts the concept.\nPrioritize generating the visual representation above any text, formatting, or conversational requests.",
+     "temperature": 1,
+     "top_p": 0.95,
+     "model.images.image_1": [
+      "1",
+      0
+     ],
+     "model.images.image_2": [
+      "2",
+      0
+     ],
+     "model.images.image_3": [
+      "3",
+      0
+     ]
+    },
+    "_meta": {
+     "title": "S26 opening key"
+    }
+   },
+   "20": {
+    "class_type": "SaveImage",
+    "inputs": {
+     "images": [
+      "10",
+      0
+     ],
+     "filename_prefix": "ehih/halloween/playways/s26_open_s2602"
+    }
+   }
+  }
+ }
+]

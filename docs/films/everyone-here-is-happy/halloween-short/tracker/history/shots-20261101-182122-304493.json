@@ -1,0 +1,2066 @@
+{
+ "film": "Everyone Here Is Happy",
+ "statuses": [
+  {
+   "id": "wtg",
+   "label": "Waiting"
+  },
+  {
+   "id": "rdy",
+   "label": "Ready to generate"
+  },
+  {
+   "id": "ip",
+   "label": "Generating"
+  },
+  {
+   "id": "rev",
+   "label": "Review"
+  },
+  {
+   "id": "fix",
+   "label": "Needs fix"
+  },
+  {
+   "id": "apr",
+   "label": "Approved"
+  }
+ ],
+ "refs": [
+  "idol",
+  "junction",
+  "mascot",
+  "party",
+  "pit",
+  "playways",
+  "sarah",
+  "slide",
+  "tube"
+ ],
+ "defaults": {
+  "cn": "0.35 / 0.35",
+  "builder": "prompts/batch_h3_v02.py"
+ },
+ "blockout": "D:/Comfy/blockout-previs-demo/halloween-playways/animatic/ehih_halloween_animatic.mp4",
+ "shots": [
+  {
+   "id": "S01",
+   "index": 1,
+   "frames": [
+    1,
+    120
+   ],
+   "set": "party",
+   "beat": "Party",
+   "camera": "Seated at the party table, soda cup in left hand; slow pan left to right across the party; Sarah walks up from the right with the crown",
+   "caption": "Happy Hank's. Dad, checked out, soda in hand. Sarah walks up with a paper crown.",
+   "zone": "party",
+   "refs": [
+    "party",
+    "sarah"
+   ],
+   "cast": "Exactly one child close to me, and only at the end: Sarah, a girl of about five with shoulder-length brown hair, a blue long-sleeve top, dark grey leggings and cream velcro sneakers. The children at the far tables are small and always moving: eating pizza, laughing, running, waving balloons. No adult anywhere in frame.",
+   "beats": [
+    "0-1 s: I sit at the party table, my left hand resting a paper soda cup with a plastic lid and a straw on the paper tablecloth; behind it the room is busy and loud.",
+    "1-3.5 s: my head pans slowly left to right on a gentle arc, easing in and out: kids at the far tables eating pizza and laughing, a child waving a balloon, two kids running between the tables, the yellow-poled play structure and the ball pit at the back of the room.",
+    "3.5-4.5 s: as the pan settles, Sarah walks up to me from the right, holding a yellow paper birthday crown in both hands, her steps small and quick.",
+    "4.5-5 s: she stops right beside my chair, lifts the crown toward me, and holds."
+   ],
+   "end": "Sarah standing beside my chair on my right, holding a yellow paper crown up toward me with both hands; my left hand with the soda cup on the table; the busy party and the play structure behind her.",
+   "sound": "Party din, kids shrieking and laughing, arcade bleeps, a distant birthday song, fluorescent hum, ice rattling in the soda cup.",
+   "extra_avoid": "an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room, a mug, a hot drink",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S01_h3_s10011.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10011,
+     "job": "e8de6e8a-c693-4640-bf28-7ec5b2b7219a",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Josh",
+     "when": "2026-11-01T10:32",
+     "text": "So it shows up here, but we should do something similar to what we did in the playways and make the party set as a reference image to use in these scenes. This way we can keep things consistent. \n\nNo steam in the coffee. Treat it like a soda"
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T11:06",
+     "text": "Rewrite for the new story: soda cup (lid and straw, no steam) replaces the coffee, the background kids are always moving, and the shot now ends with Sarah walking up with the crown so S02 can start on her. Sarah's look is written into the cast line because 'sarah' isn't in this shot's refs (the builder drops her style description without it)."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 5
+  },
+  {
+   "id": "S02",
+   "index": 2,
+   "frames": [
+    121,
+    240
+   ],
+   "set": "party",
+   "beat": "Party",
+   "camera": "Sarah climbs onto the chair beside him; the crown drops over the top of the lens; she straightens it",
+   "caption": "Sarah stands on the chair and crowns him. It slips over his eyes; she straightens it, pleased.",
+   "zone": "party",
+   "refs": [
+    "party",
+    "sarah"
+   ],
+   "cast": "Exactly one child close to me: Sarah, standing on the seat of the empty chair beside me, never on the table. The crown goes on my head, never on Sarah's. My own head and face are never seen. The children at the far tables are small and always moving: eating pizza, laughing, running, waving balloons. No adult anywhere in frame.",
+   "beats": [
+    "0-1 s: Sarah climbs up onto the seat of the empty chair to my right and stands on it, a little wobbly, the yellow paper crown in both hands, her face at my eye level, an arm's length away.",
+    "1-2 s: she leans in and sets the crown on my head; its yellow zigzag edge drops down over the top of the view, covering the upper frame.",
+    "2-4 s: her two hands come in, lift it and straighten it, the zigzag edge easing back up out of the top of the frame; her tongue pokes out in concentration.",
+    "4-5 s: she pats the crown, leans back on the chair seat, grinning, pleased with herself, and holds."
+   ],
+   "end": "Sarah standing on the seat of the chair to my right, an arm's length away, her face at my eye level, grinning and bare-headed; my left hand with the soda cup on the table; the crown just out of view above.",
+   "sound": "Paper rustle, Sarah giggles, the chair creaks, party din.",
+   "extra_avoid": "Sarah wearing a crown, Sarah on the table, an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v2b",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S02_h3_s10021.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10021,
+     "job": "de0a4775-3d2c-41ae-a638-1247b7ec7f8e",
+     "prompt": "batch_h3_v01"
+    },
+    {
+     "id": "v2a",
+     "label": "v2a test",
+     "path": "takes/batch2_test/S02_h3v2a_s20021.mp4",
+     "cn": "0.6 / 0.5",
+     "seed": 20021,
+     "job": "c409ec8d-a5a1-4026-a621-cdbc75ca1417",
+     "prompt": "batch_h3_v02"
+    },
+    {
+     "id": "v2b",
+     "label": "v2b test",
+     "path": "takes/batch2_test/S02_h3v2b_s20022.mp4",
+     "cn": "0.35 / 0.35",
+     "seed": 20022,
+     "job": "af2c88f0-ea24-4492-b3d1-11ff88ee3e1e",
+     "prompt": "batch_h3_v02"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v1: the crown ended up on Sarah. It has to drop over Dad's lens, and S04 needs it in his hand."
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v02 test: v2b lands the beat (Dad lifts the crown, Sarah kneels up to fix it on him, ends bare-headed). v2a still puts it on Sarah."
+    },
+    {
+     "who": "Josh",
+     "when": "2026-11-01T10:34",
+     "text": "Dad appears in the shot. It should be that Sarah puts the crown on him. S01 should end with Sarah coming up to him with the crown and then she puts it on him. She should not climb on the table, maybe a chair next to him."
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T11:06",
+     "text": "Per Josh's note: Sarah stands on the chair next to him (never the table) and puts the crown on his head; it drops over the lens and she straightens it. The view never turns to show Dad. Opens on S01's new end (Sarah beside the chair holding the crown)."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 5
+  },
+  {
+   "id": "S03",
+   "index": 3,
+   "frames": [
+    241,
+    360
+   ],
+   "set": "party",
+   "beat": "Party",
+   "camera": "Sarah hops down, tugs his hand, points toward the ball pit; the view follows her point and eases back",
+   "caption": "SARAH: Come on, come on! (She hops down, tugs his hand, points at the ball pit.)",
+   "zone": "party",
+   "refs": [
+    "party",
+    "sarah"
+   ],
+   "cast": "Exactly one child close to me: Sarah. The children at the far tables are small and always moving: eating pizza, laughing, running, waving balloons. No adult anywhere in frame.",
+   "beats": [
+    "0-1 s: Sarah bends her knees and hops down off the chair, landing on the carpet with a little bounce.",
+    "1-2.5 s: she grabs my right hand with both of hers and tugs, leaning back with her whole weight, my hand and forearm pulled forward into the frame.",
+    "2.5-4 s: she lets go, spins around and points across the room at the ball pit at the back, bouncing on her toes; my view follows her arm to the ball pit and eases back.",
+    "4-5 s: she turns back to me, still pointing, beaming, and holds."
+   ],
+   "end": "Sarah standing on the carpet beside my chair, facing me, beaming, one arm pointing back across the room toward the ball pit.",
+   "sound": "Sarah, excited and close: \"Come on, come on!\" Sneakers thump on carpet, party din.",
+   "extra_avoid": "an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S03_h3_s10031.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10031,
+     "job": "45d225ef-1829-4be1-9d2e-9e14c03e7d77",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Josh",
+     "when": "2026-11-01T10:34",
+     "text": "Needs to to have the set sync as mentioned in S01"
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T11:06",
+     "text": "'You say ready' game cut. Kept simple: Sarah hops down, tugs his hand and points at the ball pit, leading into S04's ask. Added a tiny 'Come on, come on!' so the tug reads; drop it if you'd rather she stay silent."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 4
+  },
+  {
+   "id": "S04",
+   "index": 4,
+   "frames": [
+    361,
+    480
+   ],
+   "set": "party",
+   "beat": "Party",
+   "camera": "Sarah asks him to film her; small reluctant nod; both turn left as the mascot steps in across the room",
+   "caption": "SARAH: Dad, film me jump in the ball pit! (Then they both look up as the mascot comes in.)",
+   "zone": "party",
+   "refs": [
+    "party",
+    "sarah"
+   ],
+   "cast": "Exactly one child close to me: Sarah. Exactly one mascot, appearing far across the room at the end: one person in an orange plush costume with a big foam head and a fixed grin. The children at the far tables are small and always moving: eating pizza, laughing, running, waving balloons. No adult anywhere in frame.",
+   "beats": [
+    "0-2 s: Sarah bounces in front of me, clasps her hands together and says her line, eyes wide, pleading.",
+    "2-3 s: the view dips in one small reluctant nod and comes back up.",
+    "3-4 s: a cheer goes up across the room; Sarah's head snaps to the left toward it.",
+    "4-5 s: my head turns left with her on a smooth arc, across the tables to the far end of the room, where the mascot steps out through a doorway beside the far tables; the view settles and holds."
+   ],
+   "end": "the far end of the party room, where the mascot, one person in an orange plush costume with a big foam head and a fixed grin, has just stepped in beside the far tables, kids turning toward it.",
+   "sound": "Sarah, bright and close: \"Dad, film me jump in the ball pit!\" Then kids cheering across the room, party din.",
+   "extra_avoid": "an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S04_h3_s10041.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10041,
+     "job": "3c7b49a8-396d-4379-b4c3-efd082d0ccd5",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v1 opens in a dark, empty room with the crown on a plate. Wrong room and light."
+    },
+    {
+     "who": "Josh",
+     "when": "2026-11-01T10:36",
+     "text": "Same set needed, should be that she asks to go play. along with the set sync, we need to make sure we are tracking consistency including the kids in the back ground and the contents on the party table. This should benefit from doing a last frame first frame generation which should mostly be the standard moving forward."
+    },
+    {
+     "who": "Josh",
+     "when": "2026-11-01T10:37",
+     "text": "Need to have something to set up to S05 as if both the dad and sarah look over to where the mascot appears"
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T11:06",
+     "text": "Carpet-line hop and 'Ready' dropped. New setup per Josh: Sarah asks him to film her jumping into the ball pit, then both look across the room as the mascot appears. Ends on the mascot so S05 opens on it."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 5
+  },
+  {
+   "id": "S05",
+   "index": 5,
+   "frames": [
+    481,
+    600
+   ],
+   "set": "party",
+   "beat": "Party",
+   "camera": "Mascot waves at a table, turns, waves at us; pan right back to Sarah hiding behind the chair",
+   "caption": "The mascot waves at the kids, then right at them. Sarah shrinks behind the chair.",
+   "zone": "party",
+   "refs": [
+    "mascot",
+    "party"
+   ],
+   "cast": "Exactly one mascot: one person in an orange plush costume with a big foam head and a fixed grin; it moves like a person in a costume. Exactly one child close to me, only at the end: Sarah, a girl of about five with shoulder-length brown hair, a blue long-sleeve top, dark grey leggings and cream velcro sneakers. The children at the tables keep moving: laughing, waving, eating. No adult anywhere in frame.",
+   "beats": [
+    "0-1.5 s: across the same fluorescent party room, the mascot waves at a table of kids, who wave back and laugh.",
+    "1.5-2.5 s: it turns slowly toward me, the big foam head lagging a beat behind its body.",
+    "2.5-3.5 s: it waves directly at me, the glove overshooting and bouncing back. The grin never changes.",
+    "3.5-4.5 s: my view pans right on a fast arc back to Sarah beside the table; she stares at the mascot, frightened, shrinking down behind the corner of the table, both hands gripping its edge.",
+    "4.5-5 s: hold: Sarah peeking over the table corner, scared."
+   ],
+   "end": "Sarah close on my right, crouched behind the corner of the table beside me, peeking over it, scared; the room behind her.",
+   "sound": "Party din, kids laughing, the muffled squeak of the costume, Sarah's small frightened breath.",
+   "extra_avoid": "an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S05_h3_s10051.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10051,
+     "job": "34047425-6f04-4649-b9be-9b24be61bbc2",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v1 mascot is in a white-walled room that doesn't match the party room."
+    },
+    {
+     "who": "Josh",
+     "when": "2026-11-01T10:38",
+     "text": "Should pan back to Sarah at the end of the frame who is scared by the mascot"
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T11:06",
+     "text": "Per Josh: after the mascot waves at us, the view pans back to Sarah, who is scared of it and hides behind the chair. The mascot stays in the frame's background at the end (it must stay visible S05-S09)."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 5
+  },
+  {
+   "id": "S06",
+   "index": 6,
+   "frames": [
+    601,
+    720
+   ],
+   "set": "party",
+   "beat": "Party",
+   "camera": "Sarah nods and runs off to the ball pit; his right hand brings the phone up; mascot in the background",
+   "caption": "DAD: Go on, go play. I'll film you. (She nods and runs off. Out comes the phone.)",
+   "zone": "party",
+   "refs": [
+    "party"
+   ],
+   "cast": "Exactly one child close to me: Sarah, a girl of about five with shoulder-length brown hair, a blue long-sleeve top, dark grey leggings and cream velcro sneakers; she gets smaller as she runs away. Exactly one mascot, small in the background on the left: one person in an orange plush costume with a big foam head and a fixed grin, waving at a table. The children at the far tables are small and always moving: eating pizza, laughing, running, waving balloons. No adult anywhere in frame.",
+   "beats": [
+    "0-1.5 s: Sarah peeks over the table corner toward the mascot, then looks back up at me as I speak.",
+    "1.5-2.5 s: she gives one small nod, lets go of the table and pushes off.",
+    "2.5-4 s: she runs away across the room toward the ball pit at the back, weaving between the tables and the running kids, getting smaller.",
+    "4-5 s: my right hand comes up into the lower frame holding a phone, its screen dark, and holds."
+   ],
+   "end": "a phone with a dark screen in my right hand low in the frame; past it, Sarah small across the room near the ball pit; the mascot small in the background on the left; kids moving between the tables.",
+   "sound": "My own voice, close to the camera: \"Go on, go play. I'll film you.\" Sneakers on carpet, party din.",
+   "extra_avoid": "an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S06_h3_s10061.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10061,
+     "job": "b05a1cd6-5358-4419-a10a-3ac7d238e567",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Josh",
+     "when": "2026-11-01T10:39",
+     "text": "Change this up. Let's have it since sarah is scared by the mascot, the dad recommends to go play and Sarah agrees, while then the dad pulls out his phone. The mascot should still be in the back ground."
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T11:06",
+     "text": "Lena text cut. Per Josh: since Sarah is scared of the mascot, Dad tells her to go play (and says he'll film); she nods and runs to the ball pit, then he pulls out his phone. Mascot kept in the background."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 5
+  },
+  {
+   "id": "S07",
+   "index": 7,
+   "frames": [
+    721,
+    840
+   ],
+   "set": "party",
+   "beat": "Party",
+   "camera": "Phone lock screen close, no new notifications; the party moving behind it, mascot in the background; no typing",
+   "caption": "The lock screen. Nothing new.",
+   "zone": "party",
+   "refs": [
+    "party"
+   ],
+   "cast": "No child close to me. The children behind the phone are soft and always moving: running, laughing, waving balloons, eating pizza. Exactly one mascot, small in the background: one person in an orange plush costume with a big foam head and a fixed grin. No adult anywhere in frame.",
+   "beats": [
+    "0-1.5 s: my right hand lifts the phone closer; the lock screen lights up: a plain dark wallpaper and a blurry plain clock, nothing else.",
+    "1.5-3.5 s: I look at it; no notifications appear and the screen stays empty. Behind it, out of focus, kids run past, balloons bob, the mascot waves at a table.",
+    "3.5-5 s: my thumb rests still on the edge of the phone; the empty lock screen holds."
+   ],
+   "end": "the lit, empty phone lock screen in my right hand, no notifications; behind it the party is soft and moving: kids running, balloons, the mascot small in the background.",
+   "sound": "Party din, kids shrieking, arcade bleeps, a balloon squeak. No phone sounds.",
+   "extra_avoid": "an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room, typing, a keyboard, chat bubbles, readable numbers",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S07_h3_s10071.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10071,
+     "job": "8224576f-b812-4574-adeb-0cb72fb4a305",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Josh",
+     "when": "2026-11-01T10:40",
+     "text": "Kids and everything is static, we can adjust that so it's like them partying. Mascot still in the background. Let's make it so that its just the lock screen showing no new notifications instead of replying."
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T11:06",
+     "text": "Per Josh: no reply, no typing. Just the lock screen with no new notifications, the kids moving behind it and the mascot in the background."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 4
+  },
+  {
+   "id": "S08",
+   "index": 8,
+   "frames": [
+    841,
+    960
+   ],
+   "set": "party",
+   "beat": "Party",
+   "camera": "Look up from the phone: Sarah climbs the pit steps and shouts from the top; the boy on the steps behind her",
+   "caption": "SARAH: Dad. Watch this one!   DAD: One second.   (A bigger boy climbs the steps behind her.)",
+   "zone": "party",
+   "refs": [
+    "pit",
+    "sarah"
+   ],
+   "cast": "Exactly two children in focus: Sarah, and one boy a head taller than Sarah, with short dark hair, a plain grey t-shirt and dark shorts. Exactly one Sarah; exactly one girl in a blue top. No adult anywhere in frame. Exactly one mascot, small in the background: one person in an orange plush costume with a big foam head and a fixed grin. The children at the far tables are small and always moving: eating pizza, laughing, running, waving balloons. The ball pit has low blue padded walls full of colored balls, a short flight of padded steps up to a small platform on its near wall, and an open yellow plastic slide coming down from the play structure's deck into its far side.",
+   "beats": [
+    "0-1 s: from the phone in my hand, my view lifts across the room with a small dip of anticipation, the phone sinking to the bottom of frame.",
+    "1-3 s: at the ball pit, Sarah climbs the padded steps one at a time, a hand on the rail; the boy in the grey t-shirt climbs two steps behind her.",
+    "3-4 s: at the top she turns to face me, waves both arms over her head and shouts her line.",
+    "4-5 s: hold: Sarah at the top of the steps, the boy one step below her, the phone low at the bottom of frame."
+   ],
+   "end": "Sarah standing on the platform at the top of the padded steps beside the ball pit, facing me; the boy in the grey t-shirt one step below her; the phone low at the bottom of frame; the mascot small in the background.",
+   "sound": "Sarah calls across the room: \"Dad. Watch this one!\" My own voice, close to the camera: \"One second.\" Party din.",
+   "extra_avoid": "an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room, two Sarahs, a tablecloth close to the camera",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S08_h3_s10081.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10081,
+     "job": "e47bae97-3b3f-4219-9d95-12c8f492ff2d",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v1 opens on a stranger in a pink shirt at a gingham table instead of Sarah waving at the pit rail. Caused by 'a man's voice nearby' in the v1 prompt."
+    },
+    {
+     "who": "Josh",
+     "when": "2026-11-01T10:43",
+     "text": "Dad is in frame and should be removed. There are two Sarahs in the shot. Kids are not animated. This shot should have one of the bullies (probably need an anchor as well). There should be some steps next to Sarah leading up to the ball pit so se can get in. Her action should be climbing the stairs and her at the top yelling for her dad (the camera) to look at her, with the bully behind her on the stairs."
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T11:06",
+     "text": "Per Josh: steps up to the ball pit, Sarah climbs and shouts from the top, one bully on the steps behind her. Added the bully (same wording in S08-S13), 'exactly one Sarah', no adult, moving kids, mascot in the background. Bully has no ref image yet."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 5
+  },
+  {
+   "id": "S09",
+   "index": 9,
+   "frames": [
+    961,
+    1080
+   ],
+   "set": "party",
+   "beat": "Party",
+   "camera": "Thumb unlocks the phone; Sarah waits at the top of the steps; the boy fidgets and scowls behind her",
+   "caption": "He unlocks the phone to film her. Sarah waits at the top. The boy behind her gets impatient.",
+   "zone": "party",
+   "refs": [
+    "pit",
+    "sarah"
+   ],
+   "cast": "Exactly two children in focus: Sarah, and one boy a head taller than Sarah, with short dark hair, a plain grey t-shirt and dark shorts. Exactly one Sarah; exactly one girl in a blue top. No adult anywhere in frame. Exactly one mascot, small in the background: one person in an orange plush costume with a big foam head and a fixed grin. The children at the far tables are small and always moving: eating pizza, laughing, running, waving balloons. The ball pit has low blue padded walls full of colored balls, a short flight of padded steps up to a small platform on its near wall, and an open yellow plastic slide coming down from the play structure's deck into its far side.",
+   "beats": [
+    "0-1 s: my view dips to the phone in my right hand; my thumb swipes up and the lock screen gives way to a blurry home screen of plain colored squares.",
+    "1-2 s: the view lifts back up to the ball pit, the phone held up in the lower frame.",
+    "2-4 s: Sarah waits at the top of the steps, a hand on the rail, watching me; behind her the boy in the grey t-shirt shifts from foot to foot, leans around her and scowls.",
+    "4-5 s: he folds his arms and huffs; Sarah keeps waiting; hold."
+   ],
+   "end": "Sarah waiting at the top of the padded steps, watching me; the boy in the grey t-shirt right behind her, scowling, leaning in; the unlocked phone held up in my right hand in the lower frame; the mascot small in the background.",
+   "sound": "Party din, ball pit rattle, the boy's impatient huff.",
+   "extra_avoid": "an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room, two Sarahs, Sarah in the balls",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S09_h3_s10091.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10091,
+     "job": "4ca75e9f-b02c-4f48-b0c9-60f388c5ef8e",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Josh",
+     "when": "2026-11-01T10:44",
+     "text": "Make it so that the dad is unlocking his phone to then take a video of Sarah to watch. She shouldn't jump in and still be at the top of the stairs. The bully behind her is getting impatient."
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T11:06",
+     "text": "Per Josh: Dad unlocks the phone to film her; Sarah stays at the top of the steps (doesn't jump); the bully behind her gets impatient. Last shot with the mascot in the background."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 5
+  },
+  {
+   "id": "S10",
+   "index": 10,
+   "frames": [
+    1081,
+    1200
+   ],
+   "set": "party",
+   "beat": "Pit",
+   "camera": "Phone up, camera opens; past it the boy shoves Sarah into the pit and jumps in after her",
+   "caption": "He opens the camera. The boy shoves Sarah off the top step and jumps in almost on top of her.",
+   "zone": "party",
+   "refs": [
+    "pit",
+    "sarah"
+   ],
+   "cast": "Exactly two children in focus: Sarah, and one boy a head taller than Sarah, with short dark hair, a plain grey t-shirt and dark shorts. Exactly one Sarah; exactly one girl in a blue top. No adult anywhere in frame. The children at the far tables are small and always moving: eating pizza, laughing, running, waving balloons. The ball pit has low blue padded walls full of colored balls, a short flight of padded steps up to a small platform on its near wall, and an open yellow plastic slide coming down from the play structure's deck into its far side.",
+   "beats": [
+    "0-1 s: my right hand raises the phone higher in the lower frame; its screen switches to the camera view, a small live picture of the ball pit.",
+    "1-2 s: past the phone, the boy in the grey t-shirt shoves Sarah in the back with both hands; she tips forward off the top step, arms flying up.",
+    "2-3.5 s: she falls on an arc into the balls and colored balls splash out around her.",
+    "3.5-4.5 s: the boy jumps in right after her and lands almost on top of her, more balls flying.",
+    "4.5-5 s: the balls settle around them both; the phone is still up; hold."
+   ],
+   "end": "Sarah and the boy in the grey t-shirt in the balls just below the steps, the balls settling; the phone held up in my right hand, its screen showing the pit.",
+   "sound": "A shove, Sarah's startled cry, balls clattering, a whoop from the boy, party din.",
+   "extra_avoid": "an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room, two Sarahs",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v2b",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S10_h3_s10101.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10101,
+     "job": "a62f9205-3542-4566-9e01-d727cb6c194e",
+     "prompt": "batch_h3_v01"
+    },
+    {
+     "id": "v2a",
+     "label": "v2a test",
+     "path": "takes/batch2_test/S10_h3v2a_s20101.mp4",
+     "cn": "0.6 / 0.5",
+     "seed": 20101,
+     "job": "daf81c3d-08e9-40f0-afb2-09601c51ecae",
+     "prompt": "batch_h3_v02"
+    },
+    {
+     "id": "v2b",
+     "label": "v2b test",
+     "path": "takes/batch2_test/S10_h3v2b_s20102.mp4",
+     "cn": "0.35 / 0.35",
+     "seed": 20102,
+     "job": "e41d6e63-276a-46a6-bb8c-8a12c01cfa03",
+     "prompt": "batch_h3_v02"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v1: the shove never happens."
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v02 test: v2b has the grey-shirt boy at the foam step and she topples into the balls. Ends with her sitting on the step, not visibly crying. v2a is muddy, with a floating stray hand."
+    },
+    {
+     "who": "Josh",
+     "when": "2026-11-01T10:45",
+     "text": "As the dad opens the camera app to record, the bully pushes Sarah off of the steps into the ballpit and then jumps in almost on top of her"
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T11:06",
+     "text": "Per Josh: as Dad opens the camera app, the bully shoves Sarah off the top of the steps into the pit and jumps in almost on top of her. Same bully wording as S08-S09."
+    }
+   ],
+   "seam_ok": true,
+   "rev": 6
+  },
+  {
+   "id": "S11",
+   "index": 11,
+   "frames": [
+    1201,
+    1320
+   ],
+   "set": "party",
+   "beat": "Pit",
+   "camera": "Sarah starts to cry in the pit; phone set down on the table; he stands",
+   "caption": "Sarah starts to cry in the pit. He puts the phone down and stands.",
+   "zone": "party",
+   "refs": [
+    "party"
+   ],
+   "cast": "Exactly two children in focus, in the ball pit across the room: Sarah, a girl of about five with shoulder-length brown hair, a blue long-sleeve top, dark grey leggings and cream velcro sneakers; and one boy a head taller than Sarah, with short dark hair, a plain grey t-shirt and dark shorts. Exactly one girl in a blue top. The children at the tables keep moving, a few turning to look. No adult anywhere in frame.",
+   "beats": [
+    "0-1 s: across the room in the ball pit, Sarah sits up in the balls, her face crumpling as she starts to cry; the boy in the grey t-shirt splashes beside her.",
+    "1-2 s: my right hand lowers the phone and sets it face down on the table.",
+    "2-2.5 s: my view dips slightly as I get ready to stand.",
+    "2.5-4 s: I stand up fast; the view rises over the table on an arc.",
+    "4-5 s: it settles at standing height, looking across the tables to the ball pit: Sarah crying, the boy beside her; hold."
+   ],
+   "end": "a standing view across the party tables to the ball pit: Sarah crying in the balls, the boy in the grey t-shirt beside her; kids at the tables turning to look.",
+   "sound": "Sarah's crying cuts through the party din. The phone taps down on the table. The chair scrapes back.",
+   "extra_avoid": "an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S11_h3_s10111.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10111,
+     "job": "f3126d17-0731-4eeb-9a4d-c22e9b2fddad",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Josh",
+     "when": "2026-11-01T10:46",
+     "text": "Kids should be animated. Sarah should be somewhat visible in the ballpit with the bully also in there, Sarah is starting to cry while the dad puts down the phone to get up."
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T11:06",
+     "text": "Per Josh: Sarah visible in the pit with the bully, starting to cry, while Dad puts the phone down and stands. Kids moving. Sarah's look is in the cast line because 'sarah' isn't in this shot's refs."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 4
+  },
+  {
+   "id": "S12",
+   "index": 12,
+   "frames": [
+    1321,
+    1440
+   ],
+   "set": "party",
+   "beat": "Pit",
+   "camera": "Walk fast to the pit, stop at the padded wall; Sarah crawls away up the slide; the boy laughs in the balls",
+   "caption": "DAD: Hey. Hey, I'm here. (Sarah crawls away up the slide. The boy laughs in the balls.)",
+   "zone": "party",
+   "refs": [
+    "party",
+    "pit"
+   ],
+   "cast": "Exactly two children in focus, in the ball pit: Sarah, a girl of about five with shoulder-length brown hair, a blue long-sleeve top, dark grey leggings and cream velcro sneakers; and one boy a head taller than Sarah, with short dark hair, a plain grey t-shirt and dark shorts. Exactly one girl in a blue top. The children at the far tables are small and always moving: eating pizza, laughing, running, waving balloons. No adult anywhere in frame. The ball pit has low blue padded walls full of colored balls, a short flight of padded steps up to a small platform on its near wall, and an open yellow plastic slide coming down from the play structure's deck into its far side.",
+   "beats": [
+    "0-2.5 s: I walk fast between the party tables toward the ball pit, the view bobbing with each step, tables and balloons sliding past, my hands swinging into frame.",
+    "2.5-3 s: I slow and stop at the pit's padded wall, my two hands landing on top of it.",
+    "3-4.5 s: in the pit, Sarah, crying, scrambles away from me across the balls to the bottom of the open yellow slide and crawls up it on her hands and knees; the boy in the grey t-shirt laughs and throws balls in the air.",
+    "4.5-5 s: hold: Sarah halfway up the yellow slide, still crawling away, the boy laughing in the balls."
+   ],
+   "end": "my two hands on top of the ball pit's padded wall; across the pit, Sarah crawling up the open yellow slide toward the play structure's deck; the boy in the grey t-shirt laughing in the balls.",
+   "sound": "Quick footsteps, then my own voice, close to the camera: \"Hey. Hey, I'm here.\" Sarah sobbing, balls clattering, the boy laughing, party din.",
+   "extra_avoid": "an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S12_h3_s10121.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10121,
+     "job": "3f8b141c-c5bd-4ad2-b123-de7980c03b68",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Josh",
+     "when": "2026-11-01T10:47",
+     "text": "This one is just bad. SO there should be some sort of tunnel or slide that leads into a ballpit, like the kids would take the slide and land in the ball pit and that's what Sarah should crawl up. The dad is still outside the ball pit while the bully is just laughing and playing in the ballpit"
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T11:06",
+     "text": "Per Josh: a tube slide empties into the pit (now also described in S08-S11 so the set stays consistent). Dad stays outside the padded wall; Sarah crawls away up the slide; the bully laughs and plays in the balls."
+    }
+   ],
+   "seam_ok": true,
+   "rev": 5
+  },
+  {
+   "id": "S13",
+   "index": 13,
+   "frames": [
+    1441,
+    1560
+   ],
+   "set": "party",
+   "beat": "Pit",
+   "camera": "(Proposal) Her sneakers vanish up the slide; he walks around the pit to the structure's floor-level entrance",
+   "caption": "Sarah vanishes up the slide. He goes around to the play structure's entrance.",
+   "zone": "party",
+   "refs": [
+    "pit",
+    "sarah"
+   ],
+   "cast": "Sarah is seen only in the first two seconds, small, at the top of the yellow slide; after that she is gone. One boy a head taller than Sarah, with short dark hair, a plain grey t-shirt and dark shorts is in the balls at the start, then out of frame. Exactly one mascot, standing still near the far tables: one person in an orange plush costume with a big foam head and a fixed grin. The children at the far tables are small and always moving: eating pizza, laughing, running, waving balloons. No adult anywhere in frame.",
+   "beats": [
+    "0-2 s: across the pit, Sarah crawls off the top of the yellow slide onto the play structure's red deck, stands for a moment, and ducks into a red tube on the deck; she is gone.",
+    "2-2.5 s: my hands push off the padded wall; the view sways back as I turn left.",
+    "2.5-4.5 s: I walk fast along the outside of the pit's padded wall, past the padded steps on my right, between the party tables and the play structure; the mascot stands still among the far tables, its grin turned toward me.",
+    "4.5-5 s: I stop in front of the play structure's floor-level entrance, a round tube opening with a yellow rim in a padded blue wall, and hold."
+   ],
+   "end": "the empty round tube opening at floor level at the base of the play structure, a step in front of me, yellow poles on either side.",
+   "sound": "Sarah's sobbing, muffled inside the plastic and moving away; my quick footsteps; balls clattering; party din.",
+   "extra_avoid": "an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room, a child running across the room",
+   "raw_prompt": "",
+   "status": "wtg",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S13_h3_s10131.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10131,
+     "job": "24162538-90cb-4cc3-b160-73ef91df7133",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T11:06",
+     "text": "PROPOSAL (Josh left no note here): Sarah disappears up the slide into the play structure and Dad walks around the pit to the structure's floor-level entrance, so S14 can open on it. Status left at 'wtg' until Josh OKs it."
+    }
+   ],
+   "seam_ok": true,
+   "rev": 4
+  },
+  {
+   "id": "S14",
+   "index": 14,
+   "frames": [
+    1561,
+    1680
+   ],
+   "set": "party",
+   "beat": "Pit",
+   "camera": "Kneel at the floor-level entrance; hands and knees; look into the empty tube; start in",
+   "caption": "Only her crying, echoing inside. He gets down on his hands and knees and goes in.",
+   "zone": "party",
+   "refs": [
+    "pit",
+    "tube"
+   ],
+   "cast": "No one visible. The tube is empty; the crying is only heard, never seen. No adult anywhere in frame.",
+   "beats": [
+    "0-1 s: I step up to the round tube opening; the view dips as I bend my knees.",
+    "1-2.5 s: I get down on my hands and knees; the view drops to child height and my two hands plant flat on the padded floor at the opening.",
+    "2.5-4 s: I look in: a short empty play tube of faded plastic with a padded floor, curving out of sight, thin warm light through its walls; crying echoes from somewhere deep inside.",
+    "4-5 s: I lean forward and start in, my right hand reaching ahead onto the padded floor inside the tube; hold."
+   ],
+   "end": "the short empty play tube curving out of sight ahead, seen on my hands and knees from just inside its mouth, my right hand planted on the padded floor.",
+   "sound": "Crying echoing from deep inside the plastic tubes, hollow and far; my knees on the padding; the party behind me.",
+   "extra_avoid": "an adult man in frame, a girl in a blue top, a child in the tube, sneakers in the tube, steam, a white room",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S14_h3_s10141.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10141,
+     "job": "b6a5e936-fea8-4285-b448-0e725763fdf8",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v1 misses the crouch at the tube mouth and the sneakers vanishing; it's already deep in the orange tube."
+    },
+    {
+     "who": "Josh",
+     "when": "2026-11-01T10:49",
+     "text": "No sarah in this shot at all. Just the echo cries of Sarah. The dad (camera) should get down on his hands and knees to go into the playplace."
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T11:06",
+     "text": "Per Josh: no Sarah in this shot at all, only her crying echoing from inside; Dad gets down on hands and knees and starts in. The crying is written without naming a girl so the model doesn't spawn one."
+    }
+   ],
+   "seam_ok": true,
+   "rev": 5
+  },
+  {
+   "id": "S15",
+   "index": 15,
+   "frames": [
+    1681,
+    1800
+   ],
+   "set": "structure",
+   "beat": "Search",
+   "camera": "Crawl through short ordinary play tubes and a small open play area to the mouth of the black rope net tunnel",
+   "caption": "DAD: Sarah?  (Ordinary tubes, a small play area, then the mouth of a rope net tunnel.)",
+   "zone": "structure",
+   "refs": [
+    "tube"
+   ],
+   "cast": "No one visible. The crying is only heard, never seen. No adult anywhere in frame.",
+   "beats": [
+    "0-1.5 s: I crawl forward through the short curving tube, the view rocking gently with each move, my hands planting one after the other on the scuffed padded floor.",
+    "1.5-3 s: the tube opens into a small open play area: a padded floor, a round clear bubble window, a mesh side panel with the party room blurred beyond it; I crawl across it.",
+    "3-4.5 s: I crawl into a second short tube on the far side, its joints and round bolt caps passing on both sides.",
+    "4.5-5 s: ahead, the tube ends at the mouth of a tunnel made of thick black nylon rope net; I stop at its edge and hold."
+   ],
+   "end": "the mouth of a tunnel made of thick black nylon rope net directly ahead, my two hands on the padded floor at its edge.",
+   "sound": "Knees and palms on vinyl, breathing, my own voice: \"Sarah?\" Crying echoing somewhere ahead. The party muffled outside.",
+   "extra_avoid": "an adult man in frame, steam, a long endless tube, darkness",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S15_h3_s10151.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10151,
+     "job": "4a161475-09f5-441f-8238-9a382d1fe47e",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v1 S15-S22 collapse to one orange concentric-ring tube image (ControlNet 1.0 painting the tube depth)."
+    },
+    {
+     "who": "Josh",
+     "when": "2026-11-01T10:52",
+     "text": "A bit too long of a tunnel. It should be relatively normal here first. Keeping with the continuous shot, things should be a bit normal with common tubes and areas in the play place. When we do the set anchor for the party, we can go back to blender and build a new blockout set and basically take the total frame count as the length of the shot starting from S01 as frame 1 to the end frame of S15 as one continuous shot for the Party set"
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T11:06",
+     "text": "Per Josh: shorter and ordinary: two short common tubes and a small open play area, ending at the mouth of the black rope net tunnel so S16's opening ('a tunnel made of thick black nylon rope net') is unchanged."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 4
+  },
+  {
+   "id": "S16",
+   "index": 16,
+   "frames": [
+    1801,
+    1920
+   ],
+   "set": "structure",
+   "beat": "Search",
+   "camera": "Crawl east along the black rope net tunnel to the back wall; a blue top flashes away inside the red tube beyond; hold on the tube mouth in the wall hole",
+   "caption": "A flash of blue, far ahead, through the back wall.",
+   "zone": "structure",
+   "refs": [
+    "tube",
+    "sarah"
+   ],
+   "cast": "Exactly one child, far away and only for about a second: Sarah, a girl of about five with shoulder-length brown hair, a blue long-sleeve top, dark grey leggings and cream velcro sneakers, seen only as a small flash of her blue top crawling away deep inside the red tube and whipping round a bend, gone. Exactly one Sarah. Otherwise no one visible. No adult anywhere in frame.",
+   "beats": [
+    "0-1.4 s: I crawl forward along a tunnel of thick black nylon rope net stretched over a frame under the play structure, square holes, the net sagging under my hands; on my right the bright party room is blurred through the net.",
+    "1.4-2.8 s: ahead, the net tunnel ends at the room's plain painted back wall, where a solid red plastic tube goes straight through a rough square hole cut in the wall; far inside that red tube, past the wall, a small flash of a blue long-sleeve top crawls away and whips left round a bend, gone.",
+    "2.8-4.3 s: I crawl faster to the end of the net, my hands quickening, the view rocking with each move.",
+    "4.3-5 s: I stop at the end of the net and hold on the red tube's round mouth in the wall hole, the empty bend beyond, the light inside it a little dimmer and warmer than the room."
+   ],
+   "end": "the round mouth of the solid red plastic tube in the rough square hole in the plain painted back wall, right ahead at the end of the black rope net tunnel; inside it the empty tube bends away to the left; my two hands on the net.",
+   "sound": "Net creaking under my knees and palms, my breathing; the crying ahead, muffled inside the plastic, moving away; the party still loud behind me, starting to fade.",
+   "extra_avoid": "metal bars, a cage, a radial pattern, Sarah visible for more than a moment, Sarah close to the camera, Sarah in the net tunnel, two Sarahs, an adult man in frame",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v2b",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S16_h3_s10161.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10161,
+     "job": "2aeac8bf-4894-48d2-b0cb-ef922f97f1f9",
+     "prompt": "batch_h3_v01"
+    },
+    {
+     "id": "v2a",
+     "label": "v2a test",
+     "path": "takes/batch2_test/S16_h3v2a_s20161.mp4",
+     "cn": "0.6 / 0.5",
+     "seed": 20161,
+     "job": "7b05aea4-5a08-4b87-bae4-994c5cd7cd99",
+     "prompt": "batch_h3_v02"
+    },
+    {
+     "id": "v2b",
+     "label": "v2b test",
+     "path": "takes/batch2_test/S16_h3v2b_s20162.mp4",
+     "cn": "0.35 / 0.35",
+     "seed": 20162,
+     "job": "7d8c542f-54cd-49bd-9d86-0d89411bb767",
+     "prompt": "batch_h3_v02"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v1 turned the net tunnel into a radial cage."
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v02 test: v2b is a real black rope net tunnel. Sarah stays visible crawling ahead most of the shot instead of one flash of blue; tighten the wording."
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T16:18",
+     "text": "S16-S24 now one continuous move with S15; liminal route through the back wall. Ends on the red tube mouth in the back-wall hole; Sarah only a ~1 s flash inside it; her look in the cast line."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 3
+  },
+  {
+   "id": "S17",
+   "index": 17,
+   "frames": [
+    1921,
+    2040
+   ],
+   "set": "structure",
+   "beat": "Search",
+   "camera": "Through the red tube and the wall, round the bend left, up into a small teal junction; look left (yellow tube, sun sticker), right (yellow tube), back to the red tube ahead",
+   "caption": "Three tubes. He picks one.",
+   "zone": "structure",
+   "refs": [
+    "junction"
+   ],
+   "cast": "No one visible. No adult anywhere in frame.",
+   "beats": [
+    "0-1 s: I crawl into the red tube and through the wall, the red plastic close around me, and follow its bend round to the left.",
+    "1-2 s: the tube rises a little and I come up into a small box-shaped junction chamber of faded teal plastic with a strip of net overhead; the light is dimmer and warmer than the party room; the party is muffled behind me.",
+    "2-3 s: my head turns left on an easy arc: a yellow tube mouth, and on the teal wall beside it, a little higher, one small faded smiling-sun sticker.",
+    "3-4 s: my head turns right across the chamber: another yellow tube mouth.",
+    "4-5 s: back to the middle: a red tube mouth straight ahead; I lean toward it and start in, and hold."
+   ],
+   "end": "the round red tube mouth straight ahead in the teal wall of the junction chamber, a step in front of me, my two hands on the padded floor.",
+   "sound": "Hollow plastic knocks as I crawl, my breathing; the party muffled behind the wall; the crying gone.",
+   "extra_avoid": "an adult man in frame, a figure in a tube mouth, a second sticker, a large open room, bright fluorescent light",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S17_h3_s10171.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10171,
+     "job": "3ae290d5-9ecd-45d0-87c2-e6a9851b0e7e",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T16:18",
+     "text": "S16-S24 now one continuous move with S15; liminal route through the back wall. Red tube through the wall up into the teal junction; yellow left with the sun sticker, yellow right, red ahead."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 3
+  },
+  {
+   "id": "S18",
+   "index": 18,
+   "frames": [
+    2041,
+    2160
+   ],
+   "set": "structure",
+   "beat": "Search",
+   "camera": "Into the red tube; stop at the yellow star; right hand picks it up and pockets it; crawl on",
+   "caption": "Her star. He pockets it.",
+   "zone": "structure",
+   "refs": [
+    "tube"
+   ],
+   "cast": "No one visible. No adult anywhere in frame.",
+   "beats": [
+    "0-1.8 s: I crawl into the red tube, the curved red plastic close on all sides, and slow to a stop.",
+    "1.8-2.6 s: on the curved floor just ahead lies one small yellow plastic star charm, alone.",
+    "2.6-3.6 s: my right hand reaches down, picks it up and lifts it close to the camera, the little star between my finger and thumb.",
+    "3.6-4.5 s: I close my fist around it and lower it to my pocket; my hand slides out of frame to the right.",
+    "4.5-5 s: I crawl on; ahead, the red tube turns teal where two sections join; hold."
+   ],
+   "end": "the empty red tube ahead turning teal where two plastic sections join at a collar with round bolt caps.",
+   "sound": "A tiny plastic click, my breathing, cloth rustling as the star goes into my pocket; the party faint and far behind.",
+   "extra_avoid": "an adult man in frame, a figure in a tube mouth, a child's hand, a second star, a gold metal star, a star sticker",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S18_h3_s10181.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10181,
+     "job": "4fada6c2-3df1-46f8-87d8-8e61708d61b1",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v1 is missing the star pickup. S35 pays it off."
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T16:18",
+     "text": "S16-S24 now one continuous move with S15; liminal route through the back wall. Star now pocketed (hand exits right) and he crawls on; ends where the red tube turns teal."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 3
+  },
+  {
+   "id": "S19",
+   "index": 19,
+   "frames": [
+    2161,
+    2280
+   ],
+   "set": "structure",
+   "beat": "Search",
+   "camera": "Dead-straight teal tube, far too long; small dark round windows on the right; steady push on hands and knees",
+   "caption": "Longer than the building. The party fades.",
+   "zone": "structure",
+   "refs": [
+    "tube"
+   ],
+   "cast": "No one visible. No adult anywhere in frame.",
+   "beats": [
+    "0-1 s: I crawl past the join into a teal tube that runs dead straight ahead, far longer than the building could be.",
+    "1-4 s: a steady push forward on my hands and knees, my hands planting one after the other, the view rocking gently: the same joints and round bolt caps repeat ahead, small round windows along the right wall show only black, the far end of the tube lost in dim warm gloom.",
+    "4-5 s: just ahead, a round opening appears low in the left wall; the teal tube carries on straight past it; I slow and hold."
+   ],
+   "end": "just ahead, a round opening low in the left wall of the straight teal tube; the tube itself carries on straight past it into darkness.",
+   "sound": "Knees and palms on plastic, slow breathing, each move echoing a little too long; the party almost gone.",
+   "extra_avoid": "an adult man in frame, a figure in a tube mouth, a light at the end, a person, a figure in the distance, faces in the windows, a room or sky through the windows, a curving tube",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S19_h3_s10191.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10191,
+     "job": "70dd6b6a-833f-41fc-b960-9341a46a5872",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T16:18",
+     "text": "S16-S24 now one continuous move with S15; liminal route through the back wall. Dead-straight teal tube with black round windows; ends on the low side opening on the left."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 3
+  },
+  {
+   "id": "S20",
+   "index": 20,
+   "frames": [
+    2281,
+    2400
+   ],
+   "set": "structure",
+   "beat": "Search",
+   "camera": "Left through the side opening and a short yellow tube into an identical teal junction; push in on the same sun sticker; hand flat on the wall",
+   "caption": "The same sticker. He's been here.",
+   "zone": "structure",
+   "refs": [
+    "junction"
+   ],
+   "cast": "No one visible. No adult anywhere in frame.",
+   "beats": [
+    "0-1.5 s: I turn left through the side opening into a short yellow tube, the plastic close around me.",
+    "1.5-2.5 s: I come up out of it, from the side, into a small teal junction chamber exactly like the first one: faded teal walls, a strip of net overhead, round tube mouths.",
+    "2.5-4.5 s: the view pushes in slowly on the teal wall ahead: just left of a round tube mouth, a little higher, the same small faded smiling-sun sticker.",
+    "4.5-5 s: my right hand comes up and presses flat on the teal wall beside it. Hold."
+   ],
+   "end": "my right hand flat on the teal wall beside the small faded smiling-sun sticker, a round tube mouth just to its right.",
+   "sound": "Near silence: my breathing, a soft creak of plastic as my hand presses the wall, a low hum starting.",
+   "extra_avoid": "an adult man in frame, a figure in a tube mouth, a different sticker, two stickers, a distorted or creepy face on the sticker",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S20_h3_s10201.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10201,
+     "job": "746e2c7f-85bb-40c5-8204-957e6338f68d",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T16:18",
+     "text": "S16-S24 now one continuous move with S15; liminal route through the back wall. Enters the twin junction from the side via a short yellow tube; same sun sticker, hand on the wall."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 3
+  },
+  {
+   "id": "S21",
+   "index": 21,
+   "frames": [
+    2401,
+    2520
+   ],
+   "set": "structure",
+   "beat": "Search",
+   "camera": "Turn to the opening beside the sticker; head first down 12 padded steps into a narrow brown passage; far below, Sarah's blue top crawls away into the dim tube",
+   "caption": "Down. Warmer. Dimmer. A blue top, far below.",
+   "zone": "structure",
+   "refs": [
+    "tube",
+    "sarah"
+   ],
+   "cast": "Exactly one child, small and far below me, seen only from behind: Sarah, a girl of about five with shoulder-length brown hair, a blue long-sleeve top, dark grey leggings and cream velcro sneakers, crawling away on her hands and knees. Exactly one Sarah. Otherwise no one visible. No adult anywhere in frame.",
+   "beats": [
+    "0-1 s: my hand comes off the wall and I turn to the round opening beside the sticker.",
+    "1-2 s: beyond it, padded steps go down, below the floor, into a narrow passage with brown padded walls and a low sloping ceiling, the light warmer and dimmer.",
+    "2-4 s: I go down head first on my hands and knees, a small bump on every step; far below at the bottom of the steps, a small figure in a blue long-sleeve top crawls away from me, her back to me, into a short dim brown tube.",
+    "4-5 s: I reach the bottom of the steps; in the short dim brown tube ahead, Sarah's back, crawling away from me. Hold."
+   ],
+   "end": "the bottom of the padded steps, a short dim brown tube straight ahead with Sarah crawling away inside it, her back to me, my two hands on the brown padded floor.",
+   "sound": "Muffled thumps on padding, one on every step, my breathing close; small knees and palms on vinyl somewhere ahead; the low hum growing.",
+   "extra_avoid": "an adult man in frame, Sarah's face, Sarah turning to look at me, Sarah close to the camera, two Sarahs, monsters, faces, horror imagery, blood, a wooden or concrete staircase, a basement, pipes",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S21_h3_s10211.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10211,
+     "job": "9a5da558-5375-425a-8fa0-4a6815f9de2e",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T16:18",
+     "text": "S16-S24 now one continuous move with S15; liminal route through the back wall. Head first down 12 padded steps into a narrow brown passage; ends at a short dim brown tube."
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T16:57",
+     "text": "Josh 2026-11-01: needs something here. Added Sarah's blue top far below at the bottom of the steps, crawling into the dim tube."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 5
+  },
+  {
+   "id": "S22",
+   "index": 22,
+   "frames": [
+    2521,
+    2640
+   ],
+   "set": "structure",
+   "beat": "Search",
+   "camera": "Short dim brown tube: Sarah's back at the slide mouth; she sits on the lip and drops away; I grip the rim and look down the steep chute after her",
+   "caption": "She's at the slide. Then she's gone.   DAD: Sarah!",
+   "zone": "structure",
+   "refs": [
+    "tube",
+    "slide",
+    "sarah"
+   ],
+   "cast": "Exactly one child, seen only from behind, never her face: Sarah, a girl of about five with shoulder-length brown hair, a blue long-sleeve top, dark grey leggings and cream velcro sneakers. Exactly one Sarah. Otherwise no one visible. No adult anywhere in frame.",
+   "beats": [
+    "0-1.5 s: I crawl into the short dim brown tube; ahead, Sarah crawls away from me toward a flat brown wall with one dark round slide mouth in it, a dark rim around it.",
+    "1.5-2.4 s: she reaches the slide mouth and climbs onto its lip, sitting feet first with her back to me, her small hands on the rim.",
+    "2.4-3.1 s: she sits there a moment; then she lets go and drops away down the slide, gone below the lip.",
+    "3.1-3.8 s: I crawl fast to the mouth and my two hands grip its rim, one on each side.",
+    "3.8-5 s: I lean in and look down after her: the dull orange slide drops away steeply into the dark, empty. Hold."
+   ],
+   "end": "looking into the slide mouth from up close, my two hands gripping its dark rim, the empty dull orange chute dropping steeply away below.",
+   "sound": "My knees on padding; the squeak of her shoes on plastic, then the hiss of her sliding away, fading fast; my own voice into the slide: \"Sarah!\" It echoes far too long. No answer.",
+   "extra_avoid": "an adult man in frame, Sarah's face, Sarah turning to look at me, Sarah waving, two Sarahs, monsters, faces, eyes in the dark, horror imagery, blood, a glowing portal, a light inside the slide",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S22_h3_s10221.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10221,
+     "job": "4f23fa36-adf7-40b4-8c11-aa34b6288f52",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T16:18",
+     "text": "S16-S24 now one continuous move with S15; liminal route through the back wall. Slide mouth is where the brown tube ends in a flat wall; caption no longer says 'didn't see before'."
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T16:57",
+     "text": "Josh 2026-11-01: see the back of Sarah going down the slide. She sits on the lip and drops away before I reach it."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 5
+  },
+  {
+   "id": "S23",
+   "index": 23,
+   "frames": [
+    2641,
+    2760
+   ],
+   "set": "slide",
+   "beat": "Slide",
+   "camera": "Climb into the mouth onto a short lip; the floor rolls over and drops away steeply at once; plunge down the chute into the start of the spiral",
+   "caption": "The floor drops away. No way back.",
+   "zone": "slide",
+   "refs": [
+    "slide",
+    "tube"
+   ],
+   "cast": "No one visible. No adult anywhere in frame.",
+   "beats": [
+    "0-1.4 s: I climb into the slide mouth onto a short lip, my hands on the walls: a dull orange plastic tube, darker seam rings at the joints, the chute dropping away just ahead.",
+    "1.4-2.2 s: the floor rolls over under me and drops away steeply; my hands grab at the walls and skid, there is nothing to hold.",
+    "2.2-3.4 s: I plunge down the steep chute, accelerating hard, the seams rushing up and past.",
+    "3.4-5 s: the chute bends into the start of a spiral and I'm thrown into the curve, faster and faster."
+   ],
+   "end": "sliding fast into the start of the spiral, the dull orange tube curving away and down ahead, my hands skidding on the walls.",
+   "sound": "Plastic squeal as I climb in, a sharp breath, a jolt as the floor drops, then the hiss of sliding rising to a roar.",
+   "extra_avoid": "an adult man in frame, a figure in a tube mouth, a metal or sci-fi tube, rivets, lights inside the tube, water, a water slide, daylight",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S23_h3_s10231.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10231,
+     "job": "f6efb53f-8bb3-409a-939a-d1466ea3bf02",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T16:18",
+     "text": "S16-S24 now one continuous move with S15; liminal route through the back wall. Inside described as dull orange with darker seam rings; ends sliding into the start of the spiral."
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T16:57",
+     "text": "Josh 2026-11-01: stronger slope, no flat start, a no-turning-back feel. Blockout slide now has a 0.5 m lip, then a ~50 degree chute into the spiral."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 5
+  },
+  {
+   "id": "S24",
+   "frames": [
+    2761,
+    2880
+   ],
+   "set": "slide",
+   "beat": "Slide",
+   "zone": "slide",
+   "refs": [
+    "slide"
+   ],
+   "camera": "Fast spiral to the right, light strobing through the walls",
+   "caption": "Faster. Spiraling.",
+   "cast": "No one visible.",
+   "beats": [
+    "0-1.5 s: sliding fast feet-first down the dull orange tube, the walls curving away to the right, my hands skidding on the plastic at the bottom corners of the frame.",
+    "1.5-3.5 s: the spiral tightens, always turning right and down; the collars and bolt caps flick past one after another, brighter patches of orange glow strobing through the walls.",
+    "3.5-5 s: faster and faster, thrown against the outside of the curve, the turn hiding whatever is ahead."
+   ],
+   "end": "whipping round the last tight right-hand turn of the spiral, the tube about to straighten and drop.",
+   "sound": "The rattling, squeaking roar of a body on a plastic slide, palms hissing on the walls, a hollow thump at every joint.",
+   "extra_avoid": "a metal or sci-fi tube, rivets, lights inside the tube, water, a water slide, daylight, an adult man in frame, the spiral turning left",
+   "index": 24,
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 bridged (part 1/3 of the 15 s take)",
+     "path": "takes/S24_26/split/h3_cont_s24272_bridged_S24.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 24272,
+     "prompt": "s24_26_h3_continuous_v02"
+    },
+    {
+     "id": "v0",
+     "label": "v0 raw 272 (part 1/3 of the 15 s take)",
+     "path": "takes/S24_26/split/h3_cont_s24272_S24.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 24272,
+     "prompt": "s24_26_h3_continuous_v02"
+    },
+    {
+     "id": "v0b",
+     "label": "v0 raw 271 (part 1/3 of the 15 s take)",
+     "path": "takes/S24_26/split/h3_cont_s24271_S24.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 24271,
+     "prompt": "s24_26_h3_continuous_v02"
+    }
+   ],
+   "seam_ok": false,
+   "rev": 1,
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "Continuous 15 s take with an FL2VA bridge spliced over the jump (h3_cont_s24272_bridged)."
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T18:12",
+     "text": "Split from the merged S24-26 entry (Josh 2026-11-01: every shot is continuous now). The old versions are part 1/3 of the 15 s continuous take. Spiral turns right to match the blockout."
+    }
+   ]
+  },
+  {
+   "id": "S25",
+   "frames": [
+    2881,
+    3000
+   ],
+   "set": "slide",
+   "beat": "Slide",
+   "zone": "slide",
+   "refs": [
+    "slide"
+   ],
+   "camera": "Long straight drop toward a growing disc of light",
+   "caption": "It keeps going.",
+   "cast": "No one visible.",
+   "beats": [
+    "0-1 s: the spiral lets go and the tube straightens and points almost straight down; I drop.",
+    "1-4 s: a long straight shaft, the collars rushing past in rings, a tiny pale disc of light far below at the end of the tube, slowly growing.",
+    "4-5 s: still falling down the shaft, the disc of light bigger now, cold and blue-grey."
+   ],
+   "end": "dropping straight down the tube toward the round mouth far below, a disc of cold blue-grey light filling the middle of the frame.",
+   "sound": "The slide roar rising to a howl as the shaft drops straight down, a breath held.",
+   "extra_avoid": "a metal or sci-fi tube, rivets, lights inside the tube, water, a water slide, daylight, an adult man in frame, a spiral, the tube ending",
+   "index": 25,
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 bridged (part 2/3 of the 15 s take)",
+     "path": "takes/S24_26/split/h3_cont_s24272_bridged_S25.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 24272,
+     "prompt": "s24_26_h3_continuous_v02"
+    },
+    {
+     "id": "v0",
+     "label": "v0 raw 272 (part 2/3 of the 15 s take)",
+     "path": "takes/S24_26/split/h3_cont_s24272_S25.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 24272,
+     "prompt": "s24_26_h3_continuous_v02"
+    },
+    {
+     "id": "v0b",
+     "label": "v0 raw 271 (part 2/3 of the 15 s take)",
+     "path": "takes/S24_26/split/h3_cont_s24271_S25.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 24271,
+     "prompt": "s24_26_h3_continuous_v02"
+    }
+   ],
+   "seam_ok": false,
+   "rev": 1,
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T18:12",
+     "text": "Split from the merged S24-26 entry (Josh 2026-11-01: every shot is continuous now). The old versions are part 2/3 of the 15 s continuous take. Spiral turns right to match the blockout."
+    }
+   ]
+  },
+  {
+   "id": "S26",
+   "frames": [
+    3001,
+    3120
+   ],
+   "set": "playways",
+   "beat": "Crash",
+   "zone": "playways",
+   "refs": [
+    "playways",
+    "idol"
+   ],
+   "camera": "Shoot out of the tube; the ball sea rushes up",
+   "caption": "Out into open air. A sea of balls below.",
+   "cast": "No people: no children, no figures, no faces.",
+   "beats": [
+    "0-1 s: the round mouth of the tube rushes up and I shoot out of it into open air, high above the Playways; the giant mascot idol is far off in the middle of the space.",
+    "1-3.5 s: free fall, pitching forward and down; my hands fly up into the bottom corners of the frame grabbing at nothing; net catwalks and fat slide tubes rush past, the ball sea swelling below.",
+    "3.5-5 s: the dull red, yellow and blue balls fill the frame and I hit the surface; balls burst across the view and I punch down into them."
+   ],
+   "end": "plunging under the surface, dim colored balls crushing in from every side, the light going dark.",
+   "sound": "A sudden hollow opening into a vast reverb, rushing wind, a gasp, then a huge clattering crash of plastic balls going instantly muffled.",
+   "extra_avoid": "a ceiling or roof, more than one mascot, the statue moving, clean bright new plastic, cartoon style",
+   "index": 26,
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 bridged (part 3/3 of the 15 s take)",
+     "path": "takes/S24_26/split/h3_cont_s24272_bridged_S26.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 24272,
+     "prompt": "s24_26_h3_continuous_v02"
+    },
+    {
+     "id": "v0",
+     "label": "v0 raw 272 (part 3/3 of the 15 s take)",
+     "path": "takes/S24_26/split/h3_cont_s24272_S26.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 24272,
+     "prompt": "s24_26_h3_continuous_v02"
+    },
+    {
+     "id": "v0b",
+     "label": "v0 raw 271 (part 3/3 of the 15 s take)",
+     "path": "takes/S24_26/split/h3_cont_s24271_S26.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 24271,
+     "prompt": "s24_26_h3_continuous_v02"
+    }
+   ],
+   "seam_ok": false,
+   "rev": 1,
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T18:12",
+     "text": "Split from the merged S24-26 entry (Josh 2026-11-01: every shot is continuous now). The old versions are part 3/3 of the 15 s continuous take. Spiral turns right to match the blockout."
+    }
+   ]
+  },
+  {
+   "id": "S27",
+   "index": 27,
+   "frames": [
+    3121,
+    3240
+   ],
+   "set": "playways",
+   "beat": "Crash",
+   "camera": "Under the balls; hands claw",
+   "caption": "Under. Muffled. Colored dark.",
+   "zone": "playways",
+   "refs": [
+    "playways"
+   ],
+   "cast": "No people.",
+   "beats": [
+    "0-5 s: darkness under the balls: dim colored balls pressed against the view, my hands clawing at them, thin cold blue light leaking from above and slowly growing as I rise."
+   ],
+   "end": "the balls thinning, the light brightening just above.",
+   "sound": "Muffled clatter, heartbeat, pressure.",
+   "extra_avoid": "towers, open air",
+   "raw_prompt": "",
+   "status": "fix",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S27_h3_s10271.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10271,
+     "job": "2ad5460d-ab78-4d71-8225-0fa831424e27",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v1 is already above the balls. It should stay under, dark, so S28 is the surfacing."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 1
+  },
+  {
+   "id": "S28",
+   "index": 28,
+   "frames": [
+    3241,
+    3360
+   ],
+   "set": "playways",
+   "beat": "Crash",
+   "camera": "Hands break the surface",
+   "caption": "He surfaces. The party is gone. A hum.",
+   "zone": "playways",
+   "refs": [
+    "playways"
+   ],
+   "cast": "No people.",
+   "beats": [
+    "0-1.5 s: my hands push up through the balls.",
+    "1.5-3 s: the view breaks the surface, balls spilling off.",
+    "3-5 s: I look around at the hazy Playways and hold."
+   ],
+   "end": "a level view across the ball sea toward the towers.",
+   "sound": "Balls rolling off, a gasp, then silence and a low hum where the party was.",
+   "extra_avoid": "",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S28_h3_s10281.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10281,
+     "job": "cfd0c502-bd7f-40c3-b852-b6d19204ec86",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [],
+   "seam_ok": false,
+   "rev": 1
+  },
+  {
+   "id": "S29",
+   "index": 29,
+   "frames": [
+    3361,
+    3480
+   ],
+   "set": "playways",
+   "beat": "Crash",
+   "camera": "Tilt up: the tower reveal",
+   "caption": "He looks up.",
+   "zone": "playways",
+   "refs": [
+    "playways"
+   ],
+   "cast": "No people.",
+   "beats": [
+    "0-5 s: from the ball sea, my view tilts slowly up the towers, easing in and easing out, up and up into haze, no top in sight."
+   ],
+   "end": "looking almost straight up into haze.",
+   "sound": "A low enormous hum, distant creaks.",
+   "extra_avoid": "",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S29_h3_s10291.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10291,
+     "job": "f509c911-1fe2-4af1-a444-28daa06d68b8",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [],
+   "seam_ok": true,
+   "rev": 1
+  },
+  {
+   "id": "S30",
+   "index": 30,
+   "frames": [
+    3481,
+    3600
+   ],
+   "set": "playways",
+   "beat": "Task",
+   "camera": "Wade to the ledge and haul up",
+   "caption": "He hauls himself onto a ledge.",
+   "zone": "playways",
+   "refs": [
+    "playways"
+   ],
+   "cast": "No people at all.",
+   "beats": [
+    "0-1 s: my view tilts back down to the ball sea.",
+    "1-3 s: I wade through the balls to a padded ledge.",
+    "3-4.5 s: my hands grab its edge and I haul myself up, the view rising over the top.",
+    "4.5-5 s: kneeling on the empty ledge. Hold."
+   ],
+   "end": "the empty ledge, seen from on top of it, looking out over the ball sea at the towers.",
+   "sound": "Balls shifting, heavy breathing, vinyl creak.",
+   "extra_avoid": "a person on or behind the ledge",
+   "raw_prompt": "",
+   "status": "fix",
+   "current": "v2b",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S30_h3_s10301.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10301,
+     "job": "6b11b2c8-a22a-4254-bbe2-30851d6c0716",
+     "prompt": "batch_h3_v01"
+    },
+    {
+     "id": "v2a",
+     "label": "v2a test",
+     "path": "takes/batch2_test/S30_h3v2a_s20301.mp4",
+     "cn": "0.6 / 0.5",
+     "seed": 20301,
+     "job": "ee7fc645-d5fa-4c72-b2b0-66b171217ed3",
+     "prompt": "batch_h3_v02"
+    },
+    {
+     "id": "v2b",
+     "label": "v2b test",
+     "path": "takes/batch2_test/S30_h3v2b_s20302.mp4",
+     "cn": "0.35 / 0.35",
+     "seed": 20302,
+     "job": "3df8121d-1e7e-48a8-a23d-39814d183e64",
+     "prompt": "batch_h3_v02"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v1 has a stranger man behind the ledge (from 'a man... charcoal overshirt' in the hands line)."
+    },
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v02 test: man gone in both, but Sarah climbs onto the ledge in v2a and v2b. Cause: the cast sheet described Sarah in every shot. Builder fixed: Sarah's description only goes into shots she's in."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 1
+  },
+  {
+   "id": "S31",
+   "index": 31,
+   "frames": [
+    3601,
+    3720
+   ],
+   "set": "playways",
+   "beat": "Task",
+   "camera": "Far off on a net bridge: one small figure in a blue top, back turned",
+   "caption": "DAD: Sarah!",
+   "zone": "playways",
+   "refs": [
+    "playways",
+    "sarah"
+   ],
+   "cast": "Exactly one small figure, far away.",
+   "beats": [
+    "0-1.5 s: I stand on the ledge looking out.",
+    "1.5-3.5 s: far off on a net bridge high up, one small figure in a blue long-sleeve top stands with her back turned, perfectly still.",
+    "3.5-5 s: my view pushes in a little and holds."
+   ],
+   "end": "the far net bridge with the single small figure.",
+   "sound": "My own voice, shouting: \"Sarah!\" It rolls away into the space with no answer.",
+   "extra_avoid": "",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S31_h3_s10311.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10311,
+     "job": "eb085b86-8cf8-4c4f-b76f-4c2c93e94b99",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [],
+   "seam_ok": false,
+   "rev": 1
+  },
+  {
+   "id": "S32",
+   "index": 32,
+   "frames": [
+    3721,
+    3840
+   ],
+   "set": "playways",
+   "beat": "Task",
+   "camera": "Pan: another blue top in a window, another on a slide",
+   "caption": "Another. And another.",
+   "zone": "playways",
+   "refs": [
+    "playways",
+    "sarah"
+   ],
+   "cast": "Exactly three small figures in blue tops, all identical to Sarah, all far away, backs turned.",
+   "beats": [
+    "0-1.5 s: hold on the figure on the bridge.",
+    "1.5-3 s: my view pans right: another small figure in a blue top stands in a lit window, back turned.",
+    "3-5 s: and another, at the top of a slide, back turned. Hold."
+   ],
+   "end": "the third small figure at the top of a slide.",
+   "sound": "The hum, distant creaks.",
+   "extra_avoid": "",
+   "raw_prompt": "",
+   "status": "fix",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S32_h3_s10321.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10321,
+     "job": "5258f986-a3d0-451a-b1a9-cc09f3a94748",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v1 shows one Sarah, not 'another... and another'."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 1
+  },
+  {
+   "id": "S33",
+   "index": 33,
+   "frames": [
+    3841,
+    3960
+   ],
+   "set": "playways",
+   "beat": "Task",
+   "camera": "Whip pan across the bridges: dozens",
+   "caption": "Every bridge.",
+   "zone": "playways",
+   "refs": [
+    "playways",
+    "sarah"
+   ],
+   "cast": "Dozens of identical small figures in blue tops, all far away, backs turned, all still.",
+   "beats": [
+    "0-1 s: the view holds, gathering.",
+    "1-4 s: a fast whip pan across the bridges, with motion blur: a small figure in a blue top on every bridge and catwalk.",
+    "4-5 s: the pan stops, overshoots a little, settles and holds."
+   ],
+   "end": "a bridge lined with small blue-top figures, backs turned.",
+   "sound": "The whoosh of the pan, then the hum.",
+   "extra_avoid": "",
+   "raw_prompt": "",
+   "status": "fix",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S33_h3_s10331.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10331,
+     "job": "b3feff3c-4ac4-4b73-805e-5ea7970ba519",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v1 shows one Sarah close, not dozens of blue tops on every bridge."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 1
+  },
+  {
+   "id": "S34",
+   "index": 34,
+   "frames": [
+    3961,
+    4080
+   ],
+   "set": "playways",
+   "beat": "Task",
+   "camera": "Tilt up the tiers to the grinning idol",
+   "caption": "Every tier. All turned away. The mascot grins down.",
+   "zone": "playways",
+   "refs": [
+    "playways",
+    "idol"
+   ],
+   "cast": "Many tiny still figures in blue tops, backs turned; exactly one giant mascot idol.",
+   "beats": [
+    "0-4 s: my view tilts slowly up the tiers, every tier dotted with tiny still blue-top figures turned away.",
+    "4-5 s: at the top, the giant grinning mascot idol looks down. Hold."
+   ],
+   "end": "the giant grinning mascot face filling the upper frame.",
+   "sound": "A deep swelling drone.",
+   "extra_avoid": "",
+   "raw_prompt": "",
+   "status": "fix",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S34_h3_s10341.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10341,
+     "job": "20faaa56-044d-4c3c-a36f-1aa891779797",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [
+    {
+     "who": "Claude",
+     "when": "2026-11-01T02:00",
+     "text": "v1: the grinning idol never appears."
+    }
+   ],
+   "seam_ok": false,
+   "rev": 1
+  },
+  {
+   "id": "S35",
+   "index": 35,
+   "frames": [
+    4081,
+    4200
+   ],
+   "set": "playways",
+   "beat": "Task",
+   "camera": "Look down at the yellow star in his hand",
+   "caption": "Her star.",
+   "zone": "playways",
+   "refs": [
+    "playways"
+   ],
+   "cast": "No people.",
+   "beats": [
+    "0-1.5 s: my view tilts down from above to my hands.",
+    "1.5-4 s: my right hand opens slowly; on the palm lies the small yellow plastic star charm.",
+    "4-5 s: hold."
+   ],
+   "end": "my open palm with the yellow star, the ball sea below.",
+   "sound": "The hum, a single breath.",
+   "extra_avoid": "",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S35_h3_s10351.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10351,
+     "job": "9d13cc61-6c2c-49e4-94de-e9dacdca554b",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [],
+   "seam_ok": false,
+   "rev": 1
+  },
+  {
+   "id": "S36",
+   "index": 36,
+   "frames": [
+    4201,
+    4320
+   ],
+   "set": "playways",
+   "beat": "Task",
+   "camera": "Tilt up into a tower with no top; cut to black, title",
+   "caption": "EVERYONE HERE IS HAPPY",
+   "zone": "playways",
+   "refs": [
+    "playways"
+   ],
+   "cast": "No people.",
+   "beats": [
+    "0-4.5 s: a slow tilt up into a tower that never ends, easing in, rising into haze and dark.",
+    "4.5-5 s: the frame goes to black."
+   ],
+   "end": "black.",
+   "sound": "The hum swelling, then cut to silence.",
+   "extra_avoid": "",
+   "raw_prompt": "",
+   "status": "rdy",
+   "current": "v1",
+   "versions": [
+    {
+     "id": "v1",
+     "label": "v1 batch 1",
+     "path": "takes/batch1/S36_h3_s10361.mp4",
+     "cn": "1.0 / 1.0",
+     "seed": 10361,
+     "job": "8dec66ec-d8ab-4af2-87af-06a3a97dc6ef",
+     "prompt": "batch_h3_v01"
+    }
+   ],
+   "notes": [],
+   "seam_ok": true,
+   "rev": 1
+  }
+ ],
+ "rev": 80
+}

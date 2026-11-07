@@ -1,0 +1,1333 @@
+{
+ "127": {
+  "class_type": "UNETLoader",
+  "inputs": {
+   "unet_name": "minimax_h3_ref2va_pruned_int8_convrot.safetensors",
+   "weight_dtype": "default"
+  },
+  "_meta": {
+   "title": "H3 ref2va"
+  }
+ },
+ "145": {
+  "class_type": "LoraLoaderModelOnly",
+  "inputs": {
+   "model": [
+    "127",
+    0
+   ],
+   "lora_name": "pika_h3_flex_ref2va_v1_bf16.safetensors",
+   "strength_model": 1
+  },
+  "_meta": {
+   "title": "Pika H3 Flex"
+  }
+ },
+ "128": {
+  "class_type": "CLIPLoader",
+  "inputs": {
+   "clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors",
+   "type": "minimax",
+   "device": "default"
+  },
+  "_meta": {
+   "title": "H3 text encoder"
+  }
+ },
+ "119": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "minimax_h3_video_vae_int8_convrot.safetensors"
+  },
+  "_meta": {
+   "title": "Video VAE"
+  }
+ },
+ "120": {
+  "class_type": "VAELoader",
+  "inputs": {
+   "vae_name": "minimax_h3_audio_vae_fp32.safetensors"
+  },
+  "_meta": {
+   "title": "Audio VAE"
+  }
+ },
+ "123": {
+  "class_type": "KSamplerSelect",
+  "inputs": {
+   "sampler_name": "lcm"
+  },
+  "_meta": {
+   "title": "Sampler"
+  }
+ },
+ "147": {
+  "class_type": "ManualSigmas",
+  "inputs": {
+   "sigmas": "1.0, 0.972973, 0.923077, 0.8, 0.571429, 0.333333, 0.0"
+  },
+  "_meta": {
+   "title": "Sigmas"
+  }
+ },
+ "173": {
+  "class_type": "ModelPatchLoader",
+  "inputs": {
+   "name": "minimax_h3_fun_controlnet_union_pruned_int8_convrot.safetensors"
+  },
+  "_meta": {
+   "title": "Fun ControlNet"
+  }
+ },
+ "174": {
+  "class_type": "LoadVideo",
+  "inputs": {
+   "file": "e7aa600b1b8212a1a0e9caf0d7c1eea7f97cc1d903ed1d14b25fdd23fa8ca15e.mp4"
+  },
+  "_meta": {
+   "title": "blockout depth"
+  }
+ },
+ "8": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "33e5425b6021085f385440d1d953a1cad99ce0187dc14b7ced7a66b79435b8eb.png"
+  },
+  "_meta": {
+   "title": "first frame of S05"
+  }
+ },
+ "150": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "5c90d4bab53db5a503bcef6c8062c5e3fdb4edaecfbc7aff08cfb541fd71fefc.png"
+  },
+  "_meta": {
+   "title": "ref party"
+  }
+ },
+ "151": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "682b09df3ab691335398c3abac8437154dc1fc9b05fcfd0ab85be620b07497b8.png"
+  },
+  "_meta": {
+   "title": "ref mascot"
+  }
+ },
+ "152": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "22df8380adf787f84f4203ea3961aea6effcbf94fcdeb4fee1cf1d4839c49cd3.png"
+  },
+  "_meta": {
+   "title": "ref pit"
+  }
+ },
+ "153": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "723c38e5ea6b233f56836c0a176ce036439d7c880e74cef624c2e2e1f63583af.png"
+  },
+  "_meta": {
+   "title": "ref tube"
+  }
+ },
+ "154": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "fab1bdc6b71279cd4a2878182f7422872fdf268ed13f4cb6de511d55eeff3b81.png"
+  },
+  "_meta": {
+   "title": "ref junction"
+  }
+ },
+ "155": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "aa3e743e448b406c5d0321b85fca4f2dab372a8292b4b194b93e0ecfc57ee451.png"
+  },
+  "_meta": {
+   "title": "ref sarah"
+  }
+ },
+ "156": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "4461501730de79ed771e5b537b0367bffe317c9768f39837cf11fe6afc632a92.png"
+  },
+  "_meta": {
+   "title": "ref slide"
+  }
+ },
+ "157": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "05d166539983d8dc8d26c71b8f5ae5faf750431927477dc62f41a4bb79d394c4.png"
+  },
+  "_meta": {
+   "title": "ref playways"
+  }
+ },
+ "158": {
+  "class_type": "LoadImage",
+  "inputs": {
+   "image": "8c92a1285baeb92a3fbefa2a80d7b2037afa58541cfc8f54536291af20fd71ae.png"
+  },
+  "_meta": {
+   "title": "ref idol"
+  }
+ },
+ "500a": {
+  "class_type": "Video Slice",
+  "inputs": {
+   "video": [
+    "174",
+    0
+   ],
+   "start_time": 20.6767,
+   "duration": 5.1667,
+   "strict_duration": false
+  },
+  "_meta": {
+   "title": "S05 depth slice"
+  }
+ },
+ "500b": {
+  "class_type": "GetVideoComponents",
+  "inputs": {
+   "video": [
+    "500a",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S05 depth frames"
+  }
+ },
+ "501": {
+  "class_type": "MiniMaxH3FunControlNetApply",
+  "inputs": {
+   "model": [
+    "145",
+    0
+   ],
+   "model_patch": [
+    "173",
+    0
+   ],
+   "vae": [
+    "119",
+    0
+   ],
+   "strength": 0.5,
+   "start_percent": 0.0,
+   "end_percent": 0.5,
+   "control_video": [
+    "500b",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S05 ControlNet"
+  }
+ },
+ "502": {
+  "class_type": "MiniMaxH3ReferenceToVideo",
+  "inputs": {
+   "clip": [
+    "128",
+    0
+   ],
+   "vae": [
+    "119",
+    0
+   ],
+   "audio_vae": [
+    "120",
+    0
+   ],
+   "prompt": "subject_definitions:\n<Subject 1> is the party mascot in <Picture 1>: one person in a cheap worn orange plush costume with a foam head, fixed wide grin, yellow belly, oversized gloves. Exactly one mascot.\n<Subject 2> is Happy Hank's Pizza & Play in <Picture 2>: a cheap 1990s pizza-and-games party room, drop ceiling with flat fluorescent panels, laminate party tables with paper tablecloths and balloons, purple patterned carpet, arcade glow, a yellow-poled play structure with red, blue and teal tubes behind a ball pit. Ordinary, loud, a little grubby. Only children and the one mascot are in the room; no adult is ever close to the camera.\n<Subject 3> is the ball pit in <Picture 3>: low blue padded walls, colored plastic balls, a foam step, the yellow-poled play structure rising behind it.\n<Subject 4> is Sarah, the girl in <Picture 4>: about five, shoulder-length brown hair, blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow star bracelet on her left wrist.\n<Subject 5> is the play-structure tube in <Picture 5>: a short, gently curving crawl tube of dull faded rotomolded plastic, scuffed vinyl-padded floor, round bolt caps at the joints, thin warm light through the plastic. Cramped for an adult, still ordinary. Look reference only: a different part of the building; it does not appear in this shot.\n<Subject 6> is the junction chamber in <Picture 6>: faded teal plastic walls, red and yellow tube mouths leading off, a strip of net overhead, scuffed padded floor. Look reference only: a different part of the building; it does not appear in this shot.\n<Subject 7> is the slide in <Picture 7>: a dull faded orange rotomolded plastic tube slide, matte chalky plastic, plastic collars with fat round bolt caps. Look reference only: a different part of the building; it does not appear in this shot.\n<Subject 8> is the Playways in <Picture 8>: a dense knot of grimy faded tube slides, torn sagging net catwalks, dark mesh-caged towers, dusty bubble pods, endless towers of small amber windows in cold blue-grey haze, a vast sea of dull colored balls. No ceiling ever visible. Look reference only: a different part of the building; it does not appear in this shot.\n<Subject 9> is the giant mascot idol in <Picture 9>: the same grinning orange mascot face, as one enormous still statue. Exactly one. It never moves. Look reference only: a different part of the building; it does not appear in this shot.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. Across the same fluorescent party room, the mascot waves at a table of kids, who wave back and laugh. It ends on Sarah close on my right, crouched behind the corner of the table beside me, peeking over it, scared; the room behind her.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\n<Subject 3>: fully_preserved.\n<Subject 4>: fully_preserved.\n<Subject 5>: not shown in this shot.\n<Subject 6>: not shown in this shot.\n<Subject 7>: not shown in this shot.\n<Subject 8>: not shown in this shot.\n<Subject 9>: not shown in this shot.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person POV, one single continuous handheld take with no cuts; the camera is my own eyes, a tired father, and no other adult is ever near the camera. The only part of me ever visible is my own two bare hands and forearms in the lower frame; exactly two hands, never more. Sarah always looks the same: a girl of about five, shoulder-length brown hair, a blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow plastic star bracelet on her left wrist. Photorealistic early-1990s live-action film still, shot on 35mm film with a real lens, practical sets and real physical materials: scuffed rotomolded plastic, vinyl padding, cheap carpet, nylon rope net. Natural textures and real-world scale. Flat cool fluorescent light from a drop ceiling, a loud ordinary room. Visible film grain, slight halation around lights.\nMotion: the camera moves like a real person's head and body. Every move starts with a small anticipation, eases in and eases out, travels on a gentle arc and settles with a little follow-through; nothing snaps or jitters. People move with weight. The last half second holds almost still on the end state.\nExactly one mascot: one person in an orange plush costume with a big foam head and a fixed grin; it moves like a person in a costume. Exactly one child close to me, only at the end: Sarah, a girl of about five with shoulder-length brown hair, a blue long-sleeve top, dark grey leggings and cream velcro sneakers. The children at the tables keep moving: laughing, waving, eating. No adult anywhere in frame.\n\nCamera and layout, exactly as in the blockout: I am seated at my party table, eyes about 1.1 m above the floor; the near edge of the table fills the bottom third of the frame the whole time. The shot opens looking left across the room: the mascot is small, about 8 m away, by the far doorway and the far tables. It walks a few steps closer, still far across the room, never nearer than about 5 m. The view then pans right along my table to Sarah, about 1 m away at the right-hand corner of the same table, half-hidden behind it; in the background beyond her, small and far, the play structure and the ball pit. Keep everything at these distances and sizes; do not move the camera closer to the action than this.\n\n[Shot 1] The first frame is given and fixed; the shot opens exactly on it: the far end of the party room, where the mascot, one person in an orange plush costume with a big foam head and a fixed grin, has just stepped in beside the far tables, kids turning toward it. In order: 1. 0-1.5 s: across the same fluorescent party room, the mascot waves at a table of kids, who wave back and laugh. 2. 1.5-2.5 s: it turns slowly toward me, the big foam head lagging a beat behind its body. 3. 2.5-3.5 s: it waves directly at me, the glove overshooting and bouncing back. The grin never changes. 4. 3.5-4.5 s: my view pans right on a fast arc back to Sarah beside the table; she stares at the mascot, frightened, shrinking down behind the corner of the table, both hands gripping its edge. 5. 4.5-5 s: hold: Sarah peeking over the table corner, scared.\nThe shot ends on: Sarah close on my right, crouched behind the corner of the table beside me, peeking over it, scared; the room behind her.\n\noverall_soundscape:\nParty din, kids laughing, the muffled squeak of the costume, Sarah's small frightened breath.\n\nnon_diegetic_music:\nNone.\n\nAvoid: a cut, third-person view, cartoon, anime, illustration, 3D render, CGI look, video game graphics, glossy surfaces, oversaturated colors, readable text, logos, a second adult, a stranger looking at the camera, a face close to the camera, extra hands, extra mascots, monsters, concentric rings, a tunnel of repeating circles, an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room.",
+   "width": 768,
+   "height": 1344,
+   "length": 124,
+   "ref_image_size": "match",
+   "ref_images.ref_image_0": [
+    "151",
+    0
+   ],
+   "ref_images.ref_image_1": [
+    "150",
+    0
+   ],
+   "ref_images.ref_image_2": [
+    "152",
+    0
+   ],
+   "ref_images.ref_image_3": [
+    "155",
+    0
+   ],
+   "ref_images.ref_image_4": [
+    "153",
+    0
+   ],
+   "ref_images.ref_image_5": [
+    "154",
+    0
+   ],
+   "ref_images.ref_image_6": [
+    "156",
+    0
+   ],
+   "ref_images.ref_image_7": [
+    "157",
+    0
+   ],
+   "ref_images.ref_image_8": [
+    "158",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S05 refs"
+  }
+ },
+ "512": {
+  "class_type": "MiniMaxH3AddGuide",
+  "inputs": {
+   "positive": [
+    "502",
+    0
+   ],
+   "latent": [
+    "502",
+    1
+   ],
+   "frame_idx": 0,
+   "vae": [
+    "119",
+    0
+   ],
+   "audio_vae": [
+    "120",
+    0
+   ],
+   "image": [
+    "8",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S05 first frame guide"
+  }
+ },
+ "503": {
+  "class_type": "RandomNoise",
+  "inputs": {
+   "noise_seed": 30053
+  },
+  "_meta": {
+   "title": "S05 seed"
+  }
+ },
+ "504": {
+  "class_type": "BasicGuider",
+  "inputs": {
+   "model": [
+    "501",
+    0
+   ],
+   "conditioning": [
+    "512",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S05 guider"
+  }
+ },
+ "505": {
+  "class_type": "SamplerCustomAdvanced",
+  "inputs": {
+   "noise": [
+    "503",
+    0
+   ],
+   "guider": [
+    "504",
+    0
+   ],
+   "sampler": [
+    "123",
+    0
+   ],
+   "sigmas": [
+    "147",
+    0
+   ],
+   "latent_image": [
+    "502",
+    1
+   ]
+  },
+  "_meta": {
+   "title": "S05 sample"
+  }
+ },
+ "506": {
+  "class_type": "VAEDecode",
+  "inputs": {
+   "samples": [
+    "505",
+    0
+   ],
+   "vae": [
+    "119",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S05 decode"
+  }
+ },
+ "507": {
+  "class_type": "VAEDecodeAudio",
+  "inputs": {
+   "samples": [
+    "505",
+    0
+   ],
+   "vae": [
+    "120",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S05 audio"
+  }
+ },
+ "508": {
+  "class_type": "CreateVideo",
+  "inputs": {
+   "images": [
+    "506",
+    0
+   ],
+   "audio": [
+    "507",
+    0
+   ],
+   "fps": 24
+  },
+  "_meta": {
+   "title": "S05 video"
+  }
+ },
+ "509": {
+  "class_type": "SaveVideo",
+  "inputs": {
+   "video": [
+    "508",
+    0
+   ],
+   "filename_prefix": "ehih/halloween/v2chain/S05_v4_s30053",
+   "format": "auto",
+   "codec": "auto"
+  },
+  "_meta": {
+   "title": "save S05"
+  }
+ },
+ "510": {
+  "class_type": "ImageFromBatch",
+  "inputs": {
+   "image": [
+    "506",
+    0
+   ],
+   "batch_index": 120,
+   "length": 1
+  },
+  "_meta": {
+   "title": "S05 frame 120"
+  }
+ },
+ "511": {
+  "class_type": "SaveImage",
+  "inputs": {
+   "images": [
+    "510",
+    0
+   ],
+   "filename_prefix": "ehih/halloween/v2chain/S05_v4_f120"
+  },
+  "_meta": {
+   "title": "save S05 frame 120"
+  }
+ },
+ "600a": {
+  "class_type": "Video Slice",
+  "inputs": {
+   "video": [
+    "174",
+    0
+   ],
+   "start_time": 25.8433,
+   "duration": 5.1667,
+   "strict_duration": false
+  },
+  "_meta": {
+   "title": "S06 depth slice"
+  }
+ },
+ "600b": {
+  "class_type": "GetVideoComponents",
+  "inputs": {
+   "video": [
+    "600a",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S06 depth frames"
+  }
+ },
+ "601": {
+  "class_type": "MiniMaxH3FunControlNetApply",
+  "inputs": {
+   "model": [
+    "145",
+    0
+   ],
+   "model_patch": [
+    "173",
+    0
+   ],
+   "vae": [
+    "119",
+    0
+   ],
+   "strength": 0.5,
+   "start_percent": 0.0,
+   "end_percent": 0.5,
+   "control_video": [
+    "600b",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S06 ControlNet"
+  }
+ },
+ "602": {
+  "class_type": "MiniMaxH3ReferenceToVideo",
+  "inputs": {
+   "clip": [
+    "128",
+    0
+   ],
+   "vae": [
+    "119",
+    0
+   ],
+   "audio_vae": [
+    "120",
+    0
+   ],
+   "prompt": "subject_definitions:\n<Subject 1> is Happy Hank's Pizza & Play in <Picture 1>: a cheap 1990s pizza-and-games party room, drop ceiling with flat fluorescent panels, laminate party tables with paper tablecloths and balloons, purple patterned carpet, arcade glow, a yellow-poled play structure with red, blue and teal tubes behind a ball pit. Ordinary, loud, a little grubby. Only children and the one mascot are in the room; no adult is ever close to the camera.\n<Subject 2> is the ball pit in <Picture 2>: low blue padded walls, colored plastic balls, a foam step, the yellow-poled play structure rising behind it.\n<Subject 3> is Sarah, the girl in <Picture 3>: about five, shoulder-length brown hair, blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow star bracelet on her left wrist.\n<Subject 4> is the party mascot in <Picture 4>: one person in a cheap worn orange plush costume with a foam head, fixed wide grin, yellow belly, oversized gloves. Exactly one mascot.\n<Subject 5> is the play-structure tube in <Picture 5>: a short, gently curving crawl tube of dull faded rotomolded plastic, scuffed vinyl-padded floor, round bolt caps at the joints, thin warm light through the plastic. Cramped for an adult, still ordinary. Look reference only: a different part of the building; it does not appear in this shot.\n<Subject 6> is the junction chamber in <Picture 6>: faded teal plastic walls, red and yellow tube mouths leading off, a strip of net overhead, scuffed padded floor. Look reference only: a different part of the building; it does not appear in this shot.\n<Subject 7> is the slide in <Picture 7>: a dull faded orange rotomolded plastic tube slide, matte chalky plastic, plastic collars with fat round bolt caps. Look reference only: a different part of the building; it does not appear in this shot.\n<Subject 8> is the Playways in <Picture 8>: a dense knot of grimy faded tube slides, torn sagging net catwalks, dark mesh-caged towers, dusty bubble pods, endless towers of small amber windows in cold blue-grey haze, a vast sea of dull colored balls. No ceiling ever visible. Look reference only: a different part of the building; it does not appear in this shot.\n<Subject 9> is the giant mascot idol in <Picture 9>: the same grinning orange mascot face, as one enormous still statue. Exactly one. It never moves. Look reference only: a different part of the building; it does not appear in this shot.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. Sarah peeks over the table corner toward the mascot, then looks back up at me as I speak. It ends on a phone with a dark screen in my right hand low in the frame; past it, Sarah small across the room near the ball pit; the mascot small in the background on the left; kids moving between the tables.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\n<Subject 3>: fully_preserved.\n<Subject 4>: fully_preserved.\n<Subject 5>: not shown in this shot.\n<Subject 6>: not shown in this shot.\n<Subject 7>: not shown in this shot.\n<Subject 8>: not shown in this shot.\n<Subject 9>: not shown in this shot.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person POV, one single continuous handheld take with no cuts; the camera is my own eyes, a tired father, and no other adult is ever near the camera. The only part of me ever visible is my own two bare hands and forearms in the lower frame; exactly two hands, never more. Sarah always looks the same: a girl of about five, shoulder-length brown hair, a blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow plastic star bracelet on her left wrist. Photorealistic early-1990s live-action film still, shot on 35mm film with a real lens, practical sets and real physical materials: scuffed rotomolded plastic, vinyl padding, cheap carpet, nylon rope net. Natural textures and real-world scale. Flat cool fluorescent light from a drop ceiling, a loud ordinary room. Visible film grain, slight halation around lights.\nMotion: the camera moves like a real person's head and body. Every move starts with a small anticipation, eases in and eases out, travels on a gentle arc and settles with a little follow-through; nothing snaps or jitters. People move with weight. The last half second holds almost still on the end state.\nExactly one child close to me: Sarah, a girl of about five with shoulder-length brown hair, a blue long-sleeve top, dark grey leggings and cream velcro sneakers; she gets smaller as she runs away. Exactly one mascot, small in the background on the left: one person in an orange plush costume with a big foam head and a fixed grin, waving at a table. The children at the far tables are small and always moving: eating pizza, laughing, running, waving balloons. No adult anywhere in frame.\n\nCamera and layout, exactly as in the blockout: I stay seated at my table; its near edge fills the bottom third of the frame. Sarah starts close at the right-hand corner of my table, then runs off toward the back of the room and is soon a small figure far away. My view turns a little left and settles looking across the room: the ball pit and the play structure small and far across the back of the frame, the mascot about 4 m away at the left with a child in purple, balloons over the tables, and one phone in my right hand rising into the lower right of the frame. The ball pit and play structure stand across the room from my table, about 9 m away: a long, low ball pit with blue padded walls runs along the front of a wide two-level play structure of yellow poles with red, orange and teal tubes; a short flight of green padded steps with yellow handrails climbs the front wall of the pit, right of centre, up to the structure's first deck. Party tables with pink tablecloths fill the floor between us. Keep everything at these distances and sizes; do not move the camera closer to the action than this.\n\n[Shot 1] The first frame is given and fixed; the shot opens exactly on it: Sarah close on my right, crouched behind the corner of the table beside me, peeking over it, scared; the room behind her. In order: 1. 0-1.5 s: Sarah peeks over the table corner toward the mascot, then looks back up at me as I speak. 2. 1.5-2.5 s: she gives one small nod, lets go of the table and pushes off. 3. 2.5-4 s: she runs away across the room toward the ball pit at the back, weaving between the tables and the running kids, getting smaller. 4. 4-5 s: my right hand comes up into the lower frame holding a phone, its screen dark, and holds.\nThe shot ends on: a phone with a dark screen in my right hand low in the frame; past it, Sarah small across the room near the ball pit; the mascot small in the background on the left; kids moving between the tables.\n\noverall_soundscape:\nMy own voice, close to the camera: \"Go on, go play. I'll film you.\" Sneakers on carpet, party din.\n\nnon_diegetic_music:\nNone.\n\nAvoid: a cut, third-person view, cartoon, anime, illustration, 3D render, CGI look, video game graphics, glossy surfaces, oversaturated colors, readable text, logos, a second adult, a stranger looking at the camera, a face close to the camera, extra hands, extra mascots, monsters, concentric rings, a tunnel of repeating circles, an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room.",
+   "width": 768,
+   "height": 1344,
+   "length": 124,
+   "ref_image_size": "match",
+   "ref_images.ref_image_0": [
+    "150",
+    0
+   ],
+   "ref_images.ref_image_1": [
+    "152",
+    0
+   ],
+   "ref_images.ref_image_2": [
+    "155",
+    0
+   ],
+   "ref_images.ref_image_3": [
+    "151",
+    0
+   ],
+   "ref_images.ref_image_4": [
+    "153",
+    0
+   ],
+   "ref_images.ref_image_5": [
+    "154",
+    0
+   ],
+   "ref_images.ref_image_6": [
+    "156",
+    0
+   ],
+   "ref_images.ref_image_7": [
+    "157",
+    0
+   ],
+   "ref_images.ref_image_8": [
+    "158",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S06 refs"
+  }
+ },
+ "612": {
+  "class_type": "MiniMaxH3AddGuide",
+  "inputs": {
+   "positive": [
+    "602",
+    0
+   ],
+   "latent": [
+    "602",
+    1
+   ],
+   "frame_idx": 0,
+   "vae": [
+    "119",
+    0
+   ],
+   "audio_vae": [
+    "120",
+    0
+   ],
+   "image": [
+    "510",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S06 first frame guide"
+  }
+ },
+ "603": {
+  "class_type": "RandomNoise",
+  "inputs": {
+   "noise_seed": 30063
+  },
+  "_meta": {
+   "title": "S06 seed"
+  }
+ },
+ "604": {
+  "class_type": "BasicGuider",
+  "inputs": {
+   "model": [
+    "601",
+    0
+   ],
+   "conditioning": [
+    "612",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S06 guider"
+  }
+ },
+ "605": {
+  "class_type": "SamplerCustomAdvanced",
+  "inputs": {
+   "noise": [
+    "603",
+    0
+   ],
+   "guider": [
+    "604",
+    0
+   ],
+   "sampler": [
+    "123",
+    0
+   ],
+   "sigmas": [
+    "147",
+    0
+   ],
+   "latent_image": [
+    "602",
+    1
+   ]
+  },
+  "_meta": {
+   "title": "S06 sample"
+  }
+ },
+ "606": {
+  "class_type": "VAEDecode",
+  "inputs": {
+   "samples": [
+    "605",
+    0
+   ],
+   "vae": [
+    "119",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S06 decode"
+  }
+ },
+ "607": {
+  "class_type": "VAEDecodeAudio",
+  "inputs": {
+   "samples": [
+    "605",
+    0
+   ],
+   "vae": [
+    "120",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S06 audio"
+  }
+ },
+ "608": {
+  "class_type": "CreateVideo",
+  "inputs": {
+   "images": [
+    "606",
+    0
+   ],
+   "audio": [
+    "607",
+    0
+   ],
+   "fps": 24
+  },
+  "_meta": {
+   "title": "S06 video"
+  }
+ },
+ "609": {
+  "class_type": "SaveVideo",
+  "inputs": {
+   "video": [
+    "608",
+    0
+   ],
+   "filename_prefix": "ehih/halloween/v2chain/S06_v4_s30063",
+   "format": "auto",
+   "codec": "auto"
+  },
+  "_meta": {
+   "title": "save S06"
+  }
+ },
+ "610": {
+  "class_type": "ImageFromBatch",
+  "inputs": {
+   "image": [
+    "606",
+    0
+   ],
+   "batch_index": 120,
+   "length": 1
+  },
+  "_meta": {
+   "title": "S06 frame 120"
+  }
+ },
+ "611": {
+  "class_type": "SaveImage",
+  "inputs": {
+   "images": [
+    "610",
+    0
+   ],
+   "filename_prefix": "ehih/halloween/v2chain/S06_v4_f120"
+  },
+  "_meta": {
+   "title": "save S06 frame 120"
+  }
+ },
+ "700a": {
+  "class_type": "Video Slice",
+  "inputs": {
+   "video": [
+    "174",
+    0
+   ],
+   "start_time": 31.01,
+   "duration": 5.1667,
+   "strict_duration": false
+  },
+  "_meta": {
+   "title": "S07 depth slice"
+  }
+ },
+ "700b": {
+  "class_type": "GetVideoComponents",
+  "inputs": {
+   "video": [
+    "700a",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S07 depth frames"
+  }
+ },
+ "701": {
+  "class_type": "MiniMaxH3FunControlNetApply",
+  "inputs": {
+   "model": [
+    "145",
+    0
+   ],
+   "model_patch": [
+    "173",
+    0
+   ],
+   "vae": [
+    "119",
+    0
+   ],
+   "strength": 0.5,
+   "start_percent": 0.0,
+   "end_percent": 0.5,
+   "control_video": [
+    "700b",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S07 ControlNet"
+  }
+ },
+ "702": {
+  "class_type": "MiniMaxH3ReferenceToVideo",
+  "inputs": {
+   "clip": [
+    "128",
+    0
+   ],
+   "vae": [
+    "119",
+    0
+   ],
+   "audio_vae": [
+    "120",
+    0
+   ],
+   "prompt": "subject_definitions:\n<Subject 1> is Happy Hank's Pizza & Play in <Picture 1>: a cheap 1990s pizza-and-games party room, drop ceiling with flat fluorescent panels, laminate party tables with paper tablecloths and balloons, purple patterned carpet, arcade glow, a yellow-poled play structure with red, blue and teal tubes behind a ball pit. Ordinary, loud, a little grubby. Only children and the one mascot are in the room; no adult is ever close to the camera.\n<Subject 2> is the ball pit in <Picture 2>: low blue padded walls, colored plastic balls, a foam step, the yellow-poled play structure rising behind it.\n<Subject 3> is the party mascot in <Picture 3>: one person in a cheap worn orange plush costume with a foam head, fixed wide grin, yellow belly, oversized gloves. Exactly one mascot.\n<Subject 4> is the play-structure tube in <Picture 4>: a short, gently curving crawl tube of dull faded rotomolded plastic, scuffed vinyl-padded floor, round bolt caps at the joints, thin warm light through the plastic. Cramped for an adult, still ordinary. Look reference only: a different part of the building; it does not appear in this shot.\n<Subject 5> is the junction chamber in <Picture 5>: faded teal plastic walls, red and yellow tube mouths leading off, a strip of net overhead, scuffed padded floor. Look reference only: a different part of the building; it does not appear in this shot.\n<Subject 6> is Sarah, the girl in <Picture 6>: about five, shoulder-length brown hair, blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow star bracelet on her left wrist. Look reference only: she is not in this shot.\n<Subject 7> is the slide in <Picture 7>: a dull faded orange rotomolded plastic tube slide, matte chalky plastic, plastic collars with fat round bolt caps. Look reference only: a different part of the building; it does not appear in this shot.\n<Subject 8> is the Playways in <Picture 8>: a dense knot of grimy faded tube slides, torn sagging net catwalks, dark mesh-caged towers, dusty bubble pods, endless towers of small amber windows in cold blue-grey haze, a vast sea of dull colored balls. No ceiling ever visible. Look reference only: a different part of the building; it does not appear in this shot.\n<Subject 9> is the giant mascot idol in <Picture 9>: the same grinning orange mascot face, as one enormous still statue. Exactly one. It never moves. Look reference only: a different part of the building; it does not appear in this shot.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. My right hand lifts the phone closer; the lock screen lights up: a plain dark wallpaper and a blurry plain clock, nothing else. It ends on the lit, empty phone lock screen in my right hand, no notifications; behind it the party is soft and moving: kids running, balloons, the mascot small in the background.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\n<Subject 3>: fully_preserved.\n<Subject 4>: not shown in this shot.\n<Subject 5>: not shown in this shot.\n<Subject 6>: not shown in this shot.\n<Subject 7>: not shown in this shot.\n<Subject 8>: not shown in this shot.\n<Subject 9>: not shown in this shot.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person POV, one single continuous handheld take with no cuts; the camera is my own eyes, a tired father, and no other adult is ever near the camera. The only part of me ever visible is my own two bare hands and forearms in the lower frame; exactly two hands, never more. Photorealistic early-1990s live-action film still, shot on 35mm film with a real lens, practical sets and real physical materials: scuffed rotomolded plastic, vinyl padding, cheap carpet, nylon rope net. Natural textures and real-world scale. Flat cool fluorescent light from a drop ceiling, a loud ordinary room. Visible film grain, slight halation around lights.\nMotion: the camera moves like a real person's head and body. Every move starts with a small anticipation, eases in and eases out, travels on a gentle arc and settles with a little follow-through; nothing snaps or jitters. People move with weight. The last half second holds almost still on the end state.\nNo child close to me. The children behind the phone are soft and always moving: running, laughing, waving balloons, eating pizza. Exactly one mascot, small in the background: one person in an orange plush costume with a big foam head and a fixed grin. No adult anywhere in frame.\n\nCamera and layout, exactly as in the blockout: I stay seated; the table edge fills the bottom of the frame. One phone in my right hand fills the lower right quarter of the frame, held upright. Above and left of it the room carries on as before: the mascot about 4 m away on the left with a child in purple, the ball pit and play structure small and far across the back of the room. The ball pit and play structure stand across the room from my table, about 9 m away: a long, low ball pit with blue padded walls runs along the front of a wide two-level play structure of yellow poles with red, orange and teal tubes; a short flight of green padded steps with yellow handrails climbs the front wall of the pit, right of centre, up to the structure's first deck. Party tables with pink tablecloths fill the floor between us. Keep everything at these distances and sizes; do not move the camera closer to the action than this.\n\n[Shot 1] The first frame is given and fixed; the shot opens exactly on it: a phone with a dark screen in my right hand low in the frame; past it, Sarah small across the room near the ball pit; the mascot small in the background on the left; kids moving between the tables. In order: 1. 0-1.5 s: my right hand lifts the phone closer; the lock screen lights up: a plain dark wallpaper and a blurry plain clock, nothing else. 2. 1.5-3.5 s: I look at it; no notifications appear and the screen stays empty. Behind it, out of focus, kids run past, balloons bob, the mascot waves at a table. 3. 3.5-5 s: my thumb rests still on the edge of the phone; the empty lock screen holds.\nThe shot ends on: the lit, empty phone lock screen in my right hand, no notifications; behind it the party is soft and moving: kids running, balloons, the mascot small in the background.\n\noverall_soundscape:\nParty din, kids shrieking, arcade bleeps, a balloon squeak. No phone sounds.\n\nnon_diegetic_music:\nNone.\n\nAvoid: a cut, third-person view, cartoon, anime, illustration, 3D render, CGI look, video game graphics, glossy surfaces, oversaturated colors, readable text, logos, a second adult, a stranger looking at the camera, a face close to the camera, extra hands, extra mascots, monsters, concentric rings, a tunnel of repeating circles, an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room, typing, a keyboard, chat bubbles, readable numbers.",
+   "width": 768,
+   "height": 1344,
+   "length": 124,
+   "ref_image_size": "match",
+   "ref_images.ref_image_0": [
+    "150",
+    0
+   ],
+   "ref_images.ref_image_1": [
+    "152",
+    0
+   ],
+   "ref_images.ref_image_2": [
+    "151",
+    0
+   ],
+   "ref_images.ref_image_3": [
+    "153",
+    0
+   ],
+   "ref_images.ref_image_4": [
+    "154",
+    0
+   ],
+   "ref_images.ref_image_5": [
+    "155",
+    0
+   ],
+   "ref_images.ref_image_6": [
+    "156",
+    0
+   ],
+   "ref_images.ref_image_7": [
+    "157",
+    0
+   ],
+   "ref_images.ref_image_8": [
+    "158",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S07 refs"
+  }
+ },
+ "712": {
+  "class_type": "MiniMaxH3AddGuide",
+  "inputs": {
+   "positive": [
+    "702",
+    0
+   ],
+   "latent": [
+    "702",
+    1
+   ],
+   "frame_idx": 0,
+   "vae": [
+    "119",
+    0
+   ],
+   "audio_vae": [
+    "120",
+    0
+   ],
+   "image": [
+    "610",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S07 first frame guide"
+  }
+ },
+ "703": {
+  "class_type": "RandomNoise",
+  "inputs": {
+   "noise_seed": 30073
+  },
+  "_meta": {
+   "title": "S07 seed"
+  }
+ },
+ "704": {
+  "class_type": "BasicGuider",
+  "inputs": {
+   "model": [
+    "701",
+    0
+   ],
+   "conditioning": [
+    "712",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S07 guider"
+  }
+ },
+ "705": {
+  "class_type": "SamplerCustomAdvanced",
+  "inputs": {
+   "noise": [
+    "703",
+    0
+   ],
+   "guider": [
+    "704",
+    0
+   ],
+   "sampler": [
+    "123",
+    0
+   ],
+   "sigmas": [
+    "147",
+    0
+   ],
+   "latent_image": [
+    "702",
+    1
+   ]
+  },
+  "_meta": {
+   "title": "S07 sample"
+  }
+ },
+ "706": {
+  "class_type": "VAEDecode",
+  "inputs": {
+   "samples": [
+    "705",
+    0
+   ],
+   "vae": [
+    "119",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S07 decode"
+  }
+ },
+ "707": {
+  "class_type": "VAEDecodeAudio",
+  "inputs": {
+   "samples": [
+    "705",
+    0
+   ],
+   "vae": [
+    "120",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S07 audio"
+  }
+ },
+ "708": {
+  "class_type": "CreateVideo",
+  "inputs": {
+   "images": [
+    "706",
+    0
+   ],
+   "audio": [
+    "707",
+    0
+   ],
+   "fps": 24
+  },
+  "_meta": {
+   "title": "S07 video"
+  }
+ },
+ "709": {
+  "class_type": "SaveVideo",
+  "inputs": {
+   "video": [
+    "708",
+    0
+   ],
+   "filename_prefix": "ehih/halloween/v2chain/S07_v4_s30073",
+   "format": "auto",
+   "codec": "auto"
+  },
+  "_meta": {
+   "title": "save S07"
+  }
+ },
+ "710": {
+  "class_type": "ImageFromBatch",
+  "inputs": {
+   "image": [
+    "706",
+    0
+   ],
+   "batch_index": 120,
+   "length": 1
+  },
+  "_meta": {
+   "title": "S07 frame 120"
+  }
+ },
+ "711": {
+  "class_type": "SaveImage",
+  "inputs": {
+   "images": [
+    "710",
+    0
+   ],
+   "filename_prefix": "ehih/halloween/v2chain/S07_v4_f120"
+  },
+  "_meta": {
+   "title": "save S07 frame 120"
+  }
+ },
+ "800a": {
+  "class_type": "Video Slice",
+  "inputs": {
+   "video": [
+    "174",
+    0
+   ],
+   "start_time": 36.1767,
+   "duration": 5.1667,
+   "strict_duration": false
+  },
+  "_meta": {
+   "title": "S08 depth slice"
+  }
+ },
+ "800b": {
+  "class_type": "GetVideoComponents",
+  "inputs": {
+   "video": [
+    "800a",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S08 depth frames"
+  }
+ },
+ "801": {
+  "class_type": "MiniMaxH3FunControlNetApply",
+  "inputs": {
+   "model": [
+    "145",
+    0
+   ],
+   "model_patch": [
+    "173",
+    0
+   ],
+   "vae": [
+    "119",
+    0
+   ],
+   "strength": 0.5,
+   "start_percent": 0.0,
+   "end_percent": 0.5,
+   "control_video": [
+    "800b",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S08 ControlNet"
+  }
+ },
+ "802": {
+  "class_type": "MiniMaxH3ReferenceToVideo",
+  "inputs": {
+   "clip": [
+    "128",
+    0
+   ],
+   "vae": [
+    "119",
+    0
+   ],
+   "audio_vae": [
+    "120",
+    0
+   ],
+   "prompt": "subject_definitions:\n<Subject 1> is the ball pit in <Picture 1>: low blue padded walls, colored plastic balls, a foam step, the yellow-poled play structure rising behind it.\n<Subject 2> is Sarah, the girl in <Picture 2>: about five, shoulder-length brown hair, blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow star bracelet on her left wrist.\n<Subject 3> is Happy Hank's Pizza & Play in <Picture 3>: a cheap 1990s pizza-and-games party room, drop ceiling with flat fluorescent panels, laminate party tables with paper tablecloths and balloons, purple patterned carpet, arcade glow, a yellow-poled play structure with red, blue and teal tubes behind a ball pit. Ordinary, loud, a little grubby. Only children and the one mascot are in the room; no adult is ever close to the camera.\n<Subject 4> is the party mascot in <Picture 4>: one person in a cheap worn orange plush costume with a foam head, fixed wide grin, yellow belly, oversized gloves. Exactly one mascot.\n<Subject 5> is the play-structure tube in <Picture 5>: a short, gently curving crawl tube of dull faded rotomolded plastic, scuffed vinyl-padded floor, round bolt caps at the joints, thin warm light through the plastic. Cramped for an adult, still ordinary. Look reference only: a different part of the building; it does not appear in this shot.\n<Subject 6> is the junction chamber in <Picture 6>: faded teal plastic walls, red and yellow tube mouths leading off, a strip of net overhead, scuffed padded floor. Look reference only: a different part of the building; it does not appear in this shot.\n<Subject 7> is the slide in <Picture 7>: a dull faded orange rotomolded plastic tube slide, matte chalky plastic, plastic collars with fat round bolt caps. Look reference only: a different part of the building; it does not appear in this shot.\n<Subject 8> is the Playways in <Picture 8>: a dense knot of grimy faded tube slides, torn sagging net catwalks, dark mesh-caged towers, dusty bubble pods, endless towers of small amber windows in cold blue-grey haze, a vast sea of dull colored balls. No ceiling ever visible. Look reference only: a different part of the building; it does not appear in this shot.\n<Subject 9> is the giant mascot idol in <Picture 9>: the same grinning orange mascot face, as one enormous still statue. Exactly one. It never moves. Look reference only: a different part of the building; it does not appear in this shot.\n\nsummary:\n[reference generation] A five-second single continuous first-person shot. From the phone in my hand, my view lifts across the room with a small dip of anticipation, the phone sinking to the bottom of frame. It ends on Sarah standing on the platform at the top of the padded steps beside the ball pit, facing me; the boy in the grey t-shirt one step below her; the phone low at the bottom of frame; the mascot small in the background.\n\nretention_analysis:\n<Subject 1>: fully_preserved.\n<Subject 2>: fully_preserved.\n<Subject 3>: fully_preserved.\n<Subject 4>: fully_preserved.\n<Subject 5>: not shown in this shot.\n<Subject 6>: not shown in this shot.\n<Subject 7>: not shown in this shot.\n<Subject 8>: not shown in this shot.\n<Subject 9>: not shown in this shot.\nNo audio reference is used in this generation.\n\ndetailed_description:\nFirst-person POV, one single continuous handheld take with no cuts; the camera is my own eyes, a tired father, and no other adult is ever near the camera. The only part of me ever visible is my own two bare hands and forearms in the lower frame; exactly two hands, never more. Sarah always looks the same: a girl of about five, shoulder-length brown hair, a blue long-sleeve top, dark grey leggings, cream velcro sneakers, a yellow plastic star bracelet on her left wrist. Photorealistic early-1990s live-action film still, shot on 35mm film with a real lens, practical sets and real physical materials: scuffed rotomolded plastic, vinyl padding, cheap carpet, nylon rope net. Natural textures and real-world scale. Flat cool fluorescent light from a drop ceiling, a loud ordinary room. Visible film grain, slight halation around lights.\nMotion: the camera moves like a real person's head and body. Every move starts with a small anticipation, eases in and eases out, travels on a gentle arc and settles with a little follow-through; nothing snaps or jitters. People move with weight. The last half second holds almost still on the end state.\nExactly two children in focus: Sarah, and one boy a head taller than Sarah, with short dark hair, a plain grey t-shirt and dark shorts. Exactly one Sarah; exactly one girl in a blue top. No adult anywhere in frame. Exactly one mascot, small in the background: one person in an orange plush costume with a big foam head and a fixed grin. The children at the far tables are small and always moving: eating pizza, laughing, running, waving balloons. The ball pit has low blue padded walls full of colored balls, a short flight of padded steps up to a small platform on its near wall, and an open yellow plastic slide coming down from the play structure's deck into its far side.\n\nCamera and layout, exactly as in the blockout: I stay seated; the table edge fills the bottom of the frame. The phone starts in the lower right, then sinks out of the bottom of the frame as my view lifts to the ball pit across the room, about 9 m away. The pit, the green steps and the play structure stay small, across the middle band of the frame; Sarah and the boy are small figures, each about a tenth of the frame height, climbing the green steps. The ball pit and play structure stand across the room from my table, about 9 m away: a long, low ball pit with blue padded walls runs along the front of a wide two-level play structure of yellow poles with red, orange and teal tubes; a short flight of green padded steps with yellow handrails climbs the front wall of the pit, right of centre, up to the structure's first deck. Party tables with pink tablecloths fill the floor between us. Keep everything at these distances and sizes; do not move the camera closer to the action than this.\n\n[Shot 1] The first frame is given and fixed; the shot opens exactly on it: the lit, empty phone lock screen in my right hand, no notifications; behind it the party is soft and moving: kids running, balloons, the mascot small in the background. In order: 1. 0-1 s: from the phone in my hand, my view lifts across the room with a small dip of anticipation, the phone sinking to the bottom of frame. 2. 1-3 s: at the ball pit, Sarah climbs the padded steps one at a time, a hand on the rail; the boy in the grey t-shirt climbs two steps behind her. 3. 3-4 s: at the top she turns to face me, waves both arms over her head and shouts her line. 4. 4-5 s: hold: Sarah at the top of the steps, the boy one step below her, the phone low at the bottom of frame.\nThe shot ends on: Sarah standing on the platform at the top of the padded steps beside the ball pit, facing me; the boy in the grey t-shirt one step below her; the phone low at the bottom of frame; the mascot small in the background.\n\noverall_soundscape:\nSarah calls across the room: \"Dad. Watch this one!\" My own voice, close to the camera: \"One second.\" Party din.\n\nnon_diegetic_music:\nNone.\n\nAvoid: a cut, third-person view, cartoon, anime, illustration, 3D render, CGI look, video game graphics, glossy surfaces, oversaturated colors, readable text, logos, a second adult, a stranger looking at the camera, a face close to the camera, extra hands, extra mascots, monsters, concentric rings, a tunnel of repeating circles, an adult man in frame, a second girl in a blue top, steam, static frozen children, an empty or white room, two Sarahs, a tablecloth close to the camera.",
+   "width": 768,
+   "height": 1344,
+   "length": 124,
+   "ref_image_size": "match",
+   "ref_images.ref_image_0": [
+    "152",
+    0
+   ],
+   "ref_images.ref_image_1": [
+    "155",
+    0
+   ],
+   "ref_images.ref_image_2": [
+    "150",
+    0
+   ],
+   "ref_images.ref_image_3": [
+    "151",
+    0
+   ],
+   "ref_images.ref_image_4": [
+    "153",
+    0
+   ],
+   "ref_images.ref_image_5": [
+    "154",
+    0
+   ],
+   "ref_images.ref_image_6": [
+    "156",
+    0
+   ],
+   "ref_images.ref_image_7": [
+    "157",
+    0
+   ],
+   "ref_images.ref_image_8": [
+    "158",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S08 refs"
+  }
+ },
+ "812": {
+  "class_type": "MiniMaxH3AddGuide",
+  "inputs": {
+   "positive": [
+    "802",
+    0
+   ],
+   "latent": [
+    "802",
+    1
+   ],
+   "frame_idx": 0,
+   "vae": [
+    "119",
+    0
+   ],
+   "audio_vae": [
+    "120",
+    0
+   ],
+   "image": [
+    "710",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S08 first frame guide"
+  }
+ },
+ "803": {
+  "class_type": "RandomNoise",
+  "inputs": {
+   "noise_seed": 30083
+  },
+  "_meta": {
+   "title": "S08 seed"
+  }
+ },
+ "804": {
+  "class_type": "BasicGuider",
+  "inputs": {
+   "model": [
+    "801",
+    0
+   ],
+   "conditioning": [
+    "812",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S08 guider"
+  }
+ },
+ "805": {
+  "class_type": "SamplerCustomAdvanced",
+  "inputs": {
+   "noise": [
+    "803",
+    0
+   ],
+   "guider": [
+    "804",
+    0
+   ],
+   "sampler": [
+    "123",
+    0
+   ],
+   "sigmas": [
+    "147",
+    0
+   ],
+   "latent_image": [
+    "802",
+    1
+   ]
+  },
+  "_meta": {
+   "title": "S08 sample"
+  }
+ },
+ "806": {
+  "class_type": "VAEDecode",
+  "inputs": {
+   "samples": [
+    "805",
+    0
+   ],
+   "vae": [
+    "119",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S08 decode"
+  }
+ },
+ "807": {
+  "class_type": "VAEDecodeAudio",
+  "inputs": {
+   "samples": [
+    "805",
+    0
+   ],
+   "vae": [
+    "120",
+    0
+   ]
+  },
+  "_meta": {
+   "title": "S08 audio"
+  }
+ },
+ "808": {
+  "class_type": "CreateVideo",
+  "inputs": {
+   "images": [
+    "806",
+    0
+   ],
+   "audio": [
+    "807",
+    0
+   ],
+   "fps": 24
+  },
+  "_meta": {
+   "title": "S08 video"
+  }
+ },
+ "809": {
+  "class_type": "SaveVideo",
+  "inputs": {
+   "video": [
+    "808",
+    0
+   ],
+   "filename_prefix": "ehih/halloween/v2chain/S08_v4_s30083",
+   "format": "auto",
+   "codec": "auto"
+  },
+  "_meta": {
+   "title": "save S08"
+  }
+ },
+ "810": {
+  "class_type": "ImageFromBatch",
+  "inputs": {
+   "image": [
+    "806",
+    0
+   ],
+   "batch_index": 120,
+   "length": 1
+  },
+  "_meta": {
+   "title": "S08 frame 120"
+  }
+ },
+ "811": {
+  "class_type": "SaveImage",
+  "inputs": {
+   "images": [
+    "810",
+    0
+   ],
+   "filename_prefix": "ehih/halloween/v2chain/S08_v4_f120"
+  },
+  "_meta": {
+   "title": "save S08 frame 120"
+  }
+ }
+}

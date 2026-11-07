@@ -1,0 +1,42 @@
+subject_definitions:
+<Subject 1> is the inside of the enclosed tube slide in <Picture 1>. Reference role: material and light anchor for the first ten seconds. Features to follow exactly: molded orange-and-tan plastic tube, sun-faded and chalky, brown water streaks running down the walls, black scuff marks, peeling stickers, yellowed duct-tape patches, cobwebbed netting caught in the seams, riveted seam rings every few meters, a dim sickly fluorescent glow leaking in through the walls.
+<Subject 2> is the Playways in <Picture 2>. Reference role: set, scale and look anchor for the last five seconds. Features to follow exactly: a dense knot of fat enclosed tube slides in grimy faded red, orange, blue and grey filling every gap and spilling their mouths into the ball pit, sagging torn rope-net catwalks looping overhead and dripping cobwebs, dark steel-mesh caged towers, clusters of dusty clear bubble pods, towers of small amber-lit windows repeating into cold blue-grey haze, a few buzzing green-white fluorescent tubes, single red lamps, and a vast sea of dull red, yellow, blue and dark-blue plastic balls. Built in loud artificial colors and left decades without a cleaning. No ceiling is ever visible; it rises into haze.
+<Subject 3> is the viewer's own two hands, invented: the hands of a man in his mid-30s with light-to-medium warm skin, in the cuffs of a charcoal cotton overshirt. They are the only part of the viewer ever visible.
+<Subject 4> is one giant grimy orange mascot statue, far off in the middle of <Subject 2>, its glossy paint dulled and chipped. Exactly one. It never moves.
+
+summary:
+[reference generation] A fifteen-second single continuous first-person shot with no cut: sliding down the long dark tube of <Picture 1>, spiraling, then dropping straight down toward a disc of light, the viewer shoots out of the tube high above the Playways of <Picture 2>, falls a very long way, and plunges into the sea of balls.
+
+retention_analysis:
+<Subject 1> (0 to 11 seconds): fully_preserved - tube plastic, grime, stains, tape, seam rings, dim leaking light.
+<Subject 2> (11 to 15 seconds): fully_preserved - grimy tube knots, torn nets, caged towers, amber windows, blue-grey haze, dull ball colors, endless vertical scale.
+<Subject 3> (whole shot): new - two adult hands only, no arms past the cuffs, no body.
+<Subject 4> (11 to 14 seconds): new - exactly one statue, far off, perfectly still.
+No audio reference is used in this generation.
+
+detailed_description:
+First-person point of view through the eyes of a grown man going down a children's slide that does not end, handheld and violent, photographic 35mm film look with 1990s grain and slight halation, gloomy and underlit, cold desaturated blue-grey ambient darkness against weak amber practicals. There are no people anywhere in the frame: no children, no figures, no faces.
+
+[Shot 1] At 0 seconds we are sliding feet-first down the dim tube of <Subject 1>. The two hands of <Subject 3> grip the tube walls at the bottom corners of the frame, palms skidding on the dusty plastic. The tube spirals steadily to the left and down, the stained walls streaming past, seam rings flicking by one after another, the curve always hiding what is ahead.
+
+At about three seconds the spiral tightens and speeds up. Bands of sickly fluorescent light pulse through the walls in a strobing rhythm. The hands slap against the walls, losing grip.
+
+At about five seconds the tube straightens and tips steeply downward. Now the tube runs straight ahead and far below, a long dark shaft with a small pale disc of light at the very end. The viewer accelerates hard down the shaft; the seam rings rush past faster and faster and the disc of light grows.
+
+At about ten seconds the disc of light fills the frame: it is the round mouth of the tube, and through it the impossible depth of <Subject 2> appears, towers and knotted slides and torn nets below, and <Subject 4> far off.
+
+At about eleven seconds the viewer shoots out of the mouth into open air, forty meters above the ball pit. The tube whips away behind. The whole of <Subject 2> opens at once, wider and deeper than seems possible. The camera pitches forward and down. The hands of <Subject 3> fly up into the bottom corners of the frame, fingers spread, grabbing at nothing.
+
+From eleven to fourteen seconds the viewer is in a long free fall. Hanging net catwalks and fat slide tubes rush up and past on both sides. Below, the ball sea grows from a speckled dark plain into individual dull red, yellow and blue balls swelling larger every instant.
+
+At about fourteen seconds the viewer hits the surface. Balls burst outward across the lens, the hands vanish into them, and the camera punches down through the balls into a crush of colored plastic that goes darker and darker.
+
+End state at fifteen seconds: the frame is almost black, filled edge to edge with dim colored balls pressed against the lens, a little cold blue light leaking between them from above. Nothing else is visible.
+
+overall_soundscape:
+The rattling, squeaking roar of a body on a plastic slide in a closed tube, the hiss of palms skidding, a rhythmic electrical buzz each time a light band passes, the roar rising as the shaft drops straight down. Then a sudden hollow opening into a cathedral-sized reverb as the viewer leaves the tube: rushing wind, a sharp gasp, the distant low hum of the space. The impact is a huge clattering crash of thousands of plastic balls, then instant muffled pressure: dull plastic knocking close to the ears and a heartbeat.
+
+non_diegetic_music:
+None. Only the hum, which keeps going under the balls.
+
+Avoid: people, children, figures, faces, crowds, more than one mascot, the statue moving, clean bright new plastic, cartoon style, text, signage, logos, a ceiling or roof, cuts, a third-person view.

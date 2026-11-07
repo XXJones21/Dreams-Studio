@@ -1,0 +1,2166 @@
+{
+  "schema_version": "0.1-draft",
+  "artifact_kind": "shooting_plan_not_comfyui_workflow",
+  "title": "Everyone Here Is Happy",
+  "based_on": "original-story-map.md",
+  "screenplay": "screenplay-v01.fountain",
+  "chronology": {
+    "decision_status": "direction_confirmed_by_user",
+    "ethan_outside_years": 120,
+    "sarah_extraction_outside_minutes": 15,
+    "sarah_subjective_playways_years_approx": 1,
+    "later_travel_changes_aging": true,
+    "last_recorded_crossing_outside_years_before_interview": 3,
+    "last_sighting_interval_status": "proposed_detail_within_user_confirmed_recent_sighting",
+    "present_location": "unknown",
+    "present_fate": "unknown",
+    "apparent_ages_are_production_targets_not_time_conversion": true
+  },
+  "delivery": {
+    "fps": 24,
+    "width": 1920,
+    "height": 1080,
+    "total_frames": 7200,
+    "total_seconds": 300,
+    "includes_title_and_credits": true
+  },
+  "approval_status": "draft_not_authorized_for_automatic_generation",
+  "paid_jobs_submitted": 0,
+  "timing_note": "Editorial targets; validate by animatic. Candidate H3 durations are model-grid calculations, not measured media.",
+  "required_character_references": [
+    "CHAR_ETHAN_V01",
+    "CHAR_SARAH_04_V01",
+    "CHAR_SARAH_05_V01",
+    "CHAR_SARAH_12_V01",
+    "CHAR_SARAH_24_V01",
+    "CHAR_SARAH_32_V01",
+    "CHAR_SARAH_38_V01",
+    "CHAR_SARAH_42_V01"
+  ],
+  "required_location_references": [
+    "LOC_PARTY_V01",
+    "LOC_BASIN_V01",
+    "LOC_CONCOURSE_V01",
+    "LOC_BRIDGE_V01",
+    "LOC_PARTY_BAY_V01",
+    "LOC_DEPARTURE_V01",
+    "LOC_SERVICE_V01",
+    "LOC_ARCHIVES_V01",
+    "LOC_RESCUE_RECORD_V01",
+    "LOC_HOME_RECORD_V01",
+    "LOC_PLATFORM_RECORD_V01",
+    "LOC_DOORWAY_RECORD_V01",
+    "LOC_OVERLOOK_RECORD_V01",
+    "LOC_LONG_TABLE_RECORD_V01",
+    "LOC_CITY_V01"
+  ],
+  "workflow_registry": [],
+  "assets": [],
+  "scenes": [
+    {
+      "id": "S01",
+      "name": "Birthday party",
+      "purpose": "Show Sarah's specificity and Ethan's missed moment.",
+      "start_frame": 0,
+      "end_frame": 1080
+    },
+    {
+      "id": "S02",
+      "name": "Entry",
+      "purpose": "Give Ethan a readable route and a real clue.",
+      "start_frame": 1080,
+      "end_frame": 1920
+    },
+    {
+      "id": "S03",
+      "name": "Search",
+      "purpose": "Make endurance and growing competence feel worthwhile.",
+      "start_frame": 1920,
+      "end_frame": 3600
+    },
+    {
+      "id": "S04",
+      "name": "Near success",
+      "purpose": "Let genuine evidence strengthen the chase.",
+      "start_frame": 3600,
+      "end_frame": 4440
+    },
+    {
+      "id": "S05",
+      "name": "Extraction",
+      "purpose": "Make help feel like a genuine release.",
+      "start_frame": 4440,
+      "end_frame": 4920
+    },
+    {
+      "id": "S06",
+      "name": "Archives",
+      "purpose": "Relief turns into involuntary witness to the life Ethan missed.",
+      "start_frame": 4920,
+      "end_frame": 6600
+    },
+    {
+      "id": "S07",
+      "name": "Metropolis",
+      "purpose": "Leave Ethan with a choice the film does not settle.",
+      "start_frame": 6600,
+      "end_frame": 6960
+    },
+    {
+      "id": "S08",
+      "name": "Title",
+      "purpose": "Hold space after the unresolved image.",
+      "start_frame": 6960,
+      "end_frame": 7200
+    }
+  ],
+  "shots": [
+    {
+      "shot_id": "S01_SH01",
+      "scene_id": "S01",
+      "title": "Coffee and phone",
+      "dramatic_purpose": "Show Sarah's specificity and Ethan's missed moment.",
+      "action": "Close insert of coffee and Ethan shielding his eyes; add the phone message in post.",
+      "timeline": {
+        "in_frame": 0,
+        "out_frame_exclusive": 120,
+        "used_frames": 120,
+        "used_seconds": 5
+      },
+      "framing": "insert",
+      "location_asset_id": "LOC_PARTY_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "None",
+      "continuity_and_review": "Phone screen must be separately composited; no date or time emphasis.",
+      "suggested_workflow_role": "approved_insert_keyframe_then_i2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 7,
+        "candidate_frames": 175,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Phone screen must be separately composited; no date or time emphasis."
+      ]
+    },
+    {
+      "shot_id": "S01_SH02",
+      "scene_id": "S01",
+      "title": "Sarah at the rail",
+      "dramatic_purpose": "Show Sarah's specificity and Ethan's missed moment.",
+      "action": "Sarah taps twice on the rail, then looks to Ethan.",
+      "timeline": {
+        "in_frame": 120,
+        "out_frame_exclusive": 240,
+        "used_frames": 120,
+        "used_seconds": 5
+      },
+      "framing": "medium",
+      "location_asset_id": "LOC_PARTY_V01",
+      "character_reference_ids": [
+        "CHAR_SARAH_04_V01"
+      ],
+      "audio_direction": "Sarah: Dad. Watch.",
+      "continuity_and_review": "Yellow wrist star present; approve two-tap timing separately.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 7,
+        "candidate_frames": 175,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Yellow wrist star present; approve two-tap timing separately."
+      ]
+    },
+    {
+      "shot_id": "S01_SH03",
+      "scene_id": "S01",
+      "title": "Almost looking",
+      "dramatic_purpose": "Show Sarah's specificity and Ethan's missed moment.",
+      "action": "Ethan reads Lena's message and says one second.",
+      "timeline": {
+        "in_frame": 240,
+        "out_frame_exclusive": 360,
+        "used_frames": 120,
+        "used_seconds": 5
+      },
+      "framing": "close",
+      "location_asset_id": "LOC_PARTY_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Ethan: One second.",
+      "continuity_and_review": "No contempt for Sarah; distraction and discomfort, not indifference.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 7,
+        "candidate_frames": 175,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "No contempt for Sarah; distraction and discomfort, not indifference."
+      ]
+    },
+    {
+      "shot_id": "S01_SH04",
+      "scene_id": "S01",
+      "title": "Choosing to look up",
+      "dramatic_purpose": "Show Sarah's specificity and Ethan's missed moment.",
+      "action": "Ethan turns the phone face down and starts to stand.",
+      "timeline": {
+        "in_frame": 360,
+        "out_frame_exclusive": 480,
+        "used_frames": 120,
+        "used_seconds": 5
+      },
+      "framing": "medium",
+      "location_asset_id": "LOC_PARTY_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "None",
+      "continuity_and_review": "Phone action ends before the next cut; preserve table geography.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 7,
+        "candidate_frames": 175,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Phone action ends before the next cut; preserve table geography."
+      ]
+    },
+    {
+      "shot_id": "S01_SH05",
+      "scene_id": "S01",
+      "title": "Small harm",
+      "dramatic_purpose": "Show Sarah's specificity and Ethan's missed moment.",
+      "action": "A child's hand pulls away the foam step; Sarah falls backward into the balls.",
+      "timeline": {
+        "in_frame": 480,
+        "out_frame_exclusive": 600,
+        "used_frames": 120,
+        "used_seconds": 5
+      },
+      "framing": "medium",
+      "location_asset_id": "LOC_PARTY_V01",
+      "character_reference_ids": [
+        "CHAR_SARAH_04_V01"
+      ],
+      "audio_direction": "Sarah's upset cry",
+      "continuity_and_review": "Stage as separate simple actions if contact fails; no graphic injury.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 7,
+        "candidate_frames": 175,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Stage as separate simple actions if contact fails; no graphic injury."
+      ]
+    },
+    {
+      "shot_id": "S01_SH06",
+      "scene_id": "S01",
+      "title": "Too late",
+      "dramatic_purpose": "Show Sarah's specificity and Ethan's missed moment.",
+      "action": "Ethan reaches the pit and calls to Sarah.",
+      "timeline": {
+        "in_frame": 600,
+        "out_frame_exclusive": 720,
+        "used_frames": 120,
+        "used_seconds": 5
+      },
+      "framing": "medium",
+      "location_asset_id": "LOC_PARTY_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Ethan: Hey. I'm here.",
+      "continuity_and_review": "Movement toward screen right.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 7,
+        "candidate_frames": 175,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Movement toward screen right."
+      ]
+    },
+    {
+      "shot_id": "S01_SH07",
+      "scene_id": "S01",
+      "title": "Gone under",
+      "dramatic_purpose": "Show Sarah's specificity and Ethan's missed moment.",
+      "action": "Sarah's hand disappears beneath the colored surface; Ethan starts searching.",
+      "timeline": {
+        "in_frame": 720,
+        "out_frame_exclusive": 888,
+        "used_frames": 168,
+        "used_seconds": 7
+      },
+      "framing": "insert",
+      "location_asset_id": "LOC_PARTY_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01",
+        "CHAR_SARAH_04_V01"
+      ],
+      "audio_direction": "Party sound continues",
+      "continuity_and_review": "Use separate disappearance and searching plates if needed; no monstrous mouth.",
+      "suggested_workflow_role": "approved_insert_keyframe_then_i2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 9,
+        "candidate_frames": 226,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Use separate disappearance and searching plates if needed; no monstrous mouth."
+      ]
+    },
+    {
+      "shot_id": "S01_SH08",
+      "scene_id": "S01",
+      "title": "Following her",
+      "dramatic_purpose": "Show Sarah's specificity and Ethan's missed moment.",
+      "action": "Ethan pushes into the pit and goes below the surface.",
+      "timeline": {
+        "in_frame": 888,
+        "out_frame_exclusive": 1080,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "framing": "medium",
+      "location_asset_id": "LOC_PARTY_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Breathing and balls shifting",
+      "continuity_and_review": "Cut on the descent; no uninterrupted transformation required.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 10,
+        "candidate_frames": 243,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Cut on the descent; no uninterrupted transformation required."
+      ]
+    },
+    {
+      "shot_id": "S02_SH01",
+      "scene_id": "S02",
+      "title": "Soft landing",
+      "dramatic_purpose": "Give Ethan a readable route and a real clue.",
+      "action": "Ethan slides down a padded slope into a vast basin.",
+      "timeline": {
+        "in_frame": 1080,
+        "out_frame_exclusive": 1248,
+        "used_frames": 168,
+        "used_seconds": 7
+      },
+      "framing": "wide",
+      "location_asset_id": "LOC_BASIN_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Landing and breath",
+      "continuity_and_review": "Costume intact; warm inviting light.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 9,
+        "candidate_frames": 226,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Costume intact; warm inviting light."
+      ]
+    },
+    {
+      "shot_id": "S02_SH02",
+      "scene_id": "S02",
+      "title": "Impossible scale",
+      "dramatic_purpose": "Give Ethan a readable route and a real clue.",
+      "action": "His point of view follows illuminated bridges and tubes into the distance.",
+      "timeline": {
+        "in_frame": 1248,
+        "out_frame_exclusive": 1392,
+        "used_frames": 144,
+        "used_seconds": 6
+      },
+      "framing": "wide",
+      "location_asset_id": "LOC_BASIN_V01",
+      "character_reference_ids": [],
+      "audio_direction": "Venue ambience",
+      "continuity_and_review": "No threatening face, dates, decay, or view of an operator.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 8,
+        "candidate_frames": 192,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "No threatening face, dates, decay, or view of an operator."
+      ]
+    },
+    {
+      "shot_id": "S02_SH03",
+      "scene_id": "S02",
+      "title": "A route opens",
+      "dramatic_purpose": "Give Ethan a readable route and a real clue.",
+      "action": "Ethan calls Sarah; a path lights ahead.",
+      "timeline": {
+        "in_frame": 1392,
+        "out_frame_exclusive": 1560,
+        "used_frames": 168,
+        "used_seconds": 7
+      },
+      "framing": "medium",
+      "location_asset_id": "LOC_BASIN_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Ethan: Sarah? Venue: Welcome. Let's get you where you want to go.",
+      "continuity_and_review": "Voice offers a destination without asserting Sarah is nearby.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 9,
+        "candidate_frames": 226,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Voice offers a destination without asserting Sarah is nearby."
+      ]
+    },
+    {
+      "shot_id": "S02_SH04",
+      "scene_id": "S02",
+      "title": "The real token",
+      "dramatic_purpose": "Give Ethan a readable route and a real clue.",
+      "action": "On a step, Ethan finds the yellow star and closes his hand around it.",
+      "timeline": {
+        "in_frame": 1560,
+        "out_frame_exclusive": 1728,
+        "used_frames": 168,
+        "used_seconds": 7
+      },
+      "framing": "insert",
+      "location_asset_id": "LOC_BASIN_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Small plastic contact",
+      "continuity_and_review": "One token; no Sarah wrist visible in this shot.",
+      "suggested_workflow_role": "approved_insert_keyframe_then_i2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 9,
+        "candidate_frames": 226,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "One token; no Sarah wrist visible in this shot."
+      ]
+    },
+    {
+      "shot_id": "S02_SH05",
+      "scene_id": "S02",
+      "title": "Commitment",
+      "dramatic_purpose": "Give Ethan a readable route and a real clue.",
+      "action": "Ethan climbs toward the open path.",
+      "timeline": {
+        "in_frame": 1728,
+        "out_frame_exclusive": 1920,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "framing": "wide",
+      "location_asset_id": "LOC_BASIN_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Adventure motif begins",
+      "continuity_and_review": "Same direction of travel; no sudden costume change.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 10,
+        "candidate_frames": 243,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Same direction of travel; no sudden costume change."
+      ]
+    },
+    {
+      "shot_id": "S03_SH01",
+      "scene_id": "S03",
+      "title": "Her laugh",
+      "dramatic_purpose": "Make endurance and growing competence feel worthwhile.",
+      "action": "Ethan hears Sarah's laugh through a translucent tube and turns.",
+      "timeline": {
+        "in_frame": 1920,
+        "out_frame_exclusive": 2064,
+        "used_frames": 144,
+        "used_seconds": 6
+      },
+      "framing": "medium",
+      "location_asset_id": "LOC_CONCOURSE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Historical recording of Sarah's laugh",
+      "continuity_and_review": "Use the same approved recording as the later speaker shot.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 8,
+        "candidate_frames": 192,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Use the same approved recording as the later speaker shot."
+      ]
+    },
+    {
+      "shot_id": "S03_SH02",
+      "scene_id": "S03",
+      "title": "Correct passage",
+      "dramatic_purpose": "Make endurance and growing competence feel worthwhile.",
+      "action": "He chooses a branch and crawls through a circular opening.",
+      "timeline": {
+        "in_frame": 2064,
+        "out_frame_exclusive": 2256,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "framing": "medium",
+      "location_asset_id": "LOC_CONCOURSE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Breath and venue sound",
+      "continuity_and_review": "One clear action and fixed camera.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 10,
+        "candidate_frames": 243,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "One clear action and fixed camera."
+      ]
+    },
+    {
+      "shot_id": "S03_SH03",
+      "scene_id": "S03",
+      "title": "Blue marks",
+      "dramatic_purpose": "Make endurance and growing competence feel worthwhile.",
+      "action": "Child-height blue marks lead along a wall; he recognizes a route.",
+      "timeline": {
+        "in_frame": 2256,
+        "out_frame_exclusive": 2424,
+        "used_frames": 168,
+        "used_seconds": 7
+      },
+      "framing": "insert",
+      "location_asset_id": "LOC_CONCOURSE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "None",
+      "continuity_and_review": "Match the marks on Sarah's participation drawing; no text that places her here now.",
+      "suggested_workflow_role": "approved_insert_keyframe_then_i2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 9,
+        "candidate_frames": 226,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Match the marks on Sarah's participation drawing; no text that places her here now."
+      ]
+    },
+    {
+      "shot_id": "S03_SH04",
+      "scene_id": "S03",
+      "title": "Bridge crossing",
+      "dramatic_purpose": "Make endurance and growing competence feel worthwhile.",
+      "action": "Ethan crosses a soft bridge above a vast play floor.",
+      "timeline": {
+        "in_frame": 2424,
+        "out_frame_exclusive": 2664,
+        "used_frames": 240,
+        "used_seconds": 10
+      },
+      "framing": "wide",
+      "location_asset_id": "LOC_BRIDGE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Music carries forward motion",
+      "continuity_and_review": "No deliberate camera wobble or creature reveal.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 12,
+        "candidate_frames": 294,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "No deliberate camera wobble or creature reveal."
+      ]
+    },
+    {
+      "shot_id": "S03_SH05",
+      "scene_id": "S03",
+      "title": "Caught sleeve",
+      "dramatic_purpose": "Make endurance and growing competence feel worthwhile.",
+      "action": "A sleeve catches on the rail; Ethan pulls it free, leaving a small tear.",
+      "timeline": {
+        "in_frame": 2664,
+        "out_frame_exclusive": 2856,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "framing": "insert",
+      "location_asset_id": "LOC_BRIDGE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Fabric pull",
+      "continuity_and_review": "The same tear persists in every later Ethan shot.",
+      "suggested_workflow_role": "approved_insert_keyframe_then_i2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 10,
+        "candidate_frames": 243,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "The same tear persists in every later Ethan shot."
+      ]
+    },
+    {
+      "shot_id": "S03_SH06",
+      "scene_id": "S03",
+      "title": "Brief rest",
+      "dramatic_purpose": "Make endurance and growing competence feel worthwhile.",
+      "action": "Ethan sits and opens his hand around the star.",
+      "timeline": {
+        "in_frame": 2856,
+        "out_frame_exclusive": 3024,
+        "used_frames": 168,
+        "used_seconds": 7
+      },
+      "framing": "close",
+      "location_asset_id": "LOC_BRIDGE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Breathing",
+      "continuity_and_review": "Exhaustion, not aging; exactly one star.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 9,
+        "candidate_frames": 226,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Exhaustion, not aging; exactly one star."
+      ]
+    },
+    {
+      "shot_id": "S03_SH07",
+      "scene_id": "S03",
+      "title": "Closing section",
+      "dramatic_purpose": "Make endurance and growing competence feel worthwhile.",
+      "action": "Lights shut off behind him; the next shutter starts to close.",
+      "timeline": {
+        "in_frame": 3024,
+        "out_frame_exclusive": 3216,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "framing": "wide",
+      "location_asset_id": "LOC_BRIDGE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Music slows with the closing mechanism",
+      "continuity_and_review": "The closure pushes him forward; no time-passage symbolism.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 10,
+        "candidate_frames": 243,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "The closure pushes him forward; no time-passage symbolism."
+      ]
+    },
+    {
+      "shot_id": "S03_SH08",
+      "scene_id": "S03",
+      "title": "Moving restores the route",
+      "dramatic_purpose": "Make endurance and growing competence feel worthwhile.",
+      "action": "Ethan rises and runs; the shutter lifts as he reaches it.",
+      "timeline": {
+        "in_frame": 3216,
+        "out_frame_exclusive": 3408,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "framing": "medium",
+      "location_asset_id": "LOC_BRIDGE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Venue: You're making wonderful progress.",
+      "continuity_and_review": "May split the mechanism and run into separate plates.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 10,
+        "candidate_frames": 243,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "May split the mechanism and run into separate plates."
+      ]
+    },
+    {
+      "shot_id": "S03_SH09",
+      "scene_id": "S03",
+      "title": "Following the sound",
+      "dramatic_purpose": "Make endurance and growing competence feel worthwhile.",
+      "action": "He passes through a party bay following the laugh; after he passes, a speaker repeats it.",
+      "timeline": {
+        "in_frame": 3408,
+        "out_frame_exclusive": 3600,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "framing": "medium",
+      "location_asset_id": "LOC_PARTY_BAY_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Same approved laugh repeats cleanly",
+      "continuity_and_review": "Show ordinary playback, not a sinister audio glitch.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 10,
+        "candidate_frames": 243,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Show ordinary playback, not a sinister audio glitch."
+      ]
+    },
+    {
+      "shot_id": "S04_SH01",
+      "scene_id": "S04",
+      "title": "Departure bay",
+      "dramatic_purpose": "Let genuine evidence strengthen the chase.",
+      "action": "Ethan reaches a small yellow gate and a bright corridor.",
+      "timeline": {
+        "in_frame": 3600,
+        "out_frame_exclusive": 3768,
+        "used_frames": 168,
+        "used_seconds": 7
+      },
+      "framing": "wide",
+      "location_asset_id": "LOC_DEPARTURE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Welcoming room tone",
+      "continuity_and_review": "Maintain visual relationship to the party bay.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 9,
+        "candidate_frames": 226,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Maintain visual relationship to the party bay."
+      ]
+    },
+    {
+      "shot_id": "S04_SH02",
+      "scene_id": "S04",
+      "title": "Participation record",
+      "dramatic_purpose": "Let genuine evidence strengthen the chase.",
+      "action": "A card shows Sarah, her name, the wrist star, and her drawing's blue marks.",
+      "timeline": {
+        "in_frame": 3768,
+        "out_frame_exclusive": 3936,
+        "used_frames": 168,
+        "used_seconds": 7
+      },
+      "framing": "insert",
+      "location_asset_id": "LOC_DEPARTURE_V01",
+      "character_reference_ids": [
+        "CHAR_SARAH_04_V01"
+      ],
+      "audio_direction": "None",
+      "continuity_and_review": "This is a historical image from before the token was lost; composite all lettering.",
+      "suggested_workflow_role": "approved_insert_keyframe_then_i2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 9,
+        "candidate_frames": 226,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "This is a historical image from before the token was lost; composite all lettering."
+      ]
+    },
+    {
+      "shot_id": "S04_SH03",
+      "scene_id": "S04",
+      "title": "She passed this way",
+      "dramatic_purpose": "Let genuine evidence strengthen the chase.",
+      "action": "Ethan touches the image and looks through the gate.",
+      "timeline": {
+        "in_frame": 3936,
+        "out_frame_exclusive": 4104,
+        "used_frames": 168,
+        "used_seconds": 7
+      },
+      "framing": "close",
+      "location_asset_id": "LOC_DEPARTURE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Venue: Sarah passed this way.",
+      "continuity_and_review": "The statement is past tense and true; do not add 'just'.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 9,
+        "candidate_frames": 226,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "The statement is past tense and true; do not add 'just'."
+      ]
+    },
+    {
+      "shot_id": "S04_SH04",
+      "scene_id": "S04",
+      "title": "Calling ahead",
+      "dramatic_purpose": "Let genuine evidence strengthen the chase.",
+      "action": "He leans through the gate, calling that he is coming.",
+      "timeline": {
+        "in_frame": 4104,
+        "out_frame_exclusive": 4248,
+        "used_frames": 144,
+        "used_seconds": 6
+      },
+      "framing": "medium",
+      "location_asset_id": "LOC_DEPARTURE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Ethan: Sarah! I'm coming.",
+      "continuity_and_review": "Audience should still believe reunion is possible.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 8,
+        "candidate_frames": 192,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Audience should still believe reunion is possible."
+      ]
+    },
+    {
+      "shot_id": "S04_SH05",
+      "scene_id": "S04",
+      "title": "Another route",
+      "dramatic_purpose": "Let genuine evidence strengthen the chase.",
+      "action": "An empty bend lights up; Ethan puts the star away and follows.",
+      "timeline": {
+        "in_frame": 4248,
+        "out_frame_exclusive": 4440,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "framing": "wide",
+      "location_asset_id": "LOC_DEPARTURE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Adventure motif continues",
+      "continuity_and_review": "The token enters his pocket and stays there through the interview.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 10,
+        "candidate_frames": 243,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "The token enters his pocket and stays there through the interview."
+      ]
+    },
+    {
+      "shot_id": "S05_SH01",
+      "scene_id": "S05",
+      "title": "Daylight door",
+      "dramatic_purpose": "Make help feel like a genuine release.",
+      "action": "A service door opens into clear natural light.",
+      "timeline": {
+        "in_frame": 4440,
+        "out_frame_exclusive": 4584,
+        "used_frames": 144,
+        "used_seconds": 6
+      },
+      "framing": "wide",
+      "location_asset_id": "LOC_SERVICE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Quiet air beyond the door",
+      "continuity_and_review": "No ominous lighting or musical warning.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 8,
+        "candidate_frames": 192,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "No ominous lighting or musical warning."
+      ]
+    },
+    {
+      "shot_id": "S05_SH02",
+      "scene_id": "S05",
+      "title": "Offered hand",
+      "dramatic_purpose": "Make help feel like a genuine release.",
+      "action": "An attendant offers an open hand and says Ethan is safe.",
+      "timeline": {
+        "in_frame": 4584,
+        "out_frame_exclusive": 4752,
+        "used_frames": 168,
+        "used_seconds": 7
+      },
+      "framing": "insert",
+      "location_asset_id": "LOC_SERVICE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Attendant: You can come through. You're safe.",
+      "continuity_and_review": "Ordinary protective gesture; do not show an antagonist figure.",
+      "suggested_workflow_role": "approved_insert_keyframe_then_i2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 9,
+        "candidate_frames": 226,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Ordinary protective gesture; do not show an antagonist figure."
+      ]
+    },
+    {
+      "shot_id": "S05_SH03",
+      "scene_id": "S05",
+      "title": "Accepting help",
+      "dramatic_purpose": "Make help feel like a genuine release.",
+      "action": "Ethan steps out toward the offered hand.",
+      "timeline": {
+        "in_frame": 4752,
+        "out_frame_exclusive": 4920,
+        "used_frames": 168,
+        "used_seconds": 7
+      },
+      "framing": "medium",
+      "location_asset_id": "LOC_SERVICE_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "His breathing settles",
+      "continuity_and_review": "Match the torn sleeve; no jump in his apparent age.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 9,
+        "candidate_frames": 226,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Match the torn sleeve; no jump in his apparent age."
+      ]
+    },
+    {
+      "shot_id": "S06_SH01",
+      "scene_id": "S06",
+      "title": "The record exists",
+      "dramatic_purpose": "Relief turns into involuntary witness to the life Ethan missed.",
+      "action": "Ethan sits beside water, gives Sarah's name and age; the display is prepared.",
+      "timeline": {
+        "in_frame": 4920,
+        "out_frame_exclusive": 5088,
+        "used_frames": 168,
+        "used_seconds": 7
+      },
+      "framing": "medium",
+      "location_asset_id": "LOC_ARCHIVES_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Ethan: My daughter. Sarah. She's four. Attendant: We have her record.",
+      "continuity_and_review": "Only one room-screen composite is essential; keep the attendant offscreen.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 9,
+        "candidate_frames": 226,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Only one room-screen composite is essential; keep the attendant offscreen."
+      ]
+    },
+    {
+      "shot_id": "S06_SH02",
+      "scene_id": "S06",
+      "title": "Child rescued",
+      "dramatic_purpose": "Relief turns into involuntary witness to the life Ethan missed.",
+      "action": "A woman kneels and waits; Sarah taps the rail and accepts her hand; a family leads her out.",
+      "timeline": {
+        "in_frame": 5088,
+        "out_frame_exclusive": 5328,
+        "used_frames": 240,
+        "used_seconds": 10
+      },
+      "framing": "record",
+      "location_asset_id": "LOC_RESCUE_RECORD_V01",
+      "character_reference_ids": [
+        "CHAR_SARAH_05_V01"
+      ],
+      "audio_direction": "Attendant: She was out fifteen minutes after you went in.",
+      "continuity_and_review": "Bare wrist; the star is already lost. Record feels observed, not addressed to Ethan.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_single_shot",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 12,
+        "candidate_frames": 294,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Bare wrist; the star is already lost. Record feels observed, not addressed to Ethan."
+      ]
+    },
+    {
+      "shot_id": "S06_SH03",
+      "scene_id": "S06",
+      "title": "Relief",
+      "dramatic_purpose": "Relief turns into involuntary witness to the life Ethan missed.",
+      "action": "Ethan releases a breath and begins a relieved smile.",
+      "timeline": {
+        "in_frame": 5328,
+        "out_frame_exclusive": 5448,
+        "used_frames": 120,
+        "used_seconds": 5
+      },
+      "framing": "close",
+      "location_asset_id": "LOC_ARCHIVES_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Room tone and breath",
+      "continuity_and_review": "Allow actual relief before the first older Sarah image.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 7,
+        "candidate_frames": 175,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Allow actual relief before the first older Sarah image."
+      ]
+    },
+    {
+      "shot_id": "S06_SH04",
+      "scene_id": "S06",
+      "title": "Older child",
+      "dramatic_purpose": "Relief turns into involuntary witness to the life Ethan missed.",
+      "action": "Sarah at approximately twelve receives a bowl at a sunny table and taps twice.",
+      "timeline": {
+        "in_frame": 5448,
+        "out_frame_exclusive": 5592,
+        "used_frames": 144,
+        "used_seconds": 6
+      },
+      "framing": "record",
+      "location_asset_id": "LOC_HOME_RECORD_V01",
+      "character_reference_ids": [
+        "CHAR_SARAH_12_V01"
+      ],
+      "audio_direction": "Ordinary household sound",
+      "continuity_and_review": "A new record with a hard cut, not continuous facial aging.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_single_shot",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 8,
+        "candidate_frames": 192,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "A new record with a hard cut, not continuous facial aging."
+      ]
+    },
+    {
+      "shot_id": "S06_SH05",
+      "scene_id": "S06",
+      "title": "Young woman",
+      "dramatic_purpose": "Relief turns into involuntary witness to the life Ethan missed.",
+      "action": "Sarah at approximately twenty-four laughs with friends on a platform.",
+      "timeline": {
+        "in_frame": 5592,
+        "out_frame_exclusive": 5736,
+        "used_frames": 144,
+        "used_seconds": 6
+      },
+      "framing": "record",
+      "location_asset_id": "LOC_PLATFORM_RECORD_V01",
+      "character_reference_ids": [
+        "CHAR_SARAH_24_V01"
+      ],
+      "audio_direction": "Wind and indistinct social voices",
+      "continuity_and_review": "Her attention stays with friends; no appeal to camera or father.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_single_shot",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 8,
+        "candidate_frames": 192,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Her attention stays with friends; no appeal to camera or father."
+      ]
+    },
+    {
+      "shot_id": "S06_SH06",
+      "scene_id": "S06",
+      "title": "Shared home",
+      "dramatic_purpose": "Relief turns into involuntary witness to the life Ethan missed.",
+      "action": "Sarah at approximately thirty-two and a companion struggle pleasantly to move a plant.",
+      "timeline": {
+        "in_frame": 5736,
+        "out_frame_exclusive": 5880,
+        "used_frames": 144,
+        "used_seconds": 6
+      },
+      "framing": "record",
+      "location_asset_id": "LOC_DOORWAY_RECORD_V01",
+      "character_reference_ids": [
+        "CHAR_SARAH_32_V01"
+      ],
+      "audio_direction": "Shared laughter",
+      "continuity_and_review": "Simplify to a planted pot at the threshold if the physical interaction fails.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_single_shot",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 8,
+        "candidate_frames": 192,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Simplify to a planted pot at the threshold if the physical interaction fails."
+      ]
+    },
+    {
+      "shot_id": "S06_SH07",
+      "scene_id": "S06",
+      "title": "Traveler",
+      "dramatic_purpose": "Relief turns into involuntary witness to the life Ethan missed.",
+      "action": "Sarah at approximately thirty-eight accepts a drink at a gateway overlook.",
+      "timeline": {
+        "in_frame": 5880,
+        "out_frame_exclusive": 6024,
+        "used_frames": 144,
+        "used_seconds": 6
+      },
+      "framing": "record",
+      "location_asset_id": "LOC_OVERLOOK_RECORD_V01",
+      "character_reference_ids": [
+        "CHAR_SARAH_38_V01"
+      ],
+      "audio_direction": "Wind and quiet company",
+      "continuity_and_review": "One of Sarah's later gateway journeys; her travel has changed her aging relative to outside time.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_single_shot",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 8,
+        "candidate_frames": 192,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "One of Sarah's later gateway journeys; her travel has changed her aging relative to outside time."
+      ]
+    },
+    {
+      "shot_id": "S06_SH08",
+      "scene_id": "S06",
+      "title": "Known and loved",
+      "dramatic_purpose": "Relief turns into involuntary witness to the life Ethan missed.",
+      "action": "Mature adult Sarah, around forty-two, taps a travelers' long table and shares a story. A gateway glows beyond the window.",
+      "timeline": {
+        "in_frame": 6024,
+        "out_frame_exclusive": 6168,
+        "used_frames": 144,
+        "used_seconds": 6
+      },
+      "framing": "record",
+      "location_asset_id": "LOC_LONG_TABLE_RECORD_V01",
+      "character_reference_ids": [
+        "CHAR_SARAH_42_V01"
+      ],
+      "audio_direction": "Warm group conversation, no intelligible exposition required",
+      "continuity_and_review": "Recent recorded crossing, proposed three outside years ago. Sarah is an adult, not elderly; do not imply death.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_single_shot",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 8,
+        "candidate_frames": 192,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Recent recorded crossing, proposed three outside years ago. Sarah is an adult, not elderly; do not imply death."
+      ]
+    },
+    {
+      "shot_id": "S06_SH09",
+      "scene_id": "S06",
+      "title": "The missing lifetime",
+      "dramatic_purpose": "Relief turns into involuntary witness to the life Ethan missed.",
+      "action": "Ethan cannot finish a breath. He asks how long; the attendant gives the elapsed years.",
+      "timeline": {
+        "in_frame": 6168,
+        "out_frame_exclusive": 6360,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "framing": "close",
+      "location_asset_id": "LOC_ARCHIVES_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Ethan: How long? Attendant: One hundred and twenty years.",
+      "continuity_and_review": "Leave silence after the number. The adult image must not suggest that Sarah aged 120 biological years.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 10,
+        "candidate_frames": 243,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Leave silence after the number. The adult image must not suggest that Sarah aged 120 biological years."
+      ]
+    },
+    {
+      "shot_id": "S06_SH10",
+      "scene_id": "S06",
+      "title": "Recent crossing and practiced care",
+      "dramatic_purpose": "Relief turns into involuntary witness to the life Ethan missed.",
+      "action": "Ethan looks from the adult Sarah on the display toward the doorway as he hears about her recent crossing. A tissue is set within reach.",
+      "timeline": {
+        "in_frame": 6360,
+        "out_frame_exclusive": 6600,
+        "used_frames": 240,
+        "used_seconds": 10
+      },
+      "framing": "close",
+      "location_asset_id": "LOC_ARCHIVES_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Attendant: She kept traveling. Her last crossing was three years ago. Attendant: This happens a few times per cycle.",
+      "continuity_and_review": "The sighting offers a possibility, not a promised reunion. Preserve a kind delivery and room for a reaction; validate pacing with recorded scratch dialogue.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 12,
+        "candidate_frames": 294,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "The sighting offers a possibility, not a promised reunion. Preserve a kind delivery and room for a reaction; validate pacing with recorded scratch dialogue."
+      ]
+    },
+    {
+      "shot_id": "S07_SH01",
+      "scene_id": "S07",
+      "title": "A functioning world",
+      "dramatic_purpose": "Leave Ethan with a choice the film does not settle.",
+      "action": "Ethan emerges into a vast concourse with people crossing between gateways.",
+      "timeline": {
+        "in_frame": 6600,
+        "out_frame_exclusive": 6792,
+        "used_frames": 192,
+        "used_seconds": 8
+      },
+      "framing": "wide",
+      "location_asset_id": "LOC_CITY_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "Ordinary city life",
+      "continuity_and_review": "City is inhabited and functioning; no apocalypse.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 10,
+        "candidate_frames": 243,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "City is inhabited and functioning; no apocalypse."
+      ]
+    },
+    {
+      "shot_id": "S07_SH02",
+      "scene_id": "S07",
+      "title": "Unchosen route",
+      "dramatic_purpose": "Leave Ethan with a choice the film does not settle.",
+      "action": "He takes out the star as a family passes, then lifts his eyes toward diverging routes.",
+      "timeline": {
+        "in_frame": 6792,
+        "out_frame_exclusive": 6960,
+        "used_frames": 168,
+        "used_seconds": 7
+      },
+      "framing": "close",
+      "location_asset_id": "LOC_CITY_V01",
+      "character_reference_ids": [
+        "CHAR_ETHAN_V01"
+      ],
+      "audio_direction": "The child's ordinary conversation remains indistinct",
+      "continuity_and_review": "Cut before he takes a step or discards the star.",
+      "suggested_workflow_role": "reference_keyframe_then_h3_i2v_or_r2v",
+      "generation_plan": {
+        "status": "unvalidated_planning_only",
+        "candidate_model_family": "MiniMax H3",
+        "requested_seconds": 9,
+        "candidate_frames": 226,
+        "fps": 24,
+        "candidate_frame_rule": "17k+5",
+        "handles_are_provisional": true,
+        "workflow_path": null,
+        "workflow_version": null,
+        "first_frame_asset_id": null,
+        "reference_asset_files": [],
+        "seed": null,
+        "credit_limit": null
+      },
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Cut before he takes a step or discards the star."
+      ]
+    },
+    {
+      "shot_id": "S08_SH01",
+      "scene_id": "S08",
+      "title": "Title and credits",
+      "dramatic_purpose": "Hold space after the unresolved image.",
+      "action": "Black title card; reserve a short credit card within the same ten-second allocation.",
+      "timeline": {
+        "in_frame": 6960,
+        "out_frame_exclusive": 7200,
+        "used_frames": 240,
+        "used_seconds": 10
+      },
+      "framing": "graphic",
+      "location_asset_id": null,
+      "character_reference_ids": [],
+      "audio_direction": "City sound continues",
+      "continuity_and_review": "Create typography in post; no generated lettering.",
+      "suggested_workflow_role": "editorial_graphics",
+      "generation_plan": null,
+      "source_selection": {
+        "selected_take_id": null,
+        "in_frame": null,
+        "out_frame_exclusive": null
+      },
+      "status": "draft",
+      "acceptance_checks": [
+        "Match approved character and scene references.",
+        "Preserve narrative information timing.",
+        "Verify performance and audio after the actual edit.",
+        "Create typography in post; no generated lettering."
+      ]
+    }
+  ]
+}

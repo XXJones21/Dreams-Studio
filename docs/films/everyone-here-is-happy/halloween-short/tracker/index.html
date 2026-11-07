@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EHIH Shot Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --haze: #1b2127;      /* Playways haze */
+  --panel: #232a31;
+  --panel-2: #2b333b;
+  --line: #3a444e;
+  --text: #e4dfd2;      /* faded paper */
+  --dim: #98a1aa;
+  --ball-wtg: #7c8690;
+  --ball-rdy: #3f6fb5;  /* pit blue */
+  --ball-ip:  #e2c044;  /* crown yellow */
+  --ball-rev: #d9893a;  /* tube orange */
+  --ball-fix: #c5483f;  /* ball red */
+  --ball-apr: #4f9a94;  /* structure teal */
+  --josh: #e2c044;
+  --claude: #7fb3d8;
+  --radius-s: 6px;
+  --radius-m: 10px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: var(--haze);
+  color: var(--text);
+  font: 15px/1.5 "Source Sans 3", system-ui, sans-serif;
+}
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 2px solid var(--ball-ip); outline-offset: 2px; }
+.cond { font-family: "Barlow Condensed", "Arial Narrow", sans-serif; }
+
+/* plastic ball: the one decorative element */
+.ball {
+  --c: var(--ball-wtg);
+  display: inline-block; width: 14px; height: 14px; border-radius: 50%; flex: none;
+  background: radial-gradient(circle at 34% 30%, rgba(255,255,255,.65) 0 9%, transparent 10%),
+              radial-gradient(circle at 40% 38%, color-mix(in srgb, var(--c) 70%, #fff) 0%, var(--c) 45%, color-mix(in srgb, var(--c) 60%, #000) 100%);
+  box-shadow: 0 1px 2px rgba(0,0,0,.45);
+}
+.ball[data-s="wtg"] { --c: var(--ball-wtg); }
+.ball[data-s="rdy"] { --c: var(--ball-rdy); }
+.ball[data-s="ip"]  { --c: var(--ball-ip); }
+.ball[data-s="rev"] { --c: var(--ball-rev); }
+.ball[data-s="fix"] { --c: var(--ball-fix); }
+.ball[data-s="apr"] { --c: var(--ball-apr); }
+
+/* top bar */
+.top {
+  display: flex; align-items: center; gap: 24px; padding: 10px 20px;
+  border-bottom: 1px solid var(--line); background: #1f262c;
+  position: sticky; top: 0; z-index: 5;
+}
+.top h1 { margin: 0; font-size: 26px; font-weight: 600; letter-spacing: .01em; white-space: nowrap; }
+.tally { display: flex; gap: 6px; flex-wrap: wrap; }
+.tally button {
+  display: flex; align-items: center; gap: 7px; padding: 4px 10px 4px 7px;
+  background: transparent; border: 1px solid transparent; border-radius: 999px; color: var(--dim);
+}
+.tally button:hover { border-color: var(--line); color: var(--text); }
+.tally button[aria-pressed="true"] { border-color: var(--dim); color: var(--text); background: var(--panel); }
+.tally b { color: var(--text); font-weight: 600; }
+.sync { margin-left: auto; color: var(--dim); font-size: 13px; white-space: nowrap; }
+.sync.err { color: var(--ball-fix); }
+
+.app { display: grid; grid-template-columns: 236px 1fr; min-height: calc(100vh - 53px); }
+
+/* rail: a vertical filmstrip */
+.rail { border-right: 1px solid var(--line); overflow-y: auto; max-height: calc(100vh - 53px); position: sticky; top: 53px; }
+.rail ol { list-style: none; margin: 0; padding: 6px 0; }
+.rail li button {
+  width: 100%; display: grid; grid-template-columns: 42px 1fr 14px; gap: 10px; align-items: center;
+  padding: 6px 12px; background: none; border: 0; border-left: 3px solid transparent; text-align: left;
+}
+.rail li button:hover { background: var(--panel); }
+.rail li button[aria-current="true"] { background: var(--panel-2); border-left-color: var(--ball-ip); }
+.rail img { width: 42px; height: 74px; object-fit: cover; border-radius: 3px; background: #111; display: block; }
+.rail .rid { font-size: 21px; font-weight: 600; line-height: 1; }
+.rail .rcap { color: var(--dim); font-size: 12.5px; line-height: 1.3; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.rail .empty { padding: 16px; color: var(--dim); font-size: 14px; }
+
+/* detail */
+.detail { padding: 20px 28px 60px; min-width: 0; }
+.head { display: grid; grid-template-columns: auto 1fr; gap: 4px 22px; align-items: end; margin-bottom: 18px; }
+.head .sid { font-size: 76px; font-weight: 700; line-height: .82; letter-spacing: -.01em; grid-row: span 2; }
+.head .caption { font-size: 20px; line-height: 1.3; max-width: 62ch; }
+.head .meta { color: var(--dim); font-size: 14px; display: flex; gap: 16px; flex-wrap: wrap; }
+.statuses { display: flex; gap: 6px; flex-wrap: wrap; margin: 4px 0 22px; }
+.statuses button {
+  display: flex; align-items: center; gap: 8px; padding: 6px 12px 6px 9px;
+  border: 1px solid var(--line); border-radius: 999px; background: var(--panel); color: var(--dim);
+}
+.statuses button:hover { color: var(--text); }
+.statuses button[aria-pressed="true"] { color: var(--text); border-color: var(--text); background: var(--panel-2); }
+
+.screens { display: flex; gap: 22px; align-items: flex-start; flex-wrap: wrap; }
+.screen { margin: 0; }
+.screen video { width: 252px; aspect-ratio: 9 / 16; background: #0d1013; border-radius: var(--radius-s); display: block; }
+.screen figcaption { font-size: 14px; color: var(--dim); margin-top: 6px; }
+.screen figcaption strong { color: var(--text); font-weight: 600; }
+.side { flex: 1; min-width: 260px; display: flex; flex-direction: column; gap: 14px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.btn {
+  padding: 7px 14px; border-radius: var(--radius-s); border: 1px solid var(--line); background: var(--panel-2);
+}
+.btn:hover { border-color: var(--dim); }
+.btn.primary { background: var(--ball-ip); color: #1b1a12; border-color: var(--ball-ip); font-weight: 600; }
+.btn.primary:disabled { opacity: .4; cursor: default; }
+.btn.quiet { background: none; }
+.versions { display: flex; flex-direction: column; gap: 6px; }
+.ver {
+  display: grid; grid-template-columns: 1fr auto; gap: 2px 12px; padding: 8px 12px; text-align: left;
+  background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius-s);
+}
+.ver:hover { border-color: var(--dim); }
+.ver[aria-pressed="true"] { border-color: var(--text); background: var(--panel-2); }
+.ver .vl { font-weight: 600; }
+.ver .vm { color: var(--dim); font-size: 13px; grid-column: 1 / -1; }
+.ver .cur { color: var(--ball-apr); font-size: 13px; font-weight: 600; }
+
+h2 { font-family: "Barlow Condensed", sans-serif; font-weight: 600; font-size: 24px; margin: 34px 0 10px; letter-spacing: .01em; }
+h2 small { font-family: "Source Sans 3", sans-serif; font-size: 14px; color: var(--dim); font-weight: 400; margin-left: 10px; letter-spacing: 0; }
+
+/* seams: prev end | this shot | next start */
+.seams { display: flex; gap: 0; align-items: stretch; overflow-x: auto; padding-bottom: 4px; }
+.seam-group { display: flex; gap: 6px; padding: 0 12px; }
+.seam-group.this { background: var(--panel); border-radius: var(--radius-m); padding: 10px 12px; }
+.seam-group.edge { padding-top: 10px; }
+.cut { width: 2px; background: var(--ball-ip); margin: 10px 0; flex: none; opacity: .7; }
+.cut.ok { background: var(--ball-apr); }
+.still { margin: 0; }
+.still img { width: 112px; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 4px; display: block; background: #0d1013; }
+.still figcaption { font-size: 12.5px; color: var(--dim); margin-top: 4px; white-space: nowrap; }
+.seam-flag { display: flex; align-items: center; gap: 8px; margin-top: 10px; color: var(--dim); font-size: 14px; }
+
+/* pictures: blockout keyframes + this shot's reference images; click opens full size */
+.pics { display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-start; }
+.pics .grp { background: var(--panel); border-radius: var(--radius-m); padding: 10px 12px; display: flex; gap: 10px; flex-wrap: wrap; }
+.pics .lbl { width: 100%; font-size: 13px; color: var(--dim); }
+.pic { margin: 0; }
+.pic a { display: block; border-radius: 4px; outline-offset: 2px; }
+.pic img { display: block; height: 260px; width: auto; max-width: 420px; object-fit: contain; border-radius: 4px; background: #0d1013; }
+.pic figcaption { font-size: 12.5px; color: var(--dim); margin-top: 4px; }
+.refs label img { width: 26px; height: 26px; object-fit: cover; border-radius: 50%; display: block; }
+.refs label { padding-left: 5px; }
+
+.work { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 32px; }
+label.f { display: block; font-size: 14px; color: var(--dim); margin: 14px 0 4px; }
+textarea, input[type=text], select {
+  width: 100%; background: #192026; border: 1px solid var(--line); border-radius: var(--radius-s); padding: 8px 10px; line-height: 1.45;
+}
+textarea { resize: vertical; min-height: 44px; }
+textarea:focus, input:focus, select:focus { border-color: var(--dim); }
+.beats { display: flex; flex-direction: column; gap: 6px; }
+.beat { display: grid; grid-template-columns: 22px 1fr 30px; gap: 8px; align-items: start; }
+.beat .n { color: var(--dim); padding-top: 9px; text-align: right; font-variant-numeric: tabular-nums; }
+.beat button { margin-top: 5px; height: 30px; border: 1px solid transparent; background: none; color: var(--dim); border-radius: var(--radius-s); }
+.beat button:hover { border-color: var(--line); color: var(--ball-fix); }
+.refs { display: flex; gap: 6px; flex-wrap: wrap; }
+.refs label { display: flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; cursor: pointer; }
+.refs input { accent-color: var(--ball-ip); }
+.refs label:has(input:checked) { border-color: var(--text); background: var(--panel-2); }
+.savebar { display: flex; gap: 10px; align-items: center; margin-top: 16px; position: sticky; bottom: 0; padding: 10px 0; background: var(--haze); }
+.savebar .msg { color: var(--dim); font-size: 14px; }
+.savebar .msg.err { color: var(--ball-fix); }
+
+.notes { display: flex; flex-direction: column; gap: 12px; }
+.note { border-left: 3px solid var(--line); padding: 2px 0 2px 12px; }
+.note[data-who="Josh"] { border-left-color: var(--josh); }
+.note[data-who="Claude"] { border-left-color: var(--claude); }
+.note .nh { font-size: 13px; color: var(--dim); }
+.note .nh b { color: var(--text); font-weight: 600; margin-right: 8px; }
+.note p { margin: 2px 0 0; white-space: pre-wrap; }
+.addnote { margin-top: 14px; }
+.who { display: flex; gap: 4px; }
+.who button { padding: 5px 12px; border: 1px solid var(--line); background: none; border-radius: 999px; color: var(--dim); }
+.who button[aria-pressed="true"] { color: var(--text); border-color: var(--text); }
+details.rendered { margin-top: 26px; }
+details.rendered summary { cursor: pointer; font-family: "Barlow Condensed", sans-serif; font-size: 20px; font-weight: 600; }
+details.rendered pre {
+  white-space: pre-wrap; background: #161b20; border: 1px solid var(--line); border-radius: var(--radius-s);
+  padding: 12px 14px; font: 13px/1.5 "Source Sans 3", sans-serif; color: #cfcabe; max-height: 520px; overflow: auto;
+}
+.hint { color: var(--dim); font-size: 13.5px; }
+
+@media (max-width: 900px) {
+  .app { grid-template-columns: 1fr; }
+  .rail { position: static; max-height: none; border-right: 0; border-bottom: 1px solid var(--line); overflow-x: auto; }
+  .rail ol { display: flex; padding: 6px; }
+  .rail li button { grid-template-columns: 42px auto; width: auto; border-left: 0; border-bottom: 3px solid transparent; }
+  .rail li button[aria-current="true"] { border-bottom-color: var(--ball-ip); }
+  .rail .rcap, .rail .ball { display: none; }
+  .detail { padding: 16px; }
+  .head .sid { font-size: 56px; }
+  .screen video { width: calc(50vw - 28px); }
+  .work { grid-template-columns: 1fr; }
+  .top { flex-wrap: wrap; gap: 8px 16px; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1 class="cond" id="film">Shot tracker</h1>
+  <div class="tally" id="tally" role="group" aria-label="Filter shots by status"></div>
+  <div class="sync" id="sync" aria-live="polite">Loading</div>
+</header>
+<div class="app">
+  <nav class="rail" aria-label="Shots"><ol id="rail"></ol></nav>
+  <main class="detail" id="detail"></main>
+</div>
+
+<script>
+const API = "/api";
+let D = null;            // tracker data
+let sel = null;          // selected shot id
+let preview = null;      // version id shown in the take player
+let filter = null;       // status filter
+let dirty = false;       // unsaved prompt edits
+let who = localStorage.getItem("ehih-who") || "Josh";
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const statusLabel = id => (D.statuses.find(s => s.id === id) || {}).label || id;
+const shot = id => D.shots.find(s => s.id === id);
+const idx = id => D.shots.findIndex(s => s.id === id);
+const still = (s, vid, tag) => `/tracker/media/stills/${encodeURIComponent(s.id)}/${vid}_${tag}.jpg`;
+const bstill = (s, tag) => `/tracker/media/blockout_stills/${encodeURIComponent(s.id)}_${tag}.jpg`;
+const refImg = (r, full) => `/tracker/media/refs/${encodeURIComponent(r)}${full ? "_full" : ""}.jpg`;
+const pic = (src, full, cap) => `<figure class="pic"><a href="${full}" target="_blank" rel="noopener" title="Open full size"><img src="${src}" alt="${esc(cap)}" loading="lazy"></a><figcaption>${esc(cap)}</figcaption></figure>`;
+const curVer = s => s.versions.find(v => v.id === s.current) || s.versions[0];
+const fmtWhen = w => { const d = new Date(w); return isNaN(d) ? w : d.toLocaleString([], { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }); };
+
+function setSync(text, err = false) { const el = $("#sync"); el.textContent = text; el.classList.toggle("err", err); }
+
+async function load(first = false) {
+  try {
+    const r = await fetch(`${API}/shots`, { cache: "no-store" });
+    if (!r.ok) throw new Error(r.status);
+    const nd = await r.json();
+    const changed = !D || nd.rev !== D.rev;
+    D = nd;
+    if (first) {
+      $("#film").textContent = D.film;
+      sel = decodeURIComponent(location.hash.slice(1)) || D.shots[0].id;
+      if (!shot(sel)) sel = D.shots[0].id;
+    }
+    if (changed || first) { renderTally(); renderRail(); if (!dirty) renderDetail(); else renderNotesOnly(); }
+    setSync(`Synced ${new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit", second: "2-digit" })}`);
+  } catch (e) {
+    setSync("Can't reach the tracker server. Start it with: python tracker/server.py", true);
+  }
+}
+
+function renderTally() {
+  const counts = {};
+  D.shots.forEach(s => counts[s.status] = (counts[s.status] || 0) + 1);
+  $("#tally").innerHTML = D.statuses.filter(st => counts[st.id]).map(st =>
+    `<button data-f="${st.id}" aria-pressed="${filter === st.id}" title="Show only: ${esc(st.label)}">
+       <span class="ball" data-s="${st.id}"></span>${esc(st.label)} <b>${counts[st.id]}</b></button>`).join("");
+  $("#tally").querySelectorAll("button").forEach(b => b.onclick = () => {
+    filter = filter === b.dataset.f ? null : b.dataset.f; renderTally(); renderRail();
+  });
+}
+
+function renderRail() {
+  const list = D.shots.filter(s => !filter || s.status === filter);
+  $("#rail").innerHTML = list.length ? list.map(s => {
+    const v = curVer(s);
+    return `<li><button data-id="${esc(s.id)}" aria-current="${s.id === sel}">
+      <img src="${v ? still(s, v.id, "mid") : ""}" alt="" loading="lazy">
+      <span><span class="rid cond">${esc(s.id)}</span><br><span class="rcap">${esc(s.caption)}</span></span>
+      <span class="ball" data-s="${s.status}" title="${esc(statusLabel(s.status))}"></span></button></li>`;
+  }).join("") : `<li class="empty">No shots with this status.</li>`;
+  $("#rail").querySelectorAll("button").forEach(b => b.onclick = () => select(b.dataset.id));
+  const cur = $("#rail button[aria-current='true']");
+  if (cur) cur.scrollIntoView({ block: "nearest", inline: "nearest" });
+}
+
+function select(id) {
+  if (id === sel) return;
+  if (dirty && !confirm(`You have unsaved prompt edits on ${sel}. Discard them?`)) return;
+  dirty = false; sel = id; preview = null;
+  history.replaceState(null, "", "#" + encodeURIComponent(id));
+  renderRail(); renderDetail();
+  $("#detail").scrollIntoView({ block: "start" });
+}
+
+function seamStill(s, which) {
+  if (!s) return `<figure class="still"><img alt=""><figcaption>No shot</figcaption></figure>`;
+  const v = curVer(s);
+  const tag = which === "end" ? "last" : "first";
+  return `<figure class="still"><img src="${still(s, v.id, tag)}" alt="${esc(s.id)} ${which === "end" ? "last" : "first"} frame">
+    <figcaption>${esc(s.id)} ${which === "end" ? "ends" : "starts"}</figcaption></figure>`;
+}
+
+function renderDetail() {
+  const s = shot(sel); if (!s) return;
+  const i = idx(sel), prev = D.shots[i - 1], next = D.shots[i + 1];
+  const pv = s.versions.find(v => v.id === preview) || curVer(s);
+  const nextOk = next && next.seam_ok;
+  const raw = !!s.raw_prompt;
+  $("#detail").innerHTML = `
+  <div class="head">
+    <div class="sid cond">${esc(s.id)}</div>
+    <div class="caption">${esc(s.caption)}</div>
+    <div class="meta"><span>${esc(s.beat)}</span><span>Set: ${esc(s.set)}</span><span>Frames ${s.frames[0]}–${s.frames[1]}</span><span>Camera: ${esc(s.camera)}</span></div>
+  </div>
+  <div class="statuses" role="group" aria-label="Status">
+    ${D.statuses.map(st => `<button data-st="${st.id}" aria-pressed="${s.status === st.id}"><span class="ball" data-s="${st.id}"></span>${esc(st.label)}</button>`).join("")}
+  </div>
+
+  <div class="screens">
+    <figure class="screen"><video id="vb" src="/tracker/media/blockout/${encodeURIComponent(s.id)}.mp4" controls muted playsinline preload="metadata"></video>
+      <figcaption><strong>Blockout</strong> clay animatic</figcaption></figure>
+    <figure class="screen"><video id="vt" src="/${pv.path}" controls playsinline preload="metadata"></video>
+      <figcaption><strong>${esc(pv.label)}</strong>${pv.id === s.current ? " (current take)" : " (preview)"}</figcaption></figure>
+    <div class="side">
+      <div class="row">
+        <button class="btn" id="playboth">Play both</button>
+        <button class="btn quiet" id="restart">Back to start</button>
+      </div>
+      <div class="versions" role="group" aria-label="Versions">
+        ${s.versions.map(v => `<button class="ver" data-v="${v.id}" aria-pressed="${v.id === pv.id}">
+          <span class="vl">${esc(v.label)}</span>${v.id === s.current ? `<span class="cur">Current take</span>` : "<span></span>"}
+          <span class="vm">ControlNet ${esc(v.cn || "n/a")}${v.seed ? `, seed ${v.seed}` : ""}${v.prompt ? `, prompt ${esc(v.prompt)}` : ""}</span></button>`).join("")}
+      </div>
+      ${pv.id !== s.current ? `<div class="row"><button class="btn primary" id="makecur">Make ${esc(pv.label)} the current take</button></div>` : ""}
+    </div>
+  </div>
+
+  <h2>Pictures<small>Blockout first and last frame (the keyframes this shot has to hit) and the reference images it uses. Click to open full size.</small></h2>
+  <div class="pics">
+    <div class="grp"><span class="lbl">Blockout keyframes</span>
+      ${pic(bstill(s, "first"), bstill(s, "first"), `${s.id} first frame (${s.frames[0]})`)}
+      ${pic(bstill(s, "last"), bstill(s, "last"), `${s.id} last frame (${s.frames[1]})`)}</div>
+    <div class="grp"><span class="lbl">References</span>
+      ${(s.refs.length ? s.refs : []).map(r => pic(refImg(r), refImg(r, true), r)).join("") || `<span class="lbl">No reference images (raw prompt).</span>`}</div>
+  </div>
+
+  <h2>Cuts<small>The previous shot's last frame, this shot, and the next shot's first frame (current takes)</small></h2>
+  <div class="seams">
+    <div class="seam-group edge">${seamStill(prev, "end")}</div>
+    <div class="cut ${s.seam_ok ? "ok" : ""}" title="${s.seam_ok ? "Incoming cut flows" : "Incoming cut needs work"}"></div>
+    <div class="seam-group this">
+      <figure class="still"><img src="${still(s, pv.id, "first")}" alt="first frame"><figcaption>First</figcaption></figure>
+      <figure class="still"><img src="${still(s, pv.id, "mid")}" alt="middle frame"><figcaption>Middle</figcaption></figure>
+      <figure class="still"><img src="${still(s, pv.id, "last")}" alt="last frame"><figcaption>Last</figcaption></figure>
+    </div>
+    <div class="cut ${nextOk ? "ok" : ""}" title="${nextOk ? "Outgoing cut flows" : "Outgoing cut needs work"}"></div>
+    <div class="seam-group edge">${seamStill(next, "start")}</div>
+  </div>
+  <label class="seam-flag"><input type="checkbox" id="seamok" ${s.seam_ok ? "checked" : ""}> The cut into ${esc(s.id)} flows</label>
+
+  <div class="work">
+    <section>
+      <h2>Prompt<small>${raw ? "Raw prompt for this continuous take" : "Fields the builder turns into the H3 prompt"}</small></h2>
+      <form id="pform" autocomplete="off">
+        ${raw ? `<label class="f" for="f-raw">Prompt</label><textarea id="f-raw" rows="18">${esc(s.raw_prompt)}</textarea>` : `
+        <label class="f">References</label>
+        <div class="refs">${D.refs.map(r => `<label title="${r}"><input type="checkbox" name="ref" value="${r}" ${s.refs.includes(r) ? "checked" : ""}><img src="${refImg(r)}" alt="">${r}</label>`).join("")}</div>
+        <label class="f" for="f-zone">Look</label>
+        <select id="f-zone">${["party", "structure", "slide", "playways"].map(z => `<option ${z === s.zone ? "selected" : ""}>${z}</option>`).join("")}</select>
+        <label class="f" for="f-cast">Who is in the shot (exact counts)</label>
+        <textarea id="f-cast" rows="2">${esc(s.cast)}</textarea>
+        <label class="f">Beats, in order, with timings</label>
+        <div class="beats" id="beats">${s.beats.map((b, k) => beatRow(b, k)).join("")}</div>
+        <div class="row" style="margin-top:6px"><button type="button" class="btn quiet" id="addbeat">Add beat</button></div>
+        <label class="f" for="f-end">The shot ends on (the next shot opens here)</label>
+        <textarea id="f-end" rows="2">${esc(s.end)}</textarea>
+        <label class="f" for="f-sound">Sound</label>
+        <textarea id="f-sound" rows="2">${esc(s.sound)}</textarea>
+        <label class="f" for="f-avoid">Extra things to avoid in this shot</label>
+        <input type="text" id="f-avoid" value="${esc(s.extra_avoid)}">`}
+        <div class="savebar">
+          <button type="submit" class="btn primary" id="save" disabled>Save prompt</button>
+          <button type="button" class="btn quiet" id="discard" hidden>Discard changes</button>
+          <span class="msg" id="savemsg"></span>
+        </div>
+      </form>
+    </section>
+    <section>
+      <h2>Notes<small>${s.notes.length} so far</small></h2>
+      <div class="notes" id="notes">${notesHtml(s)}</div>
+      <form class="addnote" id="nform">
+        <label class="f" for="f-note">Add a note</label>
+        <textarea id="f-note" rows="3" placeholder="What should change in this shot?"></textarea>
+        <div class="row" style="margin-top:8px; justify-content: space-between">
+          <div class="who" role="group" aria-label="Note author">
+            ${["Josh", "Claude"].map(w => `<button type="button" data-w="${w}" aria-pressed="${who === w}">${w}</button>`).join("")}
+          </div>
+          <button type="submit" class="btn">Add note</button>
+        </div>
+      </form>
+      <details class="rendered" id="rendered">
+        <summary>Full prompt sent to H3</summary>
+        <p class="hint">Rendered by prompts/batch_h3_v02.py from the saved fields, with the shared cast sheet, motion line and Avoid list.</p>
+        <div class="row"><button type="button" class="btn quiet" id="copyprompt">Copy prompt</button></div>
+        <pre id="ptext">Open to load.</pre>
+      </details>
+    </section>
+  </div>`;
+  wire(s);
+}
+
+function beatRow(b, k) {
+  return `<div class="beat"><span class="n">${k + 1}</span><textarea rows="2" name="beat">${esc(b)}</textarea>
+    <button type="button" class="rm" title="Remove beat ${k + 1}" aria-label="Remove beat ${k + 1}">✕</button></div>`;
+}
+function notesHtml(s) {
+  return s.notes.length ? s.notes.map(n => `<div class="note" data-who="${esc(n.who)}">
+    <div class="nh"><b>${esc(n.who)}</b>${esc(fmtWhen(n.when))}</div><p>${esc(n.text)}</p></div>`).join("")
+    : `<p class="hint">No notes yet. Add the first one below.</p>`;
+}
+function renderNotesOnly() {
+  const s = shot(sel); if (!s) return;
+  const el = $("#notes"); if (el) el.innerHTML = notesHtml(s);
+}
+
+function markDirty() {
+  dirty = true; $("#save").disabled = false; $("#discard").hidden = false;
+  $("#savemsg").textContent = "Unsaved changes"; $("#savemsg").className = "msg";
+}
+function renumber() {
+  document.querySelectorAll("#beats .beat").forEach((row, k) => {
+    row.querySelector(".n").textContent = k + 1;
+    const b = row.querySelector(".rm"); b.title = b.ariaLabel = `Remove beat ${k + 1}`;
+  });
+}
+
+async function patch(s, set) {
+  const r = await fetch(`${API}/shots/${encodeURIComponent(s.id)}`, {
+    method: "PATCH", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ rev: s.rev, set })
+  });
+  const body = await r.json();
+  if (!r.ok) throw Object.assign(new Error(body.error || r.status), { body, code: r.status });
+  D.shots[idx(s.id)] = body; D.rev = (D.rev || 0) + 1;
+  return body;
+}
+
+function wire(s) {
+  const vb = $("#vb"), vt = $("#vt");
+  $("#playboth").onclick = () => {
+    if (!vb.paused || !vt.paused) { vb.pause(); vt.pause(); $("#playboth").textContent = "Play both"; return; }
+    vb.currentTime = vt.currentTime = 0; vb.play(); vt.play(); $("#playboth").textContent = "Pause both";
+  };
+  vt.onended = () => $("#playboth").textContent = "Play both";
+  $("#restart").onclick = () => { vb.currentTime = vt.currentTime = 0; };
+
+  document.querySelectorAll(".statuses button").forEach(b => b.onclick = async () => {
+    try { await patch(shot(sel), { status: b.dataset.st }); renderTally(); renderRail();
+      document.querySelectorAll(".statuses button").forEach(x => x.setAttribute("aria-pressed", x === b));
+      setSync(`${sel} set to ${statusLabel(b.dataset.st)}`);
+    } catch (e) { conflict(e); }
+  });
+  document.querySelectorAll(".ver").forEach(b => b.onclick = () => { preview = b.dataset.v; if (!dirty) renderDetail(); else { vt.src = "/" + shot(sel).versions.find(v => v.id === preview).path; } });
+  const mc = $("#makecur");
+  if (mc) mc.onclick = async () => {
+    try { await patch(shot(sel), { current: preview }); preview = null; renderRail(); if (!dirty) renderDetail(); setSync(`${sel} current take updated`); }
+    catch (e) { conflict(e); }
+  };
+  $("#seamok").onchange = async e => {
+    try { await patch(shot(sel), { seam_ok: e.target.checked }); renderDetail(); } catch (err) { conflict(err); }
+  };
+
+  const form = $("#pform");
+  form.addEventListener("input", markDirty);
+  const ab = $("#addbeat");
+  if (ab) ab.onclick = () => { $("#beats").insertAdjacentHTML("beforeend", beatRow("", $("#beats").children.length)); markDirty(); $("#beats").lastElementChild.querySelector("textarea").focus(); };
+  form.addEventListener("click", e => { if (e.target.classList.contains("rm")) { e.target.closest(".beat").remove(); renumber(); markDirty(); } });
+  $("#discard").onclick = () => { dirty = false; renderDetail(); };
+  form.onsubmit = async e => {
+    e.preventDefault();
+    const cur = shot(sel);
+    const set = cur.raw_prompt ? { raw_prompt: $("#f-raw").value } : {
+      refs: [...form.querySelectorAll("input[name=ref]:checked")].map(x => x.value),
+      zone: $("#f-zone").value, cast: $("#f-cast").value.trim(),
+      beats: [...form.querySelectorAll("textarea[name=beat]")].map(x => x.value.trim()).filter(Boolean),
+      end: $("#f-end").value.trim(), sound: $("#f-sound").value.trim(), extra_avoid: $("#f-avoid").value.trim()
+    };
+    if (set.refs && !set.refs.length) { $("#savemsg").textContent = "Pick at least one reference image."; $("#savemsg").className = "msg err"; return; }
+    try {
+      await patch(cur, set); dirty = false; renderDetail();
+      $("#savemsg").textContent = "Prompt saved"; if ($("#rendered").open) loadPrompt();
+    } catch (err) { conflict(err); }
+  };
+
+  $("#nform").querySelectorAll(".who button").forEach(b => b.onclick = () => {
+    who = b.dataset.w; localStorage.setItem("ehih-who", who);
+    $("#nform").querySelectorAll(".who button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  });
+  $("#nform").onsubmit = async e => {
+    e.preventDefault();
+    const text = $("#f-note").value.trim(); if (!text) { $("#f-note").focus(); return; }
+    const r = await fetch(`${API}/shots/${encodeURIComponent(sel)}/notes`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ who, text }) });
+    const body = await r.json();
+    if (!r.ok) { setSync(body.error || "Note not added", true); return; }
+    D.shots[idx(sel)] = body; D.rev = (D.rev || 0) + 1;
+    $("#f-note").value = ""; renderNotesOnly(); setSync(`Note added to ${sel}`);
+  };
+
+  $("#rendered").ontoggle = () => { if ($("#rendered").open) loadPrompt(); };
+  $("#copyprompt").onclick = async () => { await navigator.clipboard.writeText($("#ptext").textContent); setSync("Prompt copied"); };
+}
+
+async function loadPrompt() {
+  $("#ptext").textContent = "Rendering…";
+  const r = await fetch(`${API}/prompt/${encodeURIComponent(sel)}`, { cache: "no-store" });
+  const b = await r.json();
+  $("#ptext").textContent = r.ok ? (b.prompt || "This shot has no beats yet, so there is no prompt.") : (b.error || "Could not render the prompt.");
+}
+
+function conflict(e) {
+  if (e.code === 409) {
+    setSync(e.body.error, true);
+    D.shots[idx(e.body.shot.id)] = e.body.shot;
+    if (!dirty) renderDetail(); else { $("#savemsg").textContent = "Someone else saved this shot. Copy your edits, discard, then reapply."; $("#savemsg").className = "msg err"; }
+  } else setSync(e.message, true);
+}
+
+document.addEventListener("keydown", e => {
+  if (e.target.closest("input, textarea, select")) return;
+  const list = D ? D.shots.filter(s => !filter || s.status === filter) : [];
+  const k = list.findIndex(s => s.id === sel);
+  if ((e.key === "j" || e.key === "ArrowDown") && k < list.length - 1) { e.preventDefault(); select(list[k + 1].id); }
+  if ((e.key === "k" || e.key === "ArrowUp") && k > 0) { e.preventDefault(); select(list[k - 1].id); }
+});
+window.addEventListener("beforeunload", e => { if (dirty) { e.preventDefault(); e.returnValue = ""; } });
+
+load(true);
+setInterval(() => load(false), 8000);
+</script>
+</body>
+</html>
